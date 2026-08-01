@@ -11,9 +11,15 @@ class SiteTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_root_redirects_to_a_locale_home_page(): void
+    public function test_root_redirects_to_the_visitors_preferred_locale(): void
     {
-        $this->get('/')->assertRedirectContains('/fr');
+        $this->get('/', ['Accept-Language' => 'fr-CA,fr;q=0.9'])->assertRedirectContains('/fr');
+        $this->get('/', ['Accept-Language' => 'en-US,en;q=0.9'])->assertRedirectContains('/en');
+    }
+
+    public function test_root_falls_back_to_french_for_unsupported_languages(): void
+    {
+        $this->get('/', ['Accept-Language' => 'de-DE,de;q=0.9'])->assertRedirectContains('/fr');
     }
 
     #[DataProvider('publicPages')]

@@ -47,7 +47,7 @@ class LeadController extends Controller
             'company' => ['nullable', 'string', 'max:150'],
             'origin' => ['required', 'string', 'max:180'],
             'destination' => ['required', 'string', 'max:180'],
-            'shipment_type' => ['required', 'string', 'max:60'],
+            'shipment_type' => ['required', 'string', 'in:'.implode(',', array_keys(config('byward.estimate.methods')))],
             'weight' => ['required', 'numeric', 'min:0.1', 'max:200000'],
             'length' => ['nullable', 'numeric', 'min:0', 'max:100000'],
             'width' => ['nullable', 'numeric', 'min:0', 'max:100000'],
