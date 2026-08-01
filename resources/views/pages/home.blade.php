@@ -74,7 +74,7 @@
                     {{ __('site.home.hero_text') }}
                 </p>
 
-                <div class="d-flex flex-column flex-sm-row gap-3 mt-4 fade-up-delayed d-3">
+                <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 mt-4 fade-up-delayed d-3">
                     <a href="{{ route('quote') }}" class="btn btn-brand btn-lg">
                         {{ __('site.common.free_quote') }}
                     </a>
@@ -220,7 +220,7 @@
                     <span class="eyebrow eyebrow-light">{{ __('site.home.estimate_eyebrow') }}</span>
                     <h2 class="text-balance">{{ __('site.home.estimate_title') }}</h2>
                     <p class="lead mt-3 mw-560">{{ __('site.home.estimate_text') }}</p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                    <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 mt-4">
                         <a href="{{ route('estimate') }}" class="btn btn-brand">
                             {{ __('site.common.calculate') }}
                         </a>

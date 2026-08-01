@@ -23,7 +23,7 @@
                     @endif
                 </div>
                 <div class="col-lg-5">
-                    <div class="d-flex flex-column flex-sm-row flex-lg-column flex-xl-row gap-3 justify-content-lg-end">
+                    <div class="d-flex flex-column flex-sm-row flex-lg-column flex-xl-row gap-3 justify-content-lg-end flex-wrap">
                         {{ $slot }}
                     </div>
                 </div>

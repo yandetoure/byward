@@ -201,7 +201,8 @@ h4, .h4 { font-size: 1.175rem; letter-spacing: -0.015em; }
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
 }
 
 .btn-brand {
@@ -516,7 +517,7 @@ h4, .h4 { font-size: 1.175rem; letter-spacing: -0.015em; }
   display: flex;
   align-items: center;
   padding-top: calc(var(--by-nav-h) + 2.5rem);
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
   overflow: hidden;
   background: $navy-900;
 }
