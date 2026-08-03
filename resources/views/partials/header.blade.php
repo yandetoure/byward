@@ -45,13 +45,11 @@
                         @endforeach
                     </div>
 
-                    <form action="#" class="d-flex order-lg-2 me-lg-2" style="max-width: 200px;">
-                        <div class="input-group input-group-sm">
-                            <input type="text" class="form-control bg-transparent text-reset border-secondary" placeholder="Track ID..." aria-label="Track Shipment" style="min-width: 120px;">
-                            <button class="btn btn-outline-secondary border-secondary" type="button" aria-label="Track">
-                                <x-icon name="arrow-right" size="14" />
-                            </button>
-                        </div>
+                    <form class="d-none d-lg-flex position-relative me-3 align-items-center" style="width: 170px;" action="{{ route('tracking.show') }}" method="GET">
+                        <input type="text" name="id" class="form-control rounded-pill pe-4" placeholder="Tracking ID..." aria-label="Track Shipment" required style="height: 28px; font-size: 0.75rem;">
+                        <button type="submit" class="btn btn-link position-absolute end-0 d-flex align-items-center justify-content-center text-brand text-decoration-none p-0 pe-2" style="height: 100%;">
+                            <x-icon name="arrow-right" size="14" />
+                        </button>
                     </form>
                     <a href="{{ route('estimate') }}" class="btn btn-header-ghost btn-sm px-3 py-2 order-lg-3">
                         {{ __('site.nav.estimate') }}

@@ -3,6 +3,7 @@
 use App\Http\Controllers\EstimateController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\TrackingController;
 use App\Http\Middleware\SetLocale;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,8 @@ Route::prefix('{locale}')
         Route::post('/contact', [LeadController::class, 'contact'])
             ->middleware('throttle:10,1')
             ->name('contact.send');
+
+        Route::get('/tracking', [TrackingController::class, 'show'])->name('tracking.show');
 
         Route::get('/quote', [PageController::class, 'quote'])->name('quote');
         Route::post('/quote', [LeadController::class, 'quote'])

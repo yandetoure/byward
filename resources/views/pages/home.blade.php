@@ -78,10 +78,10 @@
                 </div>
 
                 <div class="mt-5 fade-up-delayed d-3 p-3 bg-white bg-opacity-10 rounded-3 backdrop-blur" style="max-width: 500px; border: 1px solid rgba(255,255,255,0.2);">
-                    <form action="#" class="d-flex align-items-center gap-2">
+                    <form action="{{ route('tracking.show') }}" method="GET" class="d-flex align-items-center gap-2">
                         <div class="flex-grow-1">
                             <label class="visually-hidden" for="heroTrackId">Tracking Number</label>
-                            <input type="text" id="heroTrackId" class="form-control form-control-lg bg-white border-0" placeholder="Enter Tracking Number..." style="box-shadow: none;">
+                            <input type="text" name="id" id="heroTrackId" class="form-control form-control-lg bg-white border-0" placeholder="Enter Tracking Number..." style="box-shadow: none;" required>
                         </div>
                         <button type="submit" class="btn btn-brand btn-lg d-flex align-items-center gap-2">
                             <x-icon name="arrow-right" size="18" /> Track
