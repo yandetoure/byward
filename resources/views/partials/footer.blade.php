@@ -18,6 +18,7 @@
                 <a href="{{ route('home') }}" class="footer-logo-plate" aria-label="{{ config('byward.company.name') }}">
                     <img src="{{ asset('images/logo.png') }}" alt="{{ config('byward.company.name') }}">
                 </a>
+                <p class="fs-5 fw-bold text-brand mt-3 mb-2" style="letter-spacing: 0.5px;">On Time. Every Time.</p>
                 <p style="max-width:340px">{{ __('site.footer.tagline') }}</p>
 
                 <ul class="footer-contact mt-4">
@@ -36,9 +37,8 @@
                 </ul>
 
                 <div class="d-flex gap-2 mt-4">
-                    <a href="{{ config('byward.social.linkedin') }}" class="social-dot" aria-label="LinkedIn"><x-icon name="linkedin" /></a>
-                    <a href="{{ config('byward.social.x') }}" class="social-dot" aria-label="X"><x-icon name="x" /></a>
-                    <a href="{{ config('byward.social.facebook') }}" class="social-dot" aria-label="Facebook"><x-icon name="facebook" /></a>
+                    <a href="{{ config('byward.social.instagram') }}" class="social-dot" aria-label="Instagram" target="_blank" rel="noopener"><x-icon name="instagram" /></a>
+                    <a href="{{ config('byward.social.linkedin') }}" class="social-dot" aria-label="LinkedIn" target="_blank" rel="noopener"><x-icon name="linkedin" /></a>
                 </div>
             </div>
 

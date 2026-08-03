@@ -46,6 +46,43 @@
 
     @include('partials.footer')
 
+    {{-- ============================ LIVE CHAT WIDGET ============================ --}}
+    <div class="live-chat-widget position-fixed bottom-0 end-0 m-3 m-md-4" style="z-index: 1050;">
+        <button type="button" class="btn btn-brand rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open Live Chat">
+            <x-icon name="chat" size="24" />
+        </button>
+        <div class="dropdown-menu dropdown-menu-end p-0 shadow-lg border-0 mb-2" style="width: 320px; border-radius: 12px; overflow: hidden;">
+            <div class="bg-brand text-white p-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="position-relative">
+                        <div class="bg-white rounded-circle d-flex align-items-center justify-content-center text-brand fw-bold" style="width: 36px; height: 36px;">D</div>
+                        <span class="position-absolute bottom-0 end-0 bg-success border border-white rounded-circle" style="width: 10px; height: 10px;"></span>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-semibold">Dispatch Team</h6>
+                        <small class="opacity-75" style="font-size: 0.75rem;">Online - Replies instantly</small>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 bg-light" style="height: 250px; overflow-y: auto;">
+                <div class="d-flex flex-column gap-2">
+                    <div class="bg-white p-2 rounded-3 shadow-sm text-dark align-self-start" style="max-width: 85%; font-size: 0.9rem;">
+                        Hello! 👋 How can we help you with your logistics needs today?
+                    </div>
+                    <div class="text-muted text-center" style="font-size: 0.7rem;">Today at {{ now()->format('H:i') }}</div>
+                </div>
+            </div>
+            <div class="p-2 border-top bg-white">
+                <form action="#" class="d-flex align-items-center gap-2">
+                    <input type="text" class="form-control form-control-sm border-0 bg-light" placeholder="Type a message..." aria-label="Type message">
+                    <button class="btn btn-sm btn-brand rounded-circle d-flex align-items-center justify-content-center" type="button" style="width: 32px; height: 32px;">
+                        <x-icon name="send" size="14" />
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <button type="button" class="to-top" aria-label="{{ __('site.common.back_top') }}">
         <x-icon name="arrow-up" size="18" />
     </button>

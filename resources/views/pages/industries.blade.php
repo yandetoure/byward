@@ -9,7 +9,6 @@
 
     $icons = [
         'retail' => 'tag',
-        'healthcare' => 'thermometer',
         'manufacturing' => 'layers',
         'automotive' => 'truck',
         'food' => 'box',

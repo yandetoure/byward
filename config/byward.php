@@ -17,16 +17,15 @@ return [
 
     'company' => [
         'name' => 'Byward Logistics',
-        'phone' => '+1 (800) 555-0100',
-        'phone_href' => '+18005550100',
+        'phone' => '(613) 501-0653',
+        'phone_href' => '+16135010653',
         'email' => 'info@bywardlogistics.com',
         'founded' => 2014,
     ],
 
     'social' => [
-        'linkedin' => '#',
-        'x' => '#',
-        'facebook' => '#',
+        'instagram' => 'https://www.instagram.com/bywardlogistics?igsh=MW51bHJvdGtqbHB5ZQ==',
+        'linkedin' => 'https://www.linkedin.com/company/byward-logistics/',
     ],
 
     'images' => [

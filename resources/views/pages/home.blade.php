@@ -17,7 +17,7 @@
         'reverse' => ['icon' => 'rotate', 'anchor' => 'reverse'],
     ];
 
-    $homeIndustries = ['retail', 'healthcare', 'manufacturing', 'automotive', 'food', 'technology'];
+    $homeIndustries = ['retail', 'manufacturing', 'automotive', 'food', 'technology'];
     $whyIcons = ['check-circle', 'eye', 'support', 'tag'];
     $homeFaq = collect(__('site.faq.groups'))->flatMap(fn ($g) => $g['items'])->take(3);
 @endphp
@@ -73,12 +73,27 @@
                 <p class="lead mt-4 mw-620 fade-up-delayed d-2" style="color:rgba(255,255,255,.76)">
                     {{ __('site.home.hero_text') }}
                 </p>
+                <div class="mt-3 fade-up-delayed d-2">
+                    <span class="fs-5 fw-medium text-white" style="letter-spacing: 0.5px;">On Time. Every Time.</span>
+                </div>
 
-                <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 mt-4 fade-up-delayed d-3">
-                    <a href="{{ route('quote') }}" class="btn btn-brand btn-lg">
+                <div class="mt-5 fade-up-delayed d-3 p-3 bg-white bg-opacity-10 rounded-3 backdrop-blur" style="max-width: 500px; border: 1px solid rgba(255,255,255,0.2);">
+                    <form action="#" class="d-flex align-items-center gap-2">
+                        <div class="flex-grow-1">
+                            <label class="visually-hidden" for="heroTrackId">Tracking Number</label>
+                            <input type="text" id="heroTrackId" class="form-control form-control-lg bg-white border-0" placeholder="Enter Tracking Number..." style="box-shadow: none;">
+                        </div>
+                        <button type="submit" class="btn btn-brand btn-lg d-flex align-items-center gap-2">
+                            <x-icon name="arrow-right" size="18" /> Track
+                        </button>
+                    </form>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 mt-4 fade-up-delayed d-4">
+                    <a href="{{ route('quote') }}" class="btn btn-outline-light btn-lg">
                         {{ __('site.common.free_quote') }}
                     </a>
-                    <a href="{{ route('services') }}" class="btn btn-ghost btn-lg">
+                    <a href="{{ route('services') }}" class="btn btn-ghost text-white btn-lg">
                         {{ __('site.common.view_services') }}
                     </a>
                 </div>
@@ -102,6 +117,30 @@
                         </div>
                         <div class="stat-label">{{ $stat['label'] }}</div>
                     </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ============================ PARTNER LOGOS ============================ --}}
+        </div>
+    </div>
+</section>
+
+{{-- ============================ PARTNER LOGOS ============================ --}}
+<section class="section-sm bg-light border-bottom border-light-subtle overflow-hidden">
+    <div class="container text-center">
+        <p class="text-muted fw-semibold mb-4 fs-6 text-uppercase" style="letter-spacing: 1px;" data-reveal>Nos Partenaires</p>
+        <div class="marquee mt-4" data-reveal>
+            <div class="marquee-track">
+                @php
+                    $partners = ['IMG_1469.JPG', 'IMG_1470.PNG', 'IMG_1471.JPG', 'IMG_1472.PNG', 'IMG_1473.PNG', 'IMG_1474.JPG', 'IMG_1475.PNG'];
+                @endphp
+                @foreach(array_merge($partners, $partners) as $partner)
+                <div class="partner-logo d-flex align-items-center justify-content-center px-4" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="{{ asset('partners/' . $partner) }}" alt="Partenaire" style="max-height: 55px; width: auto; object-fit: contain;">
+                </div>
                 @endforeach
             </div>
         </div>
