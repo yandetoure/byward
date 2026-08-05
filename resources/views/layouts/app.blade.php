@@ -48,6 +48,16 @@
 
     {{-- ============================ LIVE CHAT WIDGET ============================ --}}
     <div class="live-chat-widget position-fixed bottom-0 end-0 m-3 m-md-4" style="z-index: 1050;">
+        <div id="live-chat-window" class="card shadow-lg d-none" style="position: absolute; bottom: 70px; right: 0; width: 350px; border-radius: 1rem; overflow: hidden; max-width: calc(100vw - 2rem);">
+            <div class="card-header bg-brand text-white d-flex justify-content-between align-items-center p-3">
+                <h6 class="mb-0 fw-bold">Live Chat</h6>
+                <button type="button" class="btn-close btn-close-white" id="live-chat-close" aria-label="Close"></button>
+            </div>
+            <div class="card-body p-4 text-center bg-white">
+                <p class="mb-3 text-muted">Notre service client est actuellement disponible via notre page de contact ou par téléphone.</p>
+                <a href="{{ route('contact') }}" class="btn btn-brand btn-sm">Nous contacter</a>
+            </div>
+        </div>
         <button type="button" id="live-chat-trigger" class="btn btn-brand rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;" aria-label="Open Live Chat">
             <x-icon name="chat" size="24" />
         </button>

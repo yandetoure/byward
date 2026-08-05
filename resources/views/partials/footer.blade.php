@@ -37,6 +37,7 @@
                 </ul>
 
                 <div class="d-flex gap-2 mt-4">
+                    <a href="{{ config('byward.social.facebook') }}" class="social-dot" aria-label="Facebook" target="_blank" rel="noopener"><x-icon name="facebook" /></a>
                     <a href="{{ config('byward.social.instagram') }}" class="social-dot" aria-label="Instagram" target="_blank" rel="noopener"><x-icon name="instagram" /></a>
                     <a href="{{ config('byward.social.linkedin') }}" class="social-dot" aria-label="LinkedIn" target="_blank" rel="noopener"><x-icon name="linkedin" /></a>
                 </div>

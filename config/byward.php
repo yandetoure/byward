@@ -24,6 +24,7 @@ return [
     ],
 
     'social' => [
+        'facebook' => 'https://www.facebook.com/share/1CX3134jZ7/?mibextid=wwXIfr',
         'instagram' => 'https://www.instagram.com/bywardlogistics?igsh=MW51bHJvdGtqbHB5ZQ==',
         'linkedin' => 'https://www.linkedin.com/company/byward-logistics/',
     ],

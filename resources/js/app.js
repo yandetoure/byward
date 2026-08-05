@@ -203,6 +203,27 @@ function initForms() {
     });
 }
 
+/* ------------------------------------------------------------------
+ * Live chat toggler
+ * ---------------------------------------------------------------- */
+function initLiveChat() {
+    const trigger = document.getElementById('live-chat-trigger');
+    const closeBtn = document.getElementById('live-chat-close');
+    const windowEl = document.getElementById('live-chat-window');
+
+    if (!trigger || !windowEl) return;
+
+    trigger.addEventListener('click', () => {
+        windowEl.classList.toggle('d-none');
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            windowEl.classList.add('d-none');
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initMarquee();
     initReveal();
@@ -211,4 +232,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initMobileNav();
     initForms();
+    initLiveChat();
 });
