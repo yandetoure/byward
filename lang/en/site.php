@@ -228,6 +228,19 @@ return [
                     'Returns analytics reporting',
                 ],
             ],
+            'whiteglove' => [
+                'name' => 'White Glove Services',
+                'short' => 'Premium delivery and setup services for high-value and delicate items.',
+                'long' => 'Premium delivery services including inside delivery, unpacking, setup, and debris removal for high-value or delicate items.',
+                'features' => [
+                    'Inside delivery and room of choice',
+                    'Unpacking and debris removal',
+                    'Assembly and installation',
+                    'Specialized handling for fragile items',
+                    'Scheduled delivery appointments',
+                    'Returns and reverse logistics',
+                ],
+            ],
         ],
 
         'steps_eyebrow' => 'How It Works',

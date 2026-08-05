@@ -6,6 +6,7 @@
         'lastmile' => 'last-mile',
         'supply' => 'supply-chain',
         'customs' => 'customs',
+        'whiteglove' => 'white-glove',
     ];
 @endphp
 

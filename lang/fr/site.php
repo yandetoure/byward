@@ -228,6 +228,19 @@ return [
                     'Analyse et reporting des retours',
                 ],
             ],
+            'whiteglove' => [
+                'name' => 'Services Gant Blanc',
+                'short' => 'Services de livraison et d\'installation haut de gamme pour les articles de grande valeur ou fragiles.',
+                'long' => 'Des services de livraison premium incluant la livraison à l\'intérieur, le déballage, l\'installation et l\'enlèvement des débris pour les articles de grande valeur ou délicats.',
+                'features' => [
+                    'Livraison à l\'intérieur et pièce au choix',
+                    'Déballage et enlèvement des débris',
+                    'Assemblage et installation',
+                    'Manutention spécialisée pour articles fragiles',
+                    'Rendez-vous de livraison programmés',
+                    'Retours et logistique inverse',
+                ],
+            ],
         ],
 
         'steps_eyebrow' => 'Comment ça marche',
