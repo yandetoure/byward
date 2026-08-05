@@ -222,6 +222,40 @@ function initLiveChat() {
             windowEl.classList.add('d-none');
         });
     }
+
+    const options = document.querySelectorAll('.live-chat-option');
+    const messages = document.getElementById('live-chat-messages');
+
+    if (options.length && messages) {
+        options.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const question = this.textContent;
+                const answer = this.dataset.answer;
+
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'd-flex mb-3 justify-content-end';
+                userMsg.innerHTML = `<div class="bg-navy text-white rounded-3 p-2 shadow-sm" style="max-width: 85%;"><p class="mb-0 fs-sm" style="font-size: 0.9rem;">${question}</p></div>`;
+                messages.appendChild(userMsg);
+                messages.scrollTop = messages.scrollHeight;
+
+                // Disable options temporarily
+                const optionsContainer = document.getElementById('live-chat-options');
+                optionsContainer.style.display = 'none';
+
+                // Simulate delay
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'd-flex mb-3';
+                    botMsg.innerHTML = `<div class="bg-white border rounded-3 p-2 shadow-sm" style="max-width: 85%;"><p class="mb-0 text-dark fs-sm" style="font-size: 0.9rem;">${answer}</p></div>`;
+                    messages.appendChild(botMsg);
+                    messages.scrollTop = messages.scrollHeight;
+                    
+                    optionsContainer.style.display = 'flex';
+                }, 600);
+            });
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
