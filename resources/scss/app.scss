@@ -835,6 +835,13 @@ h4, .h4 { font-size: 1.175rem; letter-spacing: -0.015em; }
 .media-wide { aspect-ratio: 16 / 11; }
 .media-square { aspect-ratio: 1 / 1; }
 
+.h-lg-100 {
+  @media (min-width: 992px) {
+    height: 100% !important;
+    aspect-ratio: auto !important;
+  }
+}
+
 .media-badge {
   position: absolute;
   background: rgba(255, 255, 255, 0.96);

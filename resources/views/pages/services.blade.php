@@ -49,9 +49,9 @@
         @php $flip = $loop->index % 2 === 1; @endphp
 
         <section class="service-block" id="{{ $meta['anchor'] }}">
-            <div class="row g-5 align-items-center">
+            <div class="row g-5 align-items-stretch">
                 <div class="col-lg-6 {{ $flip ? 'order-lg-2' : '' }}" data-reveal="{{ $flip ? 'right' : 'left' }}">
-                    <div class="media-frame media-wide">
+                    <div class="media-frame media-wide h-lg-100">
                         <img src="{{ $meta['image'] }}" alt="{{ $items[$key]['name'] }}" loading="lazy">
                     </div>
                 </div>

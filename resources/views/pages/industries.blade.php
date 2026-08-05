@@ -51,9 +51,9 @@
         @php $flip = $loop->index % 2 === 1; @endphp
 
         <section class="service-block" id="{{ $key }}">
-            <div class="row g-5 align-items-center">
+            <div class="row g-5 align-items-stretch">
                 <div class="col-lg-5 {{ $flip ? 'order-lg-2' : '' }}" data-reveal="{{ $flip ? 'right' : 'left' }}">
-                    <div class="media-frame media-square">
+                    <div class="media-frame media-square h-lg-100">
                         <img src="{{ $img['industry_'.$key] }}" alt="{{ $items[$key]['name'] }}" loading="lazy">
                     </div>
                 </div>
@@ -92,7 +92,7 @@
     <div class="glow glow-red" style="width:360px;height:360px;top:-100px;right:5%;opacity:.35"></div>
 
     <div class="container position-relative">
-        <div class="row g-5 align-items-center">
+        <div class="row g-5 align-items-stretch">
             <div class="col-lg-6" data-reveal="left">
                 <span class="eyebrow eyebrow-light">{{ __('site.industries.approach_eyebrow') }}</span>
                 <h2 class="text-balance">{{ __('site.industries.approach_title') }}</h2>
@@ -109,7 +109,7 @@
             </div>
 
             <div class="col-lg-6 ps-lg-5" data-reveal="right">
-                <div class="media-frame media-wide">
+                <div class="media-frame media-wide h-lg-100">
                     <img src="{{ $img['approach'] }}" alt="" loading="lazy">
                 </div>
             </div>
