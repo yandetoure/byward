@@ -47,7 +47,7 @@
     @include('partials.footer')
 
     {{-- ============================ LIVE CHAT WIDGET ============================ --}}
-    <div class="live-chat-widget position-fixed end-0 m-3 m-md-4" style="z-index: 1050; bottom: 5rem;">
+    <div class="live-chat-widget position-fixed end-0 m-3 m-md-4" style="z-index: 1050; bottom: 3rem;">
         <div id="live-chat-window" class="card shadow-lg d-none" style="position: absolute; bottom: 70px; right: 0; width: 350px; border-radius: 1rem; overflow: hidden; max-width: calc(100vw - 2rem);">
             <div class="card-header bg-brand text-white d-flex justify-content-between align-items-center p-3">
                 <h6 class="mb-0 fw-bold">Live Chat</h6>
@@ -58,8 +58,8 @@
                 <a href="{{ route('contact') }}" class="btn btn-brand btn-sm">Nous contacter</a>
             </div>
         </div>
-        <button type="button" id="live-chat-trigger" class="btn p-0 border-0 bg-transparent text-brand shadow-none" aria-label="Open Live Chat">
-            <x-icon name="chat" size="56" />
+        <button type="button" id="live-chat-trigger" class="btn p-0 border-0 bg-transparent text-danger shadow-none" aria-label="Open Live Chat">
+            <x-icon name="chat" size="40" />
         </button>
     </div>
 
