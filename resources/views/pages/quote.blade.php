@@ -92,17 +92,23 @@
                                 <label class="form-label" for="origin">
                                     {{ __('site.quote.f_origin') }} <span class="req">*</span>
                                 </label>
-                                <input type="text" class="form-control" id="origin" name="origin"
-                                       value="{{ old('origin') }}" placeholder="{{ __('site.estimate.ph_origin') }}"
-                                       required maxlength="180">
+                                <select class="form-select" id="origin" name="origin" required>
+                                    <option value="" disabled {{ old('origin') ? '' : 'selected' }}>{{ __('site.quote.ph_region') }}</option>
+                                    @foreach (__('site.quote.regions') as $code => $region)
+                                        <option value="{{ $region }}" @selected(old('origin') === $region)>{{ $region }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label" for="destination">
                                     {{ __('site.quote.f_destination') }} <span class="req">*</span>
                                 </label>
-                                <input type="text" class="form-control" id="destination" name="destination"
-                                       value="{{ old('destination') }}"
-                                       placeholder="{{ __('site.estimate.ph_destination') }}" required maxlength="180">
+                                <select class="form-select" id="destination" name="destination" required>
+                                    <option value="" disabled {{ old('destination') ? '' : 'selected' }}>{{ __('site.quote.ph_region') }}</option>
+                                    @foreach (__('site.quote.regions') as $code => $region)
+                                        <option value="{{ $region }}" @selected(old('destination') === $region)>{{ $region }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="col-md-7">
                                 <label class="form-label" for="shipment_type">
