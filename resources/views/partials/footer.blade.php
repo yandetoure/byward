@@ -30,7 +30,7 @@
                         <x-icon name="mail" />
                         <a href="mailto:{{ config('byward.company.email') }}">{{ config('byward.company.email') }}</a>
                     </li>
-                    <li>
+                    <li class="d-none">
                         <x-icon name="pin" />
                         <span>{!! nl2br(e(__('site.footer.address'))) !!}</span>
                     </li>

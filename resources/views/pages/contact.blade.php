@@ -42,7 +42,7 @@
                         </span>
                     </div>
 
-                    <div class="feature-row">
+                    <div class="feature-row d-none">
                         <span class="icon-tile icon-tile-sm"><x-icon name="pin" size="19" /></span>
                         <span>
                             <h4>{{ __('site.contact.label_address') }}</h4>
