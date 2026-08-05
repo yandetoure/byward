@@ -51,7 +51,7 @@ return [
         'service_supply'    => $unsplash('1586528116311-ad8dd3c8310d', 1000),
         'service_customs'   => $unsplash('1504328345606-18bbc8c9d7d1', 1000),
         'service_reverse'   => $unsplash('1566576912321-d58ddd7a6088', 1000),
-        'service_whiteglove'=> asset('images/white-glove.jpg'),
+        'service_whiteglove'=> asset('images/Glove.jpeg'),
 
         'industry_retail'        => $unsplash('1565043666747-69f6646db940', 900),
         'industry_healthcare'    => $unsplash('1532187863486-abf9dbad1b69', 900),
