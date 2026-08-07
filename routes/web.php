@@ -8,7 +8,7 @@ use App\Http\Middleware\SetLocale;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Land on the visitor's preferred language, falling back to French.
+// Land on the visitor's preferred language, falling back to English.
 Route::get('/', function (Request $request) {
     $preferred = $request->getPreferredLanguage(SetLocale::SUPPORTED) ?? config('app.locale');
 
