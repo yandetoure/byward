@@ -109,13 +109,16 @@
     <div class="container">
         <div class="stats-card" data-reveal>
             <div class="row g-0">
-                @foreach (__('site.home.stats') as $i => $stat)
-                    <div class="col-6 col-md-4 col-lg stat-item">
-                        <div class="stat-value">
-                            <span data-count-to="{{ $stat['value'] }}"
-                                  data-count-suffix="{{ $stat['suffix'] }}">0{{ $stat['suffix'] }}</span>
+                @foreach (__('site.home.features') as $i => $feature)
+                    <div class="col-6 col-lg-3 stat-item">
+                        <div class="d-flex flex-column align-items-center text-center px-md-3">
+                            <span class="icon-tile icon-tile-sm {{ $i % 2 ? 'icon-tile-red' : '' }} mb-3">
+                                <x-icon :name="$feature['icon']" />
+                            </span>
+                            <span class="fw-semibold" style="font-size: 0.95rem; line-height: 1.45; color: var(--by-navy-800); max-width: 220px;">
+                                {{ $feature['text'] }}
+                            </span>
                         </div>
-                        <div class="stat-label">{{ $stat['label'] }}</div>
                     </div>
                 @endforeach
             </div>

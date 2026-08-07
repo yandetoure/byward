@@ -63,12 +63,11 @@ return [
         'hero_l3' => 'Livrez des résultats.',
         'hero_text' => "Des solutions logistiques de bout en bout, adoptées par des entreprises de tous les secteurs. De la livraison du dernier kilomètre à la gestion du fret international, nous acheminons vos marchandises à destination, à chaque fois.",
 
-        'stats' => [
-            ['value' => 10, 'suffix' => '+', 'label' => 'Années d\'excellence'],
-            ['value' => 50, 'suffix' => 'K+', 'label' => 'Expéditions livrées'],
-            ['value' => 98, 'suffix' => '%', 'label' => 'Livraisons à l\'heure'],
-            ['value' => 120, 'suffix' => '+', 'label' => 'Destinations'],
-            ['value' => 24, 'suffix' => '/7', 'label' => 'Assistance client'],
+        'features' => [
+            ['icon' => 'truck', 'text' => 'Livraison rapide partout en Ontario et au Québec.'],
+            ['icon' => 'users', 'text' => 'Experts de confiance avec des années d\'expérience.'],
+            ['icon' => 'clock', 'text' => 'Livraison à temps garantie.'],
+            ['icon' => 'support', 'text' => 'Service client dédié 24h/24 et 7j/7.'],
         ],
 
         'marquee' => [

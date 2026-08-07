@@ -63,12 +63,11 @@ return [
         'hero_l3' => 'Deliver Results.',
         'hero_text' => "End-to-end logistics solutions trusted by businesses across industries. From last-mile delivery to global freight management — we get your cargo there, every time.",
 
-        'stats' => [
-            ['value' => 10, 'suffix' => '+', 'label' => 'Years of Excellence'],
-            ['value' => 50, 'suffix' => 'K+', 'label' => 'Shipments Delivered'],
-            ['value' => 98, 'suffix' => '%', 'label' => 'On-Time Rate'],
-            ['value' => 120, 'suffix' => '+', 'label' => 'Destinations'],
-            ['value' => 24, 'suffix' => '/7', 'label' => 'Customer Support'],
+        'features' => [
+            ['icon' => 'truck', 'text' => 'Fast delivery across Ontario and Quebec.'],
+            ['icon' => 'users', 'text' => 'Trusted experts with years of experience.'],
+            ['icon' => 'clock', 'text' => 'Guaranteed on-time delivery.'],
+            ['icon' => 'support', 'text' => '24/7 dedicated customer support.'],
         ],
 
         'marquee' => [
