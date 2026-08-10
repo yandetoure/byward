@@ -15,6 +15,7 @@ return [
         'quote' => 'Obtenir un devis',
         'menu' => 'Menu principal',
         'home' => 'Accueil',
+        'careers' => 'Carrières',
     ],
 
     'common' => [
@@ -696,5 +697,51 @@ return [
     /* ---------------------------------------------------------------- */
     'errors' => [
         'form_title' => 'Veuillez corriger les points suivants',
+    ],
+
+    /* ---------------------------------------------------------------- */
+    /* Carrières                                                        */
+    /* ---------------------------------------------------------------- */
+    'careers' => [
+        'meta_title' => 'Carrières — Byward Logistics',
+        'meta_description' => 'Rejoignez notre équipe chez Byward Logistics. Découvrez des opportunités de carrière dans le transport, l\'entreposage et la logistique.',
+        
+        'cta_eyebrow' => 'CARRIÈRES',
+        'cta_title' => 'Nos offres d\'emploi',
+        'cta_text' => 'Rejoignez une équipe dynamique et participez à notre croissance.',
+        'apply_now' => 'Postuler',
+        'cta_btn' => 'Voir les opportunités',
+
+        'hero_title' => 'Bâtissez votre avenir avec nous',
+        'hero_text' => 'Découvrez une culture d\'excellence, de sécurité et d\'innovation dans la logistique.',
+        
+        'benefits_title' => 'Pourquoi Byward Logistics ?',
+        'benefits' => [
+            ['title' => 'Rémunération compétitive', 'text' => 'Nous offrons d\'excellents forfaits de rémunération et des primes de performance.'],
+            ['title' => 'Avantages complets', 'text' => 'Assurances maladie, soins dentaires et de la vue pour vous et votre famille.'],
+            ['title' => 'Évolution de carrière', 'text' => 'Une formation continue et des voies d\'avancement claires.'],
+            ['title' => 'La sécurité avant tout', 'text' => 'Un engagement inébranlable envers des opérations sûres et des équipements bien entretenus.']
+        ],
+
+        'form_title' => 'Soumettre votre candidature',
+        'f_name' => 'Nom complet',
+        'ph_name' => 'Jean Dupont',
+        'f_email' => 'Adresse email',
+        'ph_email' => 'jean@exemple.com',
+        'f_phone' => 'Numéro de téléphone',
+        'ph_phone' => '(555) 123-4567',
+        'f_position' => 'Poste souhaité',
+        'positions' => [
+            'driver' => 'Chauffeur / Opérateur',
+            'warehouse' => 'Préparateur de commandes',
+            'logistics' => 'Coordinateur logistique',
+            'admin' => 'Administration & Support',
+            'other' => 'Autre'
+        ],
+        'f_resume' => 'Télécharger votre CV (PDF, DOCX)',
+        'f_message' => 'Lettre de motivation / Message',
+        'ph_message' => 'Dites-nous pourquoi vous êtes le candidat idéal pour Byward...',
+        'f_submit' => 'Envoyer la candidature',
+        'success' => 'Merci ! Votre candidature a bien été reçue. Notre équipe examinera votre CV et vous contactera très prochainement.',
     ],
 ];

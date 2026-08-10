@@ -57,6 +57,7 @@
                 <h5>{{ __('site.footer.company') }}</h5>
                 <ul class="footer-links">
                     <li><a href="{{ route('about') }}">{{ __('site.nav.about') }}</a></li>
+                    <li><a href="{{ route('careers') }}">{{ __('site.nav.careers') }}</a></li>
                     <li><a href="{{ route('industries') }}">{{ __('site.nav.industries') }}</a></li>
                     <li><a href="{{ route('faq') }}">{{ __('site.nav.faq') }}</a></li>
                     <li><a href="{{ route('contact') }}">{{ __('site.nav.contact') }}</a></li>

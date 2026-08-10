@@ -27,6 +27,11 @@ Route::prefix('{locale}')
         Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
         Route::get('/terms', [PageController::class, 'terms'])->name('terms');
 
+        Route::get('/careers', [PageController::class, 'careers'])->name('careers');
+        Route::post('/careers', [LeadController::class, 'career'])
+            ->middleware('throttle:10,1')
+            ->name('careers.send');
+
         Route::get('/contact', [PageController::class, 'contact'])->name('contact');
         Route::post('/contact', [LeadController::class, 'contact'])
             ->middleware('throttle:10,1')

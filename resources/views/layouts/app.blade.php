@@ -44,6 +44,10 @@
         @yield('content')
     </main>
 
+    @if(!in_array(request()->route()?->getName(), ['careers', 'contact', 'quote', 'estimate']))
+        @include('partials.careers-cta')
+    @endif
+
     @include('partials.footer')
 
     {{-- ============================ LIVE CHAT WIDGET ============================ --}}

@@ -15,6 +15,7 @@ return [
         'quote' => 'Get a Quote',
         'menu' => 'Main menu',
         'home' => 'Home',
+        'careers' => 'Careers',
     ],
 
     'common' => [
@@ -696,5 +697,51 @@ return [
     /* ---------------------------------------------------------------- */
     'errors' => [
         'form_title' => 'Please correct the following',
+    ],
+
+    /* ---------------------------------------------------------------- */
+    /* Careers                                                           */
+    /* ---------------------------------------------------------------- */
+    'careers' => [
+        'meta_title' => 'Careers — Byward Logistics',
+        'meta_description' => 'Join our team at Byward Logistics. Discover career opportunities in freight, warehousing, and logistics.',
+        
+        'cta_eyebrow' => 'CAREERS',
+        'cta_title' => 'Open Positions',
+        'cta_text' => 'Join a dynamic team and be part of our growth.',
+        'apply_now' => 'Apply Now',
+        'cta_btn' => 'View Opportunities',
+
+        'hero_title' => 'Build Your Future With Us',
+        'hero_text' => 'Discover a culture of excellence, safety, and innovation in logistics.',
+        
+        'benefits_title' => 'Why Byward Logistics?',
+        'benefits' => [
+            ['title' => 'Competitive Pay', 'text' => 'We offer excellent compensation packages and performance bonuses.'],
+            ['title' => 'Comprehensive Benefits', 'text' => 'Health, dental, and vision insurance for you and your family.'],
+            ['title' => 'Career Growth', 'text' => 'Continuous training and clear paths for advancement.'],
+            ['title' => 'Safety First', 'text' => 'A steadfast commitment to safe operations and well-maintained equipment.']
+        ],
+
+        'form_title' => 'Submit Your Application',
+        'f_name' => 'Full Name',
+        'ph_name' => 'John Doe',
+        'f_email' => 'Email Address',
+        'ph_email' => 'john@example.com',
+        'f_phone' => 'Phone Number',
+        'ph_phone' => '(555) 123-4567',
+        'f_position' => 'Position of Interest',
+        'positions' => [
+            'driver' => 'Driver / Operator',
+            'warehouse' => 'Warehouse Associate',
+            'logistics' => 'Logistics Coordinator',
+            'admin' => 'Administration & Support',
+            'other' => 'Other'
+        ],
+        'f_resume' => 'Upload Resume (PDF, DOCX)',
+        'f_message' => 'Cover Letter / Message',
+        'ph_message' => 'Tell us why you are a great fit for Byward...',
+        'f_submit' => 'Submit Application',
+        'success' => 'Thank you! Your application has been received. Our team will review your resume and contact you soon.',
     ],
 ];

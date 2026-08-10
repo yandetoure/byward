@@ -24,6 +24,11 @@ class PageController extends Controller
         return view('pages.about');
     }
 
+    public function careers()
+    {
+        return view('pages.careers');
+    }
+
     public function faq()
     {
         return view('pages.faq');

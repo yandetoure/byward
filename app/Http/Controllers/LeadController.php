@@ -65,4 +65,38 @@ class LeadController extends Controller
             ->with('status', __('site.quote.success'))
             ->withFragment('form');
     }
+
+    public function career(Request $request)
+    {
+        if (filled($request->input('website'))) {
+            return back()->with('status', __('site.careers.success'));
+        }
+
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:120'],
+            'email' => ['required', 'email', 'max:180'],
+            'phone' => ['nullable', 'string', 'max:40'],
+            'position' => ['required', 'string', 'max:150'],
+            'message' => ['nullable', 'string', 'max:4000'],
+            'resume' => ['required', 'file', 'mimes:pdf,doc,docx', 'max:5120'],
+        ]);
+
+        // Handle file upload
+        $resumePath = null;
+        if ($request->hasFile('resume')) {
+            $resumePath = $request->file('resume')->store('resumes');
+        }
+
+        $leadData = collect($data)->except(['resume'])->toArray();
+        $leadData['resume_path'] = $resumePath;
+
+        $lead = Lead::create($leadData + ['type' => 'career', 'locale' => App::getLocale()]);
+
+        Log::info('New career application received', ['id' => $lead->id, 'email' => $lead->email]);
+
+        return redirect()
+            ->route('careers')
+            ->with('status', __('site.careers.success'))
+            ->withFragment('form');
+    }
 }
