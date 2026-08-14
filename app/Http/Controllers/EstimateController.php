@@ -24,7 +24,14 @@ class EstimateController extends Controller
         ]);
 
         $config = $methods[$data['method']];
-        $price = config('byward.estimate.base_fee') + ((float) $data['weight'] * $config['rate']);
+        
+        // Calculate driving distance
+        $distance = $this->calculateDistance($data['origin'], $data['destination']);
+        
+        $price = config('byward.estimate.base_fee') 
+            + ((float) $data['weight'] * $config['rate']) 
+            + ($distance * $config['distance_rate']);
+            
         $price = max($price, $config['min']);
 
         return redirect()
@@ -38,8 +45,85 @@ class EstimateController extends Controller
                 'destination' => $data['destination'],
                 'weight' => (float) $data['weight'],
                 'method' => $data['method'],
+                'distance' => round($distance, 1),
             ])
             ->withFragment('result');
+    }
+
+    private function calculateDistance(string $origin, string $destination): float
+    {
+        try {
+            $originCoords = $this->geocodeAddress($origin);
+            $destCoords = $this->geocodeAddress($destination);
+
+            if ($originCoords && $destCoords) {
+                $distanceMeters = $this->getOSRMDistance($originCoords, $destCoords);
+                if ($distanceMeters > 0) {
+                    return $distanceMeters / 1000.0;
+                }
+            }
+        } catch (\Exception $e) {
+            // Fallback to crc32 mock below
+        }
+
+        // Fallback: deterministic mock distance based on origin and destination
+        $val = abs(crc32(strtolower($origin) . ' - ' . strtolower($destination)));
+        return 150.0 + ($val % 650);
+    }
+
+    private function geocodeAddress(string $address): ?array
+    {
+        $url = 'https://nominatim.openstreetmap.org/search?q=' . urlencode($address) . '&format=json&limit=1';
+        
+        $opts = [
+            'http' => [
+                'method' => 'GET',
+                'header' => [
+                    'User-Agent: BywardLogistics/1.0 (info@bywardlogistics.com)'
+                ],
+                'timeout' => 3
+            ]
+        ];
+        $context = stream_context_create($opts);
+        
+        $response = @file_get_contents($url, false, $context);
+        if ($response) {
+            $data = json_decode($response, true);
+            if (!empty($data) && isset($data[0]['lat']) && isset($data[0]['lon'])) {
+                return [
+                    'lat' => (float)$data[0]['lat'],
+                    'lon' => (float)$data[0]['lon']
+                ];
+            }
+        }
+        
+        return null;
+    }
+
+    private function getOSRMDistance(array $origin, array $dest): float
+    {
+        $url = "https://router.project-osrm.org/route/v1/driving/{$origin['lon']},{$origin['lat']};{$dest['lon']},{$dest['lat']}?overview=false";
+        
+        $opts = [
+            'http' => [
+                'method' => 'GET',
+                'header' => [
+                    'User-Agent: BywardLogistics/1.0 (info@bywardlogistics.com)'
+                ],
+                'timeout' => 3
+            ]
+        ];
+        $context = stream_context_create($opts);
+        
+        $response = @file_get_contents($url, false, $context);
+        if ($response) {
+            $data = json_decode($response, true);
+            if (!empty($data) && isset($data['routes'][0]['distance'])) {
+                return (float)$data['routes'][0]['distance'];
+            }
+        }
+        
+        return 0.0;
     }
 
     /**

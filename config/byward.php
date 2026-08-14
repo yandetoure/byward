@@ -67,12 +67,12 @@ return [
     'estimate' => [
         'base_fee' => 45.0,
         'methods' => [
-            'road_ltl'  => ['rate' => 1.35, 'min' => 95,  'days' => [3, 6]],
-            'road_ftl'  => ['rate' => 0.95, 'min' => 480, 'days' => [2, 4]],
-            'express'   => ['rate' => 4.20, 'min' => 180, 'days' => [1, 2]],
-            'air'       => ['rate' => 6.40, 'min' => 260, 'days' => [2, 4]],
-            'sea'       => ['rate' => 0.55, 'min' => 320, 'days' => [18, 32]],
-            'rail'      => ['rate' => 0.78, 'min' => 210, 'days' => [6, 11]],
+            'road_ltl'  => ['rate' => 1.35, 'distance_rate' => 0.18, 'min' => 95,  'days' => [3, 6]],
+            'road_ftl'  => ['rate' => 0.95, 'distance_rate' => 1.20, 'min' => 480, 'days' => [2, 4]],
+            'express'   => ['rate' => 4.20, 'distance_rate' => 0.40, 'min' => 180, 'days' => [1, 2]],
+            'air'       => ['rate' => 6.40, 'distance_rate' => 0.60, 'min' => 260, 'days' => [2, 4]],
+            'sea'       => ['rate' => 0.55, 'distance_rate' => 0.08, 'min' => 320, 'days' => [18, 32]],
+            'rail'      => ['rate' => 0.78, 'distance_rate' => 0.12, 'min' => 210, 'days' => [6, 11]],
         ],
         'currency' => 'USD',
     ],

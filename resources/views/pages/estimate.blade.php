@@ -45,24 +45,18 @@
                                 <label class="form-label" for="origin">
                                     {{ __('site.estimate.f_origin') }} <span class="req">*</span>
                                 </label>
-                                <select class="form-select" id="origin" name="origin" required>
-                                    <option value="" disabled {{ old('origin') ? '' : 'selected' }}>{{ __('site.quote.ph_region') }}</option>
-                                    @foreach (__('site.quote.regions') as $code => $region)
-                                        <option value="{{ $region }}" @selected(old('origin') === $region)>{{ $region }}</option>
-                                    @endforeach
-                                </select>
+                                <input type="text" class="form-control" id="origin" name="origin"
+                                       value="{{ old('origin') }}"
+                                       placeholder="{{ __('site.estimate.ph_origin') }}" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label" for="destination">
                                     {{ __('site.estimate.f_destination') }} <span class="req">*</span>
                                 </label>
-                                <select class="form-select" id="destination" name="destination" required>
-                                    <option value="" disabled {{ old('destination') ? '' : 'selected' }}>{{ __('site.quote.ph_region') }}</option>
-                                    @foreach (__('site.quote.regions') as $code => $region)
-                                        <option value="{{ $region }}" @selected(old('destination') === $region)>{{ $region }}</option>
-                                    @endforeach
-                                </select>
+                                <input type="text" class="form-control" id="destination" name="destination"
+                                       value="{{ old('destination') }}"
+                                       placeholder="{{ __('site.estimate.ph_destination') }}" required>
                             </div>
 
                             <div class="col-md-7">
@@ -132,6 +126,12 @@
                                     {{ $result['origin'] }} → {{ $result['destination'] }}</span>
                                 @php
                                     $fr = app()->getLocale() === 'fr';
+                                @endphp
+                                @if (isset($result['distance']))
+                                    <span><strong class="text-white">{{ __('site.estimate.result_distance') }} :</strong>
+                                        {{ number_format($result['distance'], 0, $fr ? ',' : '.', $fr ? ' ' : ',') }} km</span>
+                                @endif
+                                @php
                                     $weight = rtrim(rtrim(
                                         number_format($result['weight'], 1, $fr ? ',' : '.', $fr ? ' ' : ','),
                                         '0'

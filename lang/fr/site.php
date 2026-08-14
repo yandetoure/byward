@@ -525,8 +525,8 @@ return [
         'f_destination' => 'Destination',
         'f_method' => 'Méthode d\'expédition',
         'f_weight' => 'Poids (kg)',
-        'ph_origin' => 'Chicago, Illinois',
-        'ph_destination' => 'New York, NY',
+        'ph_origin' => 'par ex. 150 rue Elgin, Ottawa, ON',
+        'ph_destination' => 'par ex. 1000 rue de la Gauchetière O, Montréal, QC',
         'ph_method' => 'Sélectionnez une méthode…',
         'ph_weight' => 'par ex. 50',
 
@@ -544,6 +544,7 @@ return [
         'result_transit' => 'Délai de transit estimé',
         'result_days' => ':min à :max jours ouvrables',
         'result_route' => 'Itinéraire',
+        'result_distance' => 'Distance calculée',
         'result_weight' => 'Poids',
         'result_method' => 'Méthode',
         'result_disclaimer' => "Cette estimation est fournie à titre indicatif et repose sur des tarifs standards. Le prix définitif dépend des dimensions exactes, de la nature de la marchandise, des services complémentaires et de la disponibilité des transporteurs. Demandez un devis complet pour obtenir un prix confirmé.",
@@ -586,6 +587,8 @@ return [
         'ph_email' => 'jane@entreprise.com',
         'ph_phone' => '+1 (555) 000-0000',
         'ph_company' => 'Acme Corp',
+        'ph_origin' => 'par ex. 150 rue Elgin, Ottawa, ON',
+        'ph_destination' => 'par ex. 1000 rue de la Gauchetière O, Montréal, QC',
         'ph_region' => 'Sélectionnez une province/territoire...',
         'regions' => [
             'AB' => 'Alberta',
