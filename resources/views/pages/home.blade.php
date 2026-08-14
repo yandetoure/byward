@@ -213,13 +213,6 @@
                 <div class="media-frame media-wide">
                     <img src="{{ $img['why'] }}" alt="{{ __('site.services.items.warehousing.name') }}" loading="lazy">
                 </div>
-                <div class="media-badge badge-br">
-                    <span class="icon-tile icon-tile-sm icon-tile-red"><x-icon name="truck" size="20" /></span>
-                    <span>
-                        <strong>{{ __('site.home.why_badge_1_title') }}</strong>
-                        <span>{{ __('site.home.why_badge_1_text') }}</span>
-                    </span>
-                </div>
                 <div class="media-badge badge-tl d-none d-md-flex">
                     <span class="icon-tile icon-tile-sm"><x-icon name="globe" size="20" /></span>
                     <span>
