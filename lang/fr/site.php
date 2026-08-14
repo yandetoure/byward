@@ -97,8 +97,8 @@ return [
         ],
         'why_badge_1_title' => 'Depuis 2014',
         'why_badge_1_text' => 'Une décennie de livraisons',
-        'why_badge_2_title' => '30+ États',
-        'why_badge_2_text' => 'Couverture nord-américaine',
+        'why_badge_2_title' => 'ON & QC',
+        'why_badge_2_text' => 'Zone de service principale',
 
         'estimate_eyebrow' => 'Estimation instantanée',
         'estimate_title' => 'Besoin d\'une estimation rapide ?',
@@ -406,7 +406,7 @@ return [
                 'items' => [
                     [
                         'q' => 'Quelles régions Byward Logistics dessert-elle ?',
-                        'a' => "Nous assurons le transport de marchandises sur l'ensemble du territoire continental des États-Unis et proposons des expéditions internationales vers plus de 120 destinations grâce à nos partenariats avec des transporteurs internationaux. Contactez-nous pour vérifier la couverture de votre point de départ et de votre destination.",
+                        'a' => "Nous assurons le transport de marchandises au Canada, principalement en Ontario et au Québec, et proposons des expéditions internationales vers plus de 120 destinations grâce à nos partenariats avec des transporteurs internationaux. Contactez-nous pour vérifier la couverture de votre point de départ et de votre destination.",
                     ],
                     [
                         'q' => 'Depuis combien de temps Byward Logistics est-elle en activité ?',

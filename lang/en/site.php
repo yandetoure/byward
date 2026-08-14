@@ -97,8 +97,8 @@ return [
         ],
         'why_badge_1_title' => 'Since 2014',
         'why_badge_1_text' => 'A decade of deliveries',
-        'why_badge_2_title' => '30+ States',
-        'why_badge_2_text' => 'North American coverage',
+        'why_badge_2_title' => 'ON & QC',
+        'why_badge_2_text' => 'Primary service area',
 
         'estimate_eyebrow' => 'Instant Estimate',
         'estimate_title' => 'Need a Quick Delivery Estimate?',
@@ -406,7 +406,7 @@ return [
                 'items' => [
                     [
                         'q' => 'What regions does Byward Logistics service?',
-                        'a' => "We operate domestic routes across the contiguous US and offer international shipping to over 120 destinations through our global carrier partnerships. Contact us to confirm coverage for your specific origin and destination.",
+                        'a' => "We operate domestic routes across Canada, primarily serving Ontario and Quebec, and offer international shipping to over 120 destinations through our global carrier partnerships. Contact us to confirm coverage for your specific origin and destination.",
                     ],
                     [
                         'q' => 'How long has Byward Logistics been in business?',
