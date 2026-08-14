@@ -9,7 +9,7 @@ class Lead extends Model
     protected $fillable = [
         'type', 'locale', 'name', 'email', 'phone', 'company', 'message',
         'origin', 'destination', 'shipment_type', 'weight',
-        'length', 'width', 'height', 'pickup_date',
+        'length', 'width', 'height', 'pickup_date', 'photo_paths',
     ];
 
     protected function casts(): array
@@ -18,6 +18,7 @@ class Lead extends Model
             'pickup_date' => 'date',
             'handled' => 'boolean',
             'weight' => 'decimal:2',
+            'photo_paths' => 'array',
         ];
     }
 }

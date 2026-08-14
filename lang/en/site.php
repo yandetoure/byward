@@ -580,8 +580,10 @@ return [
         'f_width' => 'Width',
         'f_height' => 'Height',
         'f_pickup' => 'Preferred Pickup Date',
+        'f_photos' => 'Cargo Photos (optional)',
         'f_notes' => 'Additional Notes',
         'f_submit' => 'Submit Quote Request',
+        'ph_photos' => 'Upload photos of the cargo (max 10MB per file, JPEG/PNG/WebP, up to 10 files)',
 
         'ph_name' => 'Jane Smith',
         'ph_email' => 'jane@company.com',

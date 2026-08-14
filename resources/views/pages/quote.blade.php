@@ -45,7 +45,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('quote.send') }}" data-lock-submit novalidate>
+                    <form method="POST" action="{{ route('quote.send') }}" data-lock-submit novalidate enctype="multipart/form-data">
                         @csrf
 
                         <div class="d-none" aria-hidden="true">
@@ -151,6 +151,13 @@
                                 <label class="form-label" for="pickup_date">{{ __('site.quote.f_pickup') }}</label>
                                 <input type="date" class="form-control" id="pickup_date" name="pickup_date"
                                        value="{{ old('pickup_date') }}" min="{{ now()->toDateString() }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="photos">{{ __('site.quote.f_photos') }}</label>
+                                <input type="file" class="form-control" id="photos" name="photos[]" multiple accept="image/*">
+                                <div class="form-note mt-1" style="font-size: 0.78rem;">
+                                    {{ __('site.quote.ph_photos') }}
+                                </div>
                             </div>
                             <div class="col-12">
                                 <label class="form-label" for="message">{{ __('site.quote.f_notes') }}</label>

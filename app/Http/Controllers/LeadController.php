@@ -54,9 +54,25 @@ class LeadController extends Controller
             'height' => ['nullable', 'numeric', 'min:0', 'max:100000'],
             'pickup_date' => ['nullable', 'date', 'after_or_equal:today'],
             'message' => ['nullable', 'string', 'max:4000'],
+            'photos' => ['nullable', 'array', 'max:10'],
+            'photos.*' => ['file', 'image', 'mimes:jpeg,png,webp,jpg', 'max:10240'],
         ]);
 
-        $lead = Lead::create($data + ['type' => 'quote', 'locale' => App::getLocale()]);
+        $photoPaths = [];
+        if ($request->hasFile('photos')) {
+            foreach ($request->file('photos') as $photo) {
+                if ($photo->isValid()) {
+                    $photoPaths[] = $photo->store('quotes');
+                }
+            }
+        }
+
+        $leadData = collect($data)->except(['photos'])->toArray();
+        if (!empty($photoPaths)) {
+            $leadData['photo_paths'] = $photoPaths;
+        }
+
+        $lead = Lead::create($leadData + ['type' => 'quote', 'locale' => App::getLocale()]);
 
         Log::info('New quote request received', ['id' => $lead->id, 'email' => $lead->email]);
 

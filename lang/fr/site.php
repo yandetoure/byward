@@ -580,8 +580,10 @@ return [
         'f_width' => 'Largeur',
         'f_height' => 'Hauteur',
         'f_pickup' => 'Date de retrait souhaitée',
+        'f_photos' => 'Photos de la marchandise (facultatif)',
         'f_notes' => 'Notes complémentaires',
         'f_submit' => 'Envoyer la demande de devis',
+        'ph_photos' => 'Téléchargez des photos de la marchandise (max 10 Mo par fichier, JPEG/PNG/WebP, jusqu\'à 10 fichiers)',
 
         'ph_name' => 'Jane Smith',
         'ph_email' => 'jane@entreprise.com',
