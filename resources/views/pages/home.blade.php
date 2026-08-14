@@ -134,7 +134,7 @@
 {{-- ============================ PARTNER LOGOS ============================ --}}
 <section class="section-sm bg-light border-bottom border-light-subtle overflow-hidden">
     <div class="container text-center">
-        <p class="text-muted fw-semibold mb-4 fs-6 text-uppercase" style="letter-spacing: 1px;" data-reveal>Nos Partenaires</p>
+        <p class="text-muted fw-semibold mb-4 fs-6 text-uppercase" style="letter-spacing: 1px;" data-reveal>{{ __('site.common.partners') }}</p>
         <div class="marquee mt-4" data-reveal>
             <div class="marquee-track">
                 @php
@@ -142,7 +142,7 @@
                 @endphp
                 @foreach(array_merge($partners, $partners) as $partner)
                 <div class="partner-logo d-flex align-items-center justify-content-center px-4" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="{{ asset('partners/' . $partner) }}" alt="Partenaire" style="max-height: 55px; width: auto; object-fit: contain;">
+                    <img src="{{ asset('partners/' . $partner) }}" alt="{{ __('site.common.partner') }}" style="max-height: 55px; width: auto; object-fit: contain;">
                 </div>
                 @endforeach
             </div>

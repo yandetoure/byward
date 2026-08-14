@@ -32,6 +32,8 @@ return [
         'back_top' => 'Retour en haut',
         'required_fields' => 'Champs obligatoires',
         'sending' => 'Envoi en cours…',
+        'partners' => 'Nos Partenaires',
+        'partner' => 'Partenaire',
     ],
 
     /* ---------------------------------------------------------------- */

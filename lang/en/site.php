@@ -32,6 +32,8 @@ return [
         'back_top' => 'Back to top',
         'required_fields' => 'Required fields',
         'sending' => 'Sending…',
+        'partners' => 'OUR PARTNERS',
+        'partner' => 'Partner',
     ],
 
     /* ---------------------------------------------------------------- */
