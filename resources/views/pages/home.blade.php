@@ -50,7 +50,7 @@
 {{-- ============================ HERO ============================ --}}
 <section class="hero">
     <div class="hero-media">
-        <img src="{{ $img['hero'] }}" alt="" data-parallax="0.14" fetchpriority="high">
+        <img src="{{ $img['hero'] }}" alt="" data-parallax="0.04" fetchpriority="high">
     </div>
     <div class="grid-overlay"></div>
     <div class="glow glow-red" style="width:380px;height:380px;top:8%;left:-6%;"></div>

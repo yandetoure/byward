@@ -30,7 +30,7 @@ return [
     ],
 
     'images' => [
-        'hero'            => $unsplash('1519003722824-194d4455a60c', 2000),
+        'hero'            => '/images/banner.jpeg',
         'hero_services'   => $unsplash('1586528116311-ad8dd3c8310d', 1800),
         'hero_industries' => $unsplash('1565793298595-6a879b1d9492', 1800),
         'hero_about'      => $unsplash('1553413077-190dd305871c', 1800),
