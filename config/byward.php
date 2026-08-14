@@ -59,7 +59,6 @@ return [
         'industry_automotive'    => $unsplash('1486262715619-67b85e0b08d3', 900),
         'industry_food'          => $unsplash('1542838132-92c53300491e', 900),
         'industry_technology'    => $unsplash('1581091226825-a6a2a5aee158', 900),
-        'industry_energy'        => $unsplash('1466611653911-95081537e5b7', 900),
     ],
 
     /*

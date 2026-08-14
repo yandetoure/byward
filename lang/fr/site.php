@@ -261,14 +261,14 @@ return [
     /* ---------------------------------------------------------------- */
     'industries' => [
         'meta_title' => 'Industries desservies — Byward Logistics',
-        'meta_description' => 'Une logistique adaptée à votre secteur : commerce de détail, santé, industrie, automobile, agroalimentaire, technologie et énergie.',
+        'meta_description' => 'Une logistique adaptée à votre secteur : commerce de détail, santé, industrie, automobile, agroalimentaire, et technologie.',
 
         'eyebrow' => 'Expertise sectorielle',
         'title' => 'Une logistique adaptée à votre secteur d\'activité',
         'text' => "Chaque secteur a ses propres exigences, réglementations et profils de risque. Nous proposons des solutions conçues sur mesure pour votre secteur d'activité, et non des solutions adaptées a posteriori.",
 
         'intro_eyebrow' => 'Secteurs d\'activité que nous desservons',
-        'intro_title' => 'Une expertise approfondie dans 7 secteurs',
+        'intro_title' => 'Une expertise approfondie dans 6 secteurs',
         'intro_text' => "Des produits pharmaceutiques thermosensibles aux cargaisons industrielles complexes, nous avons développé l'expertise, le réseau et les processus dont votre secteur a besoin.",
 
         'items' => [
@@ -336,17 +336,6 @@ return [
                     'Manipulation antistatique et sécurisée contre les décharges électrostatiques',
                     'Assurance marchandises de grande valeur',
                     'Entreposage sécurisé et chaîne de contrôle',
-                ],
-            ],
-            'energy' => [
-                'name' => 'Énergie et services publics',
-                'short' => 'Logistique de projet vers les sites isolés du pétrole, du gaz et des énergies renouvelables.',
-                'long' => "Les projets énergétiques se déroulent dans des environnements isolés et difficiles. Nous prenons en charge la logistique du transport des équipements, des composants et des matériaux vers les sites de projets pétroliers et gaziers, d'énergies renouvelables et de services publics.",
-                'features' => [
-                    'Gestion de cargaisons de projet',
-                    'Transport de marchandises dangereuses (ADR/IATA)',
-                    'Livraison sur sites isolés et hors route',
-                    'Capacité de fret d\'urgence',
                 ],
             ],
         ],
@@ -436,7 +425,7 @@ return [
                     ],
                     [
                         'q' => 'Dans quels secteurs êtes-vous spécialisé ?',
-                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, l'agroalimentaire, la technologie et l'électronique, ainsi que l'énergie et les services publics. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
+                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, l'agroalimentaire, la technologie et l'électronique. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
                     ],
                 ],
             ],

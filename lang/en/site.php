@@ -261,14 +261,14 @@ return [
     /* ---------------------------------------------------------------- */
     'industries' => [
         'meta_title' => 'Industries We Serve — Byward Logistics',
-        'meta_description' => 'Logistics built for your sector: retail, healthcare, manufacturing, automotive, food, technology, and energy.',
+        'meta_description' => 'Logistics built for your sector: retail, healthcare, manufacturing, automotive, food, and technology.',
 
         'eyebrow' => 'Sector Expertise',
         'title' => 'Logistics Built Around Your Industry',
         'text' => "Every sector carries its own requirements, regulations and risk profile. We design solutions for your industry from the ground up — not generic services retrofitted after the fact.",
 
         'intro_eyebrow' => 'Industries We Serve',
-        'intro_title' => 'Deep Expertise Across 7 Sectors',
+        'intro_title' => 'Deep Expertise Across 6 Sectors',
         'intro_text' => "From temperature-sensitive pharmaceuticals to complex industrial cargo, we have built the expertise, network and processes your industry needs.",
 
         'items' => [
@@ -336,17 +336,6 @@ return [
                     'ESD-safe and anti-static handling',
                     'High-value cargo insurance',
                     'Secure storage and chain of custody',
-                ],
-            ],
-            'energy' => [
-                'name' => 'Energy & Utilities',
-                'short' => 'Project logistics to remote oil, gas, renewables and utility sites.',
-                'long' => "Energy projects run in remote and demanding environments. We handle the logistics of moving equipment, components and materials to oil and gas, renewable and utility project sites.",
-                'features' => [
-                    'Project cargo management',
-                    'Hazmat transport (ADR/IATA)',
-                    'Remote and off-road site delivery',
-                    'Emergency freight capability',
                 ],
             ],
         ],
@@ -436,7 +425,7 @@ return [
                     ],
                     [
                         'q' => 'Which industries do you specialise in?',
-                        'a' => "Our core sectors are retail and e-commerce, healthcare and pharma, manufacturing, automotive, food and beverage, technology and electronics, and energy and utilities. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
+                        'a' => "Our core sectors are retail and e-commerce, healthcare and pharma, manufacturing, automotive, food and beverage, and technology and electronics. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
                     ],
                 ],
             ],
