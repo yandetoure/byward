@@ -261,15 +261,15 @@ return [
     /* ---------------------------------------------------------------- */
     'industries' => [
         'meta_title' => 'Industries desservies — Byward Logistics',
-        'meta_description' => 'Une logistique adaptée à votre secteur : commerce de détail, santé, industrie, automobile, agroalimentaire, technologie, construction et énergie.',
+        'meta_description' => 'Une logistique adaptée à votre secteur : commerce de détail, santé, industrie, automobile, agroalimentaire, technologie et énergie.',
 
         'eyebrow' => 'Expertise sectorielle',
         'title' => 'Une logistique adaptée à votre secteur d\'activité',
         'text' => "Chaque secteur a ses propres exigences, réglementations et profils de risque. Nous proposons des solutions conçues sur mesure pour votre secteur d'activité, et non des solutions adaptées a posteriori.",
 
         'intro_eyebrow' => 'Secteurs d\'activité que nous desservons',
-        'intro_title' => 'Une expertise approfondie dans plus de 8 secteurs',
-        'intro_text' => "Des produits pharmaceutiques thermosensibles aux cargaisons de construction hors gabarit, nous avons développé l'expertise, le réseau et les processus dont votre secteur a besoin.",
+        'intro_title' => 'Une expertise approfondie dans 7 secteurs',
+        'intro_text' => "Des produits pharmaceutiques thermosensibles aux cargaisons industrielles complexes, nous avons développé l'expertise, le réseau et les processus dont votre secteur a besoin.",
 
         'items' => [
             'retail' => [
@@ -336,17 +336,6 @@ return [
                     'Manipulation antistatique et sécurisée contre les décharges électrostatiques',
                     'Assurance marchandises de grande valeur',
                     'Entreposage sécurisé et chaîne de contrôle',
-                ],
-            ],
-            'construction' => [
-                'name' => 'Construction et industrie',
-                'short' => 'Livraisons coordonnées sur chantier, y compris les chargements hors gabarit et les engins lourds.',
-                'long' => "Le respect des délais des projets dépend de la disponibilité des matériaux. Nous coordonnons les livraisons complexes sur les chantiers, notamment les chargements hors gabarit, les engins lourds et les livraisons de matériaux urgentes, afin d'assurer la continuité des projets.",
-                'features' => [
-                    'Fret hors gabarit et lourd',
-                    'Livraison sur site juste à temps',
-                    'Planification des permis et des itinéraires',
-                    'Équipement pour plateaux et semi-remorques surbaissées',
                 ],
             ],
             'energy' => [
@@ -447,7 +436,7 @@ return [
                     ],
                     [
                         'q' => 'Dans quels secteurs êtes-vous spécialisé ?',
-                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, l'agroalimentaire, la technologie et l'électronique, la construction ainsi que l'énergie et les services publics. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
+                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, l'agroalimentaire, la technologie et l'électronique, ainsi que l'énergie et les services publics. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
                     ],
                 ],
             ],

@@ -261,15 +261,15 @@ return [
     /* ---------------------------------------------------------------- */
     'industries' => [
         'meta_title' => 'Industries We Serve — Byward Logistics',
-        'meta_description' => 'Logistics built for your sector: retail, healthcare, manufacturing, automotive, food, technology, construction and energy.',
+        'meta_description' => 'Logistics built for your sector: retail, healthcare, manufacturing, automotive, food, technology, and energy.',
 
         'eyebrow' => 'Sector Expertise',
         'title' => 'Logistics Built Around Your Industry',
         'text' => "Every sector carries its own requirements, regulations and risk profile. We design solutions for your industry from the ground up — not generic services retrofitted after the fact.",
 
         'intro_eyebrow' => 'Industries We Serve',
-        'intro_title' => 'Deep Expertise Across 8+ Sectors',
-        'intro_text' => "From temperature-sensitive pharmaceuticals to oversized construction cargo, we have built the expertise, network and processes your industry needs.",
+        'intro_title' => 'Deep Expertise Across 7 Sectors',
+        'intro_text' => "From temperature-sensitive pharmaceuticals to complex industrial cargo, we have built the expertise, network and processes your industry needs.",
 
         'items' => [
             'retail' => [
@@ -336,17 +336,6 @@ return [
                     'ESD-safe and anti-static handling',
                     'High-value cargo insurance',
                     'Secure storage and chain of custody',
-                ],
-            ],
-            'construction' => [
-                'name' => 'Construction & Industrial',
-                'short' => 'Coordinated site deliveries including oversized loads and heavy equipment.',
-                'long' => "Project timelines depend on material availability. We coordinate complex site deliveries — oversized loads, heavy machinery and urgent material runs — to keep your projects moving.",
-                'features' => [
-                    'Oversized and heavy haul freight',
-                    'Just-in-time site delivery',
-                    'Permit and route planning',
-                    'Flatbed and lowboy equipment',
                 ],
             ],
             'energy' => [
@@ -447,7 +436,7 @@ return [
                     ],
                     [
                         'q' => 'Which industries do you specialise in?',
-                        'a' => "Our core sectors are retail and e-commerce, healthcare and pharma, manufacturing, automotive, food and beverage, technology and electronics, construction, and energy and utilities. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
+                        'a' => "Our core sectors are retail and e-commerce, healthcare and pharma, manufacturing, automotive, food and beverage, technology and electronics, and energy and utilities. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
                     ],
                 ],
             ],

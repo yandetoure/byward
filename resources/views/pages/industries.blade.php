@@ -13,7 +13,6 @@
         'automotive' => 'truck',
         'food' => 'box',
         'technology' => 'zap',
-        'construction' => 'warehouse',
         'energy' => 'globe',
     ];
 @endphp
