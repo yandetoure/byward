@@ -60,17 +60,23 @@
             <div class="card-body p-3 bg-light" id="live-chat-messages" style="height: 350px; overflow-y: auto;">
                 <div class="d-flex mb-3">
                     <div class="bg-white border rounded-3 p-2 shadow-sm" style="max-width: 85%;">
-                        <p class="mb-0 text-dark" style="font-size: 0.9rem;">Bonjour ! Comment pouvons-nous vous aider aujourd'hui ? Choisissez une question ci-dessous :</p>
+                        <p class="mb-0 text-dark" style="font-size: 0.9rem;">{{ __('site.chat.welcome') }}</p>
                     </div>
                 </div>
             </div>
             <div class="card-footer bg-white p-2 border-top">
-                <div class="d-flex flex-column gap-2" id="live-chat-options">
-                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="Vous pouvez obtenir un devis gratuitement et en ligne en cliquant sur le bouton 'Demander un devis' situé dans le menu principal en haut de la page.">Comment obtenir un devis ?</button>
-                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="Nous sommes ouverts du lundi au vendredi, de 8h00 à 18h00. Vous pouvez également nous contacter par email via la page Contact.">Quelles sont vos heures d'ouverture ?</button>
-                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="Nos bureaux sont situés au 123 Rue de la Logistique, Dakar, Sénégal.">Où êtes-vous situés ?</button>
-                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="Nous proposons une gamme complète de services incluant le fret international, l'entreposage, la logistique du dernier kilomètre, le dédouanement et les services Gant Blanc.">Quels services proposez-vous ?</button>
+                <div class="d-flex flex-column gap-2 mb-2" id="live-chat-options">
+                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="{{ __('site.chat.questions.a1') }}">{{ __('site.chat.questions.q1') }}</button>
+                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="{{ __('site.chat.questions.a2') }}">{{ __('site.chat.questions.q2') }}</button>
+                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="{{ __('site.chat.questions.a3') }}">{{ __('site.chat.questions.q3') }}</button>
+                    <button class="btn btn-outline-brand btn-sm text-start live-chat-option" data-answer="{{ __('site.chat.questions.a4') }}">{{ __('site.chat.questions.q4') }}</button>
                 </div>
+                <form id="live-chat-form" class="d-flex gap-2 align-items-center border-top pt-2" data-contact-url="{{ route('contact') }}" data-bot-response="{{ __('site.chat.fallback_response', ['url' => route('contact')]) }}">
+                    <input type="text" id="live-chat-input" class="form-control form-control-sm" placeholder="{{ __('site.chat.placeholder') }}" aria-label="{{ __('site.chat.placeholder') }}" required autocomplete="off" style="border-radius: 20px;">
+                    <button type="submit" id="live-chat-submit" class="btn btn-brand btn-sm p-0 d-flex align-items-center justify-content-center" style="border-radius: 50%; width: 32px; height: 32px; flex-shrink: 0;" aria-label="{{ __('site.chat.send') }}">
+                        <x-icon name="arrow-right" size="14" />
+                    </button>
+                </form>
             </div>
         </div>
         <button type="button" id="live-chat-trigger" class="btn p-0 border-0 bg-transparent text-danger shadow-none" aria-label="Open Live Chat">

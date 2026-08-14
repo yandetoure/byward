@@ -750,4 +750,22 @@ return [
         'f_submit' => 'Submit Application',
         'success' => 'Thank you! Your application has been received. Our team will review your resume and contact you soon.',
     ],
+
+    'chat' => [
+        'welcome' => 'Hello! How can we help you today? Choose a question below:',
+        'placeholder' => 'Write a message...',
+        'send' => 'Send',
+        'fallback_response' => 'Thank you for your message! A representative will get back to you as soon as possible. You can also email us directly at <a href="mailto:info@bywardlogistics.com" class="text-brand fw-bold">info@bywardlogistics.com</a>, call us at <a href="tel:+16135010653" class="text-brand fw-bold">(613) 501-0653</a>, or visit our <a href=":url" class="text-brand fw-bold">contact page</a>.',
+        'questions' => [
+            'q1' => 'How to get a quote?',
+            'a1' => 'You can get a free quote online by clicking the \'Get a Quote\' button in the main menu at the top of the page.',
+            'q2' => 'What are your opening hours?',
+            'a2' => 'We are open Monday to Friday, from 8:00 AM to 6:00 PM. You can also contact us by email via the Contact page.',
+            'q3' => 'Where are you located?',
+            'a3' => 'Our offices are located at 123 Rue de la Logistique, Dakar, Senegal.',
+            'q4' => 'What services do you offer?',
+            'a4' => 'We offer a full range of services including international freight, warehousing, last-mile logistics, customs clearance, and White Glove services.',
+        ],
+    ],
 ];
+

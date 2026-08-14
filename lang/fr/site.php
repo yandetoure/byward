@@ -750,4 +750,22 @@ return [
         'f_submit' => 'Envoyer la candidature',
         'success' => 'Merci ! Votre candidature a bien été reçue. Notre équipe examinera votre CV et vous contactera très prochainement.',
     ],
+
+    'chat' => [
+        'welcome' => 'Bonjour ! Comment pouvons-nous vous aider aujourd\'hui ? Choisissez une question ci-dessous :',
+        'placeholder' => 'Écrivez un message...',
+        'send' => 'Envoyer',
+        'fallback_response' => 'Merci pour votre message ! Un conseiller va vous répondre dans les plus brefs délais. Vous pouvez également nous écrire directement à <a href="mailto:info@bywardlogistics.com" class="text-brand fw-bold">info@bywardlogistics.com</a>, nous appeler au <a href="tel:+16135010653" class="text-brand fw-bold">(613) 501-0653</a>, ou visiter notre <a href=":url" class="text-brand fw-bold">page de contact</a>.',
+        'questions' => [
+            'q1' => 'Comment obtenir un devis ?',
+            'a1' => 'Vous pouvez obtenir un devis gratuitement et en ligne en cliquant sur le bouton \'Demander un devis\' situé dans le menu principal en haut de la page.',
+            'q2' => 'Quelles sont vos heures d\'ouverture ?',
+            'a2' => 'Nous sommes ouverts du lundi au vendredi, de 8h00 à 18h00. Vous pouvez également nous contacter par email via la page Contact.',
+            'q3' => 'Où êtes-vous situés ?',
+            'a3' => 'Nos bureaux sont situés au 123 Rue de la Logistique, Dakar, Sénégal.',
+            'q4' => 'Quels services proposez-vous ?',
+            'a4' => 'Nous proposons une gamme complète de services incluant le fret international, l\'entreposage, la logistique du dernier kilomètre, le dédouanement et les services Gant Blanc.',
+        ],
+    ],
 ];
+

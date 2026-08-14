@@ -225,8 +225,47 @@ function initLiveChat() {
 
     const options = document.querySelectorAll('.live-chat-option');
     const messages = document.getElementById('live-chat-messages');
+    const chatForm = document.getElementById('live-chat-form');
+    const chatInput = document.getElementById('live-chat-input');
+    const chatSubmitBtn = document.getElementById('live-chat-submit');
+    const optionsContainer = document.getElementById('live-chat-options');
 
-    if (options.length && messages) {
+    if (!messages) return;
+
+    function showTypingIndicator() {
+        const typingIndicator = document.createElement('div');
+        typingIndicator.className = 'd-flex mb-3 align-items-center live-chat-typing';
+        typingIndicator.innerHTML = `
+            <div class="bg-white border rounded-3 p-2 shadow-sm d-flex align-items-center" style="max-width: 85%;">
+                <div class="typing-dots d-flex gap-1 align-items-center py-1 px-2">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        `;
+        messages.appendChild(typingIndicator);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+        const typingEl = messages.querySelector('.live-chat-typing');
+        if (typingEl) typingEl.remove();
+    }
+
+    function setChatState(disabled) {
+        if (optionsContainer) {
+            optionsContainer.style.display = disabled ? 'none' : 'flex';
+        }
+        if (chatInput) {
+            chatInput.disabled = disabled;
+        }
+        if (chatSubmitBtn) {
+            chatSubmitBtn.disabled = disabled;
+        }
+    }
+
+    if (options.length) {
         options.forEach(btn => {
             btn.addEventListener('click', function() {
                 const question = this.textContent;
@@ -239,21 +278,66 @@ function initLiveChat() {
                 messages.appendChild(userMsg);
                 messages.scrollTop = messages.scrollHeight;
 
-                // Disable options temporarily
-                const optionsContainer = document.getElementById('live-chat-options');
-                optionsContainer.style.display = 'none';
+                // Disable options and form temporarily
+                setChatState(true);
+
+                // Show typing indicator
+                showTypingIndicator();
 
                 // Simulate delay
                 setTimeout(() => {
+                    removeTypingIndicator();
+
                     const botMsg = document.createElement('div');
                     botMsg.className = 'd-flex mb-3';
                     botMsg.innerHTML = `<div class="bg-white border rounded-3 p-2 shadow-sm" style="max-width: 85%;"><p class="mb-0 text-dark fs-sm" style="font-size: 0.9rem;">${answer}</p></div>`;
                     messages.appendChild(botMsg);
                     messages.scrollTop = messages.scrollHeight;
                     
-                    optionsContainer.style.display = 'flex';
-                }, 600);
+                    setChatState(false);
+                }, 800);
             });
+        });
+    }
+
+    if (chatForm && chatInput) {
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageText = chatInput.value.trim();
+            if (!messageText) return;
+
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'd-flex mb-3 justify-content-end';
+            userMsg.innerHTML = `<div class="bg-navy text-white rounded-3 p-2 shadow-sm" style="max-width: 85%;"><p class="mb-0 fs-sm" style="font-size: 0.9rem;">${messageText}</p></div>`;
+            messages.appendChild(userMsg);
+            messages.scrollTop = messages.scrollHeight;
+
+            // Clear input
+            chatInput.value = '';
+
+            // Disable options and form temporarily
+            setChatState(true);
+
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Simulate delay
+            setTimeout(() => {
+                removeTypingIndicator();
+
+                const botMsg = document.createElement('div');
+                botMsg.className = 'd-flex mb-3';
+                
+                const responseText = chatForm.dataset.botResponse || 'Thank you for your message! A representative will get back to you soon.';
+
+                botMsg.innerHTML = `<div class="bg-white border rounded-3 p-2 shadow-sm" style="max-width: 85%;"><p class="mb-0 text-dark fs-sm" style="font-size: 0.9rem;">${responseText}</p></div>`;
+                messages.appendChild(botMsg);
+                messages.scrollTop = messages.scrollHeight;
+
+                setChatState(false);
+                chatInput.focus();
+            }, 1200);
         });
     }
 }
