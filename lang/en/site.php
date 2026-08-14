@@ -377,12 +377,12 @@ return [
         'story_eyebrow' => 'Our Story',
         'story_title' => 'A Story of Steady Growth',
         'timeline' => [
-            ['year' => '2014', 'short' => '14', 'text' => 'Byward Logistics founded with 3 trucks and a team of 8.'],
-            ['year' => '2016', 'short' => '16', 'text' => "First warehouse opened; warehousing and fulfillment services launched."],
-            ['year' => '2018', 'short' => '18', 'text' => "Expanded into international ocean freight; customs brokerage division launched."],
-            ['year' => '2020', 'short' => '20', 'text' => "Real-time tracking platform rolled out across the entire fleet."],
-            ['year' => '2022', 'short' => '22', 'text' => "Passed 25,000 shipments; East and West Coast logistics hubs opened."],
-            ['year' => '2024', 'short' => '24', 'text' => "Now serving 500+ business clients across 120+ destinations worldwide."],
+            ['year' => 'Our Beginning', 'short' => '01', 'text' => 'Built with a commitment to reliable and professional transportation.'],
+            ['year' => 'Our Growth', 'short' => '02', 'text' => 'Expanded our services to better meet our clients’ logistics needs.'],
+            ['year' => 'Our Expertise', 'short' => '03', 'text' => 'Developed strong experience in transportation and supply chain solutions.'],
+            ['year' => 'Our Coverage', 'short' => '04', 'text' => 'Serving businesses across Ontario and Quebec.'],
+            ['year' => 'Our Commitment', 'short' => '05', 'text' => 'Focused on safe, efficient and on-time deliveries.'],
+            ['year' => 'Our Future', 'short' => '06', 'text' => 'Continuing to grow while maintaining dependable, personalized service.'],
         ],
 
         'cta_title' => 'Partner with Byward Logistics',

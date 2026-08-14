@@ -119,7 +119,7 @@
                 <ul class="timeline">
                     @foreach (__('site.about.timeline') as $i => $entry)
                         <li class="timeline-item" data-reveal="right" data-reveal-delay="{{ $i * 80 }}">
-                            <span class="timeline-year" aria-hidden="true">’{{ $entry['short'] }}</span>
+                            <span class="timeline-year" aria-hidden="true">{{ $entry['short'] }}</span>
                             <h4>{{ $entry['year'] }}</h4>
                             <p>{{ $entry['text'] }}</p>
                         </li>

@@ -377,12 +377,12 @@ return [
         'story_eyebrow' => 'Notre histoire',
         'story_title' => 'Une histoire de croissance constante',
         'timeline' => [
-            ['year' => '2014', 'short' => '14', 'text' => 'Byward Logistics a été fondée avec 3 camions et une équipe de 8 personnes.'],
-            ['year' => '2016', 'short' => '16', 'text' => "Ouverture du premier entrepôt ; lancement des services d'entreposage et de traitement des commandes."],
-            ['year' => '2018', 'short' => '18', 'text' => "Expansion dans le transport maritime international ; lancement d'une division de courtage en douane."],
-            ['year' => '2020', 'short' => '20', 'text' => "Plateforme de suivi en temps réel déployée sur l'ensemble de la flotte."],
-            ['year' => '2022', 'short' => '22', 'text' => "Franchissement du cap des 25 000 expéditions ; ouverture de plateformes logistiques sur les côtes Est et Ouest."],
-            ['year' => '2024', 'short' => '24', 'text' => "Nous desservons aujourd'hui plus de 500 clients professionnels dans plus de 120 destinations à travers le monde."],
+            ['year' => 'Nos débuts', 'short' => '01', 'text' => 'Créés avec un engagement de transport fiable et professionnel.'],
+            ['year' => 'Notre croissance', 'short' => '02', 'text' => 'Extension de nos services pour mieux répondre aux besoins logistiques de nos clients.'],
+            ['year' => 'Notre expertise', 'short' => '03', 'text' => 'Développement d\'une solide expérience dans le transport et les solutions de chaîne d\'approvisionnement.'],
+            ['year' => 'Notre couverture', 'short' => '04', 'text' => 'Au service des entreprises de l\'Ontario et du Québec.'],
+            ['year' => 'Notre engagement', 'short' => '05', 'text' => 'Axé sur des livraisons sûres, efficaces et ponctuelles.'],
+            ['year' => 'Notre avenir', 'short' => '06', 'text' => 'Poursuivre notre croissance tout en maintenant un service fiable et personnalisé.'],
         ],
 
         'cta_title' => 'Devenez partenaire de Byward Logistics',
