@@ -409,10 +409,6 @@ return [
                         'a' => "We operate domestic routes across Canada, primarily serving Ontario and Quebec, and offer international shipping to over 120 destinations through our global carrier partnerships. Contact us to confirm coverage for your specific origin and destination.",
                     ],
                     [
-                        'q' => 'How long has Byward Logistics been in business?',
-                        'a' => "Byward Logistics was founded in 2014 with three trucks and a team of eight. More than a decade later we serve over 500 business clients and have completed 50,000+ deliveries to 120+ destinations.",
-                    ],
-                    [
                         'q' => 'Which industries do you specialise in?',
                         'a' => "Our core sectors are retail and e-commerce, healthcare and pharma, manufacturing, automotive, and food and beverage. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
                     ],

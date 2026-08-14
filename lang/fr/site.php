@@ -409,10 +409,6 @@ return [
                         'a' => "Nous assurons le transport de marchandises au Canada, principalement en Ontario et au Québec, et proposons des expéditions internationales vers plus de 120 destinations grâce à nos partenariats avec des transporteurs internationaux. Contactez-nous pour vérifier la couverture de votre point de départ et de votre destination.",
                     ],
                     [
-                        'q' => 'Depuis combien de temps Byward Logistics est-elle en activité ?',
-                        'a' => "Byward Logistics a été fondée en 2014 avec trois camions et une équipe de huit personnes. Après plus de dix ans d'activité, nous accompagnons aujourd'hui plus de 500 clients professionnels et avons effectué plus de 50 000 livraisons vers plus de 120 destinations.",
-                    ],
-                    [
                         'q' => 'Dans quels secteurs êtes-vous spécialisé ?',
                         'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, et l'agroalimentaire. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
                     ],
