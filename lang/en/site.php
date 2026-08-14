@@ -738,6 +738,12 @@ return [
             'admin' => 'Administration & Support',
             'other' => 'Other'
         ],
+        'position_desc' => [
+            'driver' => 'Join our modern fleet. Ensure safe and timely transport of goods with flexible schedules and great benefits.',
+            'warehouse' => 'The heart of our operations. Manage inventory, fulfill orders, and keep our supply chain moving efficiently.',
+            'logistics' => 'The brains behind our routes. Plan transport operations and optimize the efficiency of our daily deliveries.',
+            'admin' => 'The backbone of our team. Provide exceptional administrative support and help keep the business running smoothly.',
+        ],
         'f_resume' => 'Upload Resume (PDF, DOCX)',
         'f_message' => 'Cover Letter / Message',
         'ph_message' => 'Tell us why you are a great fit for Byward...',

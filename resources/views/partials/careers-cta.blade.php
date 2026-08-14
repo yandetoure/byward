@@ -15,7 +15,8 @@
                     @if($val !== 'other')
                     <div class="col-md-6 col-lg-3">
                         <a href="{{ route('careers') }}?position={{ $val }}#form" class="careers-card text-decoration-none h-100 d-flex flex-column p-4">
-                            <h5 class="mb-4">{{ $label }}</h5>
+                            <h5 class="mb-3">{{ $label }}</h5>
+                            <p class="mb-4 text-white-50 text-balance" style="font-size: 0.9rem; line-height: 1.5;">{{ __('site.careers.position_desc.' . $val) }}</p>
                             <div class="mt-auto">
                                 <span class="apply-link">{{ __('site.careers.apply_now') }} <x-icon name="arrow-right" size="16" /></span>
                             </div>

@@ -738,6 +738,12 @@ return [
             'admin' => 'Administration & Support',
             'other' => 'Autre'
         ],
+        'position_desc' => [
+            'driver' => 'Rejoignez notre flotte moderne. Assurez le transport sécurisé et ponctuel de nos marchandises avec des horaires flexibles.',
+            'warehouse' => 'Au cœur de nos opérations. Gérez l\'inventaire, préparez les commandes et maintenez notre chaîne d\'approvisionnement en mouvement.',
+            'logistics' => 'Le cerveau derrière nos routes. Planifiez les opérations de transport et optimisez l\'efficacité de nos livraisons quotidiennes.',
+            'admin' => 'Le pilier de l\'équipe. Assurez un support administratif exceptionnel et contribuez au bon fonctionnement de l\'entreprise.',
+        ],
         'f_resume' => 'Télécharger votre CV (PDF, DOCX)',
         'f_message' => 'Lettre de motivation / Message',
         'ph_message' => 'Dites-nous pourquoi vous êtes le candidat idéal pour Byward...',
