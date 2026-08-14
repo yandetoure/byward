@@ -261,14 +261,14 @@ return [
     /* ---------------------------------------------------------------- */
     'industries' => [
         'meta_title' => 'Industries desservies — Byward Logistics',
-        'meta_description' => 'Une logistique adaptée à votre secteur : commerce de détail, santé, industrie, automobile, agroalimentaire, et technologie.',
+        'meta_description' => 'Une logistique adaptée à votre secteur : commerce de détail, santé, industrie, automobile, et agroalimentaire.',
 
         'eyebrow' => 'Expertise sectorielle',
         'title' => 'Une logistique adaptée à votre secteur d\'activité',
         'text' => "Chaque secteur a ses propres exigences, réglementations et profils de risque. Nous proposons des solutions conçues sur mesure pour votre secteur d'activité, et non des solutions adaptées a posteriori.",
 
         'intro_eyebrow' => 'Secteurs d\'activité que nous desservons',
-        'intro_title' => 'Une expertise approfondie dans 6 secteurs',
+        'intro_title' => 'Une expertise approfondie dans 5 secteurs',
         'intro_text' => "Des produits pharmaceutiques thermosensibles aux cargaisons industrielles complexes, nous avons développé l'expertise, le réseau et les processus dont votre secteur a besoin.",
 
         'items' => [
@@ -325,17 +325,6 @@ return [
                     'Conformité aux normes HACCP et à la sécurité alimentaire',
                     'Enregistrement et rapport de la température',
                     'Spécialistes de la livraison à durée de conservation courte',
-                ],
-            ],
-            'technology' => [
-                'name' => 'Technologie et électronique',
-                'short' => 'Un transport sécurisé et assuré pour les équipements électroniques de grande valeur.',
-                'long' => "Les équipements électroniques de haute valeur et les matériels sensibles nécessitent une manutention spécialisée, un emballage antistatique et une assurance complète. Nous protégeons vos actifs depuis leur origine jusqu'à leur installation finale.",
-                'features' => [
-                    'Livraison et installation haut de gamme',
-                    'Manipulation antistatique et sécurisée contre les décharges électrostatiques',
-                    'Assurance marchandises de grande valeur',
-                    'Entreposage sécurisé et chaîne de contrôle',
                 ],
             ],
         ],
@@ -425,7 +414,7 @@ return [
                     ],
                     [
                         'q' => 'Dans quels secteurs êtes-vous spécialisé ?',
-                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, l'agroalimentaire, la technologie et l'électronique. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
+                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, et l'agroalimentaire. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
                     ],
                 ],
             ],

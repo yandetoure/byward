@@ -12,7 +12,6 @@
         'manufacturing' => 'layers',
         'automotive' => 'truck',
         'food' => 'box',
-        'technology' => 'zap',
     ];
 @endphp
 

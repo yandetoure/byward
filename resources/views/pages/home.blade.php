@@ -17,7 +17,7 @@
         'reverse' => ['icon' => 'rotate', 'anchor' => 'reverse'],
     ];
 
-    $homeIndustries = ['retail', 'manufacturing', 'automotive', 'food', 'technology'];
+    $homeIndustries = ['retail', 'manufacturing', 'automotive', 'food'];
     $whyIcons = ['check-circle', 'eye', 'support', 'tag'];
     $homeFaq = collect(__('site.faq.groups'))->flatMap(fn ($g) => $g['items'])->take(3);
 @endphp
