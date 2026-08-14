@@ -78,8 +78,6 @@ return [
             'Chaîne du froid certifiée',
             'Courtage en douane agréé',
             'Suivi GPS en temps réel',
-            'Entrepôts 3PL',
-            'Marchandises dangereuses ADR / IATA',
             'Livraison le jour même',
             'Fret aérien & maritime',
         ],

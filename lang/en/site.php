@@ -78,8 +78,6 @@ return [
             'Certified Cold Chain',
             'Licensed Customs Brokerage',
             'Real-Time GPS Tracking',
-            '3PL Warehousing',
-            'ADR / IATA Hazmat',
             'Same-Day Delivery',
             'Air & Ocean Freight',
         ],
