@@ -17,16 +17,23 @@ class EstimateController extends Controller
         $methods = config('byward.estimate.methods');
 
         $data = $request->validate([
-            'origin' => ['required', 'string', 'max:180'],
-            'destination' => ['required', 'string', 'max:180'],
+            'origin_street' => ['required', 'string', 'max:150'],
+            'origin_province' => ['required', 'string', 'max:100'],
+            'origin_postal_code' => ['required', 'string', 'max:20'],
+            'destination_street' => ['required', 'string', 'max:150'],
+            'destination_province' => ['required', 'string', 'max:100'],
+            'destination_postal_code' => ['required', 'string', 'max:20'],
             'method' => ['required', 'string', 'in:'.implode(',', array_keys($methods))],
             'weight' => ['required', 'numeric', 'min:0.1', 'max:200000'],
         ]);
 
         $config = $methods[$data['method']];
         
+        $origin = "{$data['origin_street']}, {$data['origin_province']}, {$data['origin_postal_code']}";
+        $destination = "{$data['destination_street']}, {$data['destination_province']}, {$data['destination_postal_code']}";
+
         // Calculate driving distance
-        $distance = $this->calculateDistance($data['origin'], $data['destination']);
+        $distance = $this->calculateDistance($origin, $destination);
         
         $price = config('byward.estimate.base_fee') 
             + ((float) $data['weight'] * $config['rate']) 
@@ -41,8 +48,8 @@ class EstimateController extends Controller
                 'price' => $this->formatPrice(round($price, 2)),
                 'days_min' => $config['days'][0],
                 'days_max' => $config['days'][1],
-                'origin' => $data['origin'],
-                'destination' => $data['destination'],
+                'origin' => $origin,
+                'destination' => $destination,
                 'weight' => (float) $data['weight'],
                 'method' => $data['method'],
                 'distance' => round($distance, 1),

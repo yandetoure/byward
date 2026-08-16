@@ -45,8 +45,12 @@ class LeadController extends Controller
             'email' => ['required', 'email', 'max:180'],
             'phone' => ['required', 'string', 'max:40'],
             'company' => ['nullable', 'string', 'max:150'],
-            'origin' => ['required', 'string', 'max:180'],
-            'destination' => ['required', 'string', 'max:180'],
+            'origin_street' => ['required', 'string', 'max:150'],
+            'origin_province' => ['required', 'string', 'max:100'],
+            'origin_postal_code' => ['required', 'string', 'max:20'],
+            'destination_street' => ['required', 'string', 'max:150'],
+            'destination_province' => ['required', 'string', 'max:100'],
+            'destination_postal_code' => ['required', 'string', 'max:20'],
             'shipment_type' => ['required', 'string', 'in:'.implode(',', array_keys(config('byward.estimate.methods')))],
             'weight' => ['required', 'numeric', 'min:0.1', 'max:200000'],
             'length' => ['nullable', 'numeric', 'min:0', 'max:100000'],
@@ -68,6 +72,8 @@ class LeadController extends Controller
         }
 
         $leadData = collect($data)->except(['photos'])->toArray();
+        $leadData['origin'] = "{$data['origin_street']}, {$data['origin_province']}, {$data['origin_postal_code']}";
+        $leadData['destination'] = "{$data['destination_street']}, {$data['destination_province']}, {$data['destination_postal_code']}";
         if (!empty($photoPaths)) {
             $leadData['photo_paths'] = $photoPaths;
         }

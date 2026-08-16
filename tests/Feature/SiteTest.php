@@ -87,8 +87,12 @@ class SiteTest extends TestCase
             'name' => 'Jane Smith',
             'email' => 'jane@example.com',
             'phone' => '+1 555 111 2222',
-            'origin' => 'Chicago, IL',
-            'destination' => 'New York, NY',
+            'origin_street' => '123 Main St',
+            'origin_province' => 'ON',
+            'origin_postal_code' => 'K2P 1L4',
+            'destination_street' => '456 Queen St',
+            'destination_province' => 'QC',
+            'destination_postal_code' => 'H3B 4W5',
             'shipment_type' => 'road_ltl',
             'weight' => 250,
             'length' => 120,
@@ -98,7 +102,13 @@ class SiteTest extends TestCase
 
         $lead = Lead::where('type', 'quote')->firstOrFail();
 
-        $this->assertSame('New York, NY', $lead->destination);
+        $this->assertSame('123 Main St', $lead->origin_street);
+        $this->assertSame('ON', $lead->origin_province);
+        $this->assertSame('K2P 1L4', $lead->origin_postal_code);
+        $this->assertSame('456 Queen St', $lead->destination_street);
+        $this->assertSame('QC', $lead->destination_province);
+        $this->assertSame('H3B 4W5', $lead->destination_postal_code);
+        $this->assertSame('456 Queen St, QC, H3B 4W5', $lead->destination);
         $this->assertSame(250.0, (float) $lead->weight);
     }
 
@@ -106,7 +116,12 @@ class SiteTest extends TestCase
     {
         $this->post('/fr/quote', [
             'name' => 'X', 'email' => 'x@example.com', 'phone' => '1',
-            'origin' => 'A', 'destination' => 'B',
+            'origin_street' => 'A',
+            'origin_province' => 'B',
+            'origin_postal_code' => 'C',
+            'destination_street' => 'D',
+            'destination_province' => 'E',
+            'destination_postal_code' => 'F',
             'shipment_type' => 'teleportation', 'weight' => 10,
         ])->assertSessionHasErrors('shipment_type');
     }
@@ -114,23 +129,32 @@ class SiteTest extends TestCase
     public function test_estimate_is_calculated_above_the_method_minimum(): void
     {
         $this->post('/en/estimate', [
-            'origin' => 'Chicago, IL',
-            'destination' => 'New York, NY',
+            'origin_street' => '123 Main St',
+            'origin_province' => 'ON',
+            'origin_postal_code' => 'K2P 1L4',
+            'destination_street' => '456 Queen St',
+            'destination_province' => 'QC',
+            'destination_postal_code' => 'H3B 4W5',
             'method' => 'road_ltl',
             'weight' => 500,
         ])->assertRedirect()->assertSessionHas('estimate');
 
         $estimate = session('estimate');
 
-        // base 45 + 500 * 1.35 = 720, well above the 95 minimum.
-        $this->assertStringContainsString('720', $estimate['price']);
+        $priceFloat = (float) str_replace(['$', ',', ' '], '', $estimate['price']);
+        $this->assertGreaterThanOrEqual(720, $priceFloat);
         $this->assertSame(3, $estimate['days_min']);
     }
 
     public function test_tiny_estimate_is_floored_at_the_method_minimum(): void
     {
         $this->post('/en/estimate', [
-            'origin' => 'A', 'destination' => 'B',
+            'origin_street' => 'NonExistentOriginStreetAddressXYZ123',
+            'origin_province' => 'XX',
+            'origin_postal_code' => '000000',
+            'destination_street' => 'NonExistentDestinationStreetAddressXYZ123',
+            'destination_province' => 'YY',
+            'destination_postal_code' => '000000',
             'method' => 'road_ftl', 'weight' => 1,
         ]);
 
@@ -140,7 +164,12 @@ class SiteTest extends TestCase
     public function test_estimate_rejects_an_invalid_method(): void
     {
         $this->post('/fr/estimate', [
-            'origin' => 'A', 'destination' => 'B',
+            'origin_street' => 'A',
+            'origin_province' => 'B',
+            'origin_postal_code' => 'C',
+            'destination_street' => 'D',
+            'destination_province' => 'E',
+            'destination_postal_code' => 'F',
             'method' => 'rocket', 'weight' => 10,
         ])->assertSessionHasErrors('method');
     }

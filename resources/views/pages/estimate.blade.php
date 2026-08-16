@@ -41,22 +41,80 @@
                         @csrf
 
                         <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label" for="origin">
-                                    {{ __('site.estimate.f_origin') }} <span class="req">*</span>
-                                </label>
-                                <input type="text" class="form-control" id="origin" name="origin"
-                                       value="{{ old('origin') }}"
-                                       placeholder="{{ __('site.estimate.ph_origin') }}" required>
+                            <!-- Origin (Pickup Location) -->
+                            <div class="col-lg-6">
+                                <div class="p-3 bg-light rounded-4 border border-light-subtle h-100">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-primary text-white rounded-circle p-2 me-2 d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+                                            <x-icon name="pin" size="14" />
+                                        </div>
+                                        <h3 class="mb-0 h6 fw-bold text-navy">{{ __('site.estimate.sec_origin') }}</h3>
+                                    </div>
+                                    <div class="row g-2">
+                                        <div class="col-12">
+                                            <label class="form-label" for="origin_street">
+                                                {{ __('site.estimate.f_street') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="origin_street" name="origin_street"
+                                                   value="{{ old('origin_street') }}"
+                                                   placeholder="{{ __('site.estimate.ph_street') }}" required maxlength="150">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <label class="form-label" for="origin_province">
+                                                {{ __('site.estimate.f_province') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="origin_province" name="origin_province"
+                                                   value="{{ old('origin_province') }}"
+                                                   placeholder="{{ __('site.estimate.ph_province') }}" required maxlength="100">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label class="form-label" for="origin_postal_code">
+                                                {{ __('site.estimate.f_postal_code') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="origin_postal_code" name="origin_postal_code"
+                                                   value="{{ old('origin_postal_code') }}"
+                                                   placeholder="{{ __('site.estimate.ph_postal_code') }}" required maxlength="20">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <label class="form-label" for="destination">
-                                    {{ __('site.estimate.f_destination') }} <span class="req">*</span>
-                                </label>
-                                <input type="text" class="form-control" id="destination" name="destination"
-                                       value="{{ old('destination') }}"
-                                       placeholder="{{ __('site.estimate.ph_destination') }}" required>
+                            <!-- Destination (Delivery Location) -->
+                            <div class="col-lg-6">
+                                <div class="p-3 bg-light rounded-4 border border-light-subtle h-100">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-primary text-white rounded-circle p-2 me-2 d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+                                            <x-icon name="pin" size="14" />
+                                        </div>
+                                        <h3 class="mb-0 h6 fw-bold text-navy">{{ __('site.estimate.sec_destination') }}</h3>
+                                    </div>
+                                    <div class="row g-2">
+                                        <div class="col-12">
+                                            <label class="form-label" for="destination_street">
+                                                {{ __('site.estimate.f_street') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="destination_street" name="destination_street"
+                                                   value="{{ old('destination_street') }}"
+                                                   placeholder="{{ __('site.estimate.ph_street') }}" required maxlength="150">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <label class="form-label" for="destination_province">
+                                                {{ __('site.estimate.f_province') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="destination_province" name="destination_province"
+                                                   value="{{ old('destination_province') }}"
+                                                   placeholder="{{ __('site.estimate.ph_province') }}" required maxlength="100">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label class="form-label" for="destination_postal_code">
+                                                {{ __('site.estimate.f_postal_code') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="destination_postal_code" name="destination_postal_code"
+                                                   value="{{ old('destination_postal_code') }}"
+                                                   placeholder="{{ __('site.estimate.ph_postal_code') }}" required maxlength="20">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col-md-7">
