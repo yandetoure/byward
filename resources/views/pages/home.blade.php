@@ -138,7 +138,7 @@
         <div class="marquee mt-4" data-reveal>
             <div class="marquee-track">
                 @php
-                    $partners = ['IMG_1469.JPG', 'IMG_1470.PNG', 'IMG_1471.JPG', 'IMG_1472.PNG', 'IMG_1473.PNG', 'IMG_1474.JPG', 'IMG_1475.PNG'];
+                    $partners = [ 'IMG_1470.PNG', 'IMG_1471.JPG', 'IMG_1472.PNG', 'IMG_1473.PNG', 'IMG_1474.JPG', 'IMG_1475.PNG'];
                 @endphp
                 @foreach(array_merge($partners, $partners) as $partner)
                 <div class="partner-logo d-flex align-items-center justify-content-center px-4" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">
