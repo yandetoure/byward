@@ -55,14 +55,7 @@
                         <div class="media-frame media-square flex-grow-1">
                             <img src="{{ $img['about_ops'] }}" alt="" loading="lazy">
                         </div>
-                        <div class="bg-navy rounded-4 p-3 text-center">
-                            <div class="stat-value" style="background:linear-gradient(135deg,#fff,#a9c9ff);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.9rem">
-                                <span>{{ config('byward.company.founded') }}</span>
-                            </div>
-                            <div class="stat-label mt-1" style="color:rgba(255,255,255,.6)">
-                                {{ __('site.about.story_eyebrow') }}
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
