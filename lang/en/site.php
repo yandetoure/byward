@@ -75,7 +75,6 @@ return [
 
         'marquee' => [
             'FTL & LTL Road Freight',
-            'Certified Cold Chain',
 
             'Real-Time GPS Tracking',
             'Same-Day Delivery',

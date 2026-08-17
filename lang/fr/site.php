@@ -75,7 +75,7 @@ return [
 
         'marquee' => [
             'Fret routier FTL & LTL',
-            'Chaîne du froid certifiée',
+
             'Courtage en douane agréé',
             'Suivi GPS en temps réel',
             'Livraison le jour même',
