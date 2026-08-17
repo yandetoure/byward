@@ -76,7 +76,7 @@ return [
         'marquee' => [
             'FTL & LTL Road Freight',
             'Certified Cold Chain',
-            'Licensed Customs Brokerage',
+
             'Real-Time GPS Tracking',
             'Same-Day Delivery',
             'Air & Ocean Freight',
@@ -143,7 +143,7 @@ return [
     /* ---------------------------------------------------------------- */
     'services' => [
         'meta_title' => 'Logistics Services — Byward Logistics',
-        'meta_description' => 'Freight transport, warehousing, last-mile delivery, supply chain management, customs clearance and reverse logistics.',
+        'meta_description' => 'Freight transport, warehousing, last-mile delivery, supply chain management and reverse logistics.',
 
         'eyebrow' => 'What We Do',
         'title' => 'End-to-End Logistics Services',
@@ -202,19 +202,7 @@ return [
                     'Reporting and analytics dashboards',
                 ],
             ],
-            'customs' => [
-                'name' => 'Customs Clearance',
-                'short' => 'Expert customs brokerage and trade compliance services for seamless cross-border shipments.',
-                'long' => "Expert customs brokerage and trade compliance services for seamless cross-border shipments. We navigate complex regulations so your cargo clears quickly and compliantly.",
-                'features' => [
-                    'Licensed customs brokerage',
-                    'Import and export documentation',
-                    'Tariff classification support',
-                    'Compliance risk assessment',
-                    'Bonded warehouse access',
-                    'Duty drawback processing',
-                ],
-            ],
+
             'reverse' => [
                 'name' => 'Reverse Logistics',
                 'short' => 'Efficient returns management and product disposition solutions that reduce costs and improve customer experience.',
@@ -748,7 +736,7 @@ return [
             'q3' => 'Where are you located?',
             'a3' => 'Our offices are located at 123 Rue de la Logistique, Dakar, Senegal.',
             'q4' => 'What services do you offer?',
-            'a4' => 'We offer a full range of services including international freight, warehousing, last-mile logistics, customs clearance, and White Glove services.',
+            'a4' => 'We offer a full range of services including international freight, warehousing, last-mile logistics, and White Glove services.',
         ],
     ],
 ];

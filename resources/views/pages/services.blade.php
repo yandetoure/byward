@@ -12,7 +12,6 @@
         'warehousing' => ['anchor' => 'warehousing',  'icon' => 'warehouse', 'image' => $img['service_warehouse']],
         'lastmile'    => ['anchor' => 'last-mile',    'icon' => 'pin',       'image' => $img['service_lastmile']],
         'supply'      => ['anchor' => 'supply-chain', 'icon' => 'network',   'image' => $img['service_supply']],
-        'customs'     => ['anchor' => 'customs',      'icon' => 'shield',    'image' => $img['service_customs']],
         'reverse'     => ['anchor' => 'reverse',      'icon' => 'rotate',    'image' => $img['service_reverse']],
         'whiteglove'  => ['anchor' => 'white-glove',  'icon' => 'box',       'image' => $img['service_whiteglove']],
     ];

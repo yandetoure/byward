@@ -202,19 +202,7 @@ return [
                     'Tableaux de bord de reporting et d\'analyse',
                 ],
             ],
-            'customs' => [
-                'name' => 'Dédouanement',
-                'short' => 'Courtage en douane expert et conformité commerciale pour des expéditions transfrontalières fluides.',
-                'long' => "Des services de courtage en douane et de conformité commerciale experts pour des expéditions transfrontalières fluides. Nous maîtrisons les réglementations complexes afin que vos marchandises passent rapidement et en conformité.",
-                'features' => [
-                    'Courtage en douane agréé',
-                    'Documentation d\'import et d\'export',
-                    'Assistance au classement tarifaire',
-                    'Évaluation des risques de conformité',
-                    'Accès aux entrepôts sous douane',
-                    'Traitement des remboursements de droits',
-                ],
-            ],
+
             'reverse' => [
                 'name' => 'Logistique inverse',
                 'short' => 'Gestion efficace des retours et solutions de traitement qui réduisent les coûts et améliorent l\'expérience client.',

@@ -13,9 +13,9 @@
         'warehousing' => ['icon' => 'warehouse', 'anchor' => 'warehousing'],
         'lastmile' => ['icon' => 'pin', 'anchor' => 'last-mile'],
         'supply' => ['icon' => 'network', 'anchor' => 'supply-chain'],
-        'customs' => ['icon' => 'shield', 'anchor' => 'customs'],
         'reverse' => ['icon' => 'rotate', 'anchor' => 'reverse'],
     ];
+
 
     $homeIndustries = ['retail', 'manufacturing', 'automotive', 'food'];
     $whyIcons = ['check-circle', 'eye', 'support', 'tag'];

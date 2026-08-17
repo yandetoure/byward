@@ -5,9 +5,9 @@
         'warehousing' => 'warehousing',
         'lastmile' => 'last-mile',
         'supply' => 'supply-chain',
-        'customs' => 'customs',
         'whiteglove' => 'white-glove',
     ];
+
 @endphp
 
 <footer class="site-footer">
