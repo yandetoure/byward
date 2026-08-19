@@ -93,6 +93,9 @@
                     <a href="{{ route('quote') }}" class="btn btn-outline-light btn-lg">
                         {{ __('site.common.free_quote') }}
                     </a>
+                    <a href="{{ route('estimate') }}" class="btn btn-brand btn-lg">
+                        {{ __('site.common.calculate') }}
+                    </a>
                     <a href="{{ route('services') }}" class="btn btn-ghost text-white btn-lg">
                         {{ __('site.common.view_services') }}
                     </a>
