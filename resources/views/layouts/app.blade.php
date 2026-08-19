@@ -50,6 +50,22 @@
 
     @include('partials.footer')
 
+    {{-- ============================ SEARCH OVERLAY ============================ --}}
+    <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Site Search" hidden>
+        <div class="search-overlay-inner">
+            <div class="search-overlay-bar">
+                <x-icon name="search" size="22" class="search-overlay-icon" />
+                <input type="search" id="searchInput" class="search-overlay-input"
+                       placeholder="Search pages, services, industries…"
+                       autocomplete="off" spellcheck="false" aria-label="Search">
+                <button type="button" id="searchClose" class="search-overlay-close" aria-label="Close search">
+                    <x-icon name="x" size="20" />
+                </button>
+            </div>
+            <div id="searchResults" class="search-results" aria-live="polite"></div>
+        </div>
+    </div>
+
     {{-- ============================ LIVE CHAT WIDGET ============================ --}}
     <div class="live-chat-widget position-fixed end-0 m-3 m-md-4" style="z-index: 1050; bottom: 3rem;">
         <div id="live-chat-window" class="card shadow-lg d-none" style="position: absolute; bottom: 70px; right: 0; width: 350px; border-radius: 1rem; overflow: hidden; max-width: calc(100vw - 2rem);">

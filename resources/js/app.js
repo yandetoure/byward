@@ -351,4 +351,118 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initForms();
     initLiveChat();
+    initSearch();
 });
+
+/* ------------------------------------------------------------------
+ * Global site search — inline nav search bar with dropdown
+ * ---------------------------------------------------------------- */
+function initSearch() {
+    const input    = document.getElementById('navSearchInput');
+    const dropdown = document.getElementById('navSearchDropdown');
+
+    if (!input || !dropdown) return;
+
+    // ── Static content index ─────────────────────────────────────
+    const locale = document.documentElement.lang || 'en';
+    const p = (path) => `/${locale}${path}`;
+
+    const INDEX = [
+        // Pages
+        { tag: 'Page',     title: 'Home',                    desc: 'Byward Logistics – reliable freight & logistics.',          url: p('/') },
+        { tag: 'Page',     title: 'About Us',                desc: 'Our mission, values, story and team.',                      url: p('/about') },
+        { tag: 'Page',     title: 'Contact',                 desc: 'Get in touch with our team.',                               url: p('/contact') },
+        { tag: 'Page',     title: 'FAQ',                     desc: 'Frequently asked questions about our services.',             url: p('/faq') },
+        { tag: 'Page',     title: 'Get a Free Quote',        desc: 'Request a tailored logistics quote.',                        url: p('/quote') },
+        { tag: 'Page',     title: 'Calculate Estimate',      desc: 'Estimate your shipping cost instantly.',                     url: p('/estimate') },
+        { tag: 'Page',     title: 'Careers',                 desc: 'Join the Byward Logistics team.',                            url: p('/careers') },
+        // Services
+        { tag: 'Service',  title: 'Freight Transportation',  desc: 'Full truckload, LTL and cross-border freight.',             url: p('/services#freight') },
+        { tag: 'Service',  title: 'Warehousing & Storage',   desc: 'Flexible short and long-term warehousing solutions.',        url: p('/services#warehousing') },
+        { tag: 'Service',  title: 'Last-Mile Delivery',      desc: 'Fast, reliable final-mile delivery to end customers.',       url: p('/services#last-mile') },
+        { tag: 'Service',  title: 'Supply Chain Management', desc: 'End-to-end visibility and optimisation of your supply chain.', url: p('/services#supply-chain') },
+        { tag: 'Service',  title: 'Reverse Logistics',       desc: 'Efficient returns management and reverse logistics.',        url: p('/services#reverse') },
+        { tag: 'Service',  title: 'White Glove Delivery',    desc: 'Premium handling for high-value or fragile shipments.',      url: p('/services#white-glove') },
+        // Industries
+        { tag: 'Industry', title: 'Retail & E-Commerce',     desc: 'Scalable logistics for retail and online businesses.',       url: p('/industries#retail') },
+        { tag: 'Industry', title: 'Healthcare',              desc: 'Temperature-controlled and compliant healthcare logistics.', url: p('/industries#healthcare') },
+        { tag: 'Industry', title: 'Manufacturing',           desc: 'Just-in-time delivery and parts logistics.',                 url: p('/industries#manufacturing') },
+        { tag: 'Industry', title: 'Automotive',              desc: 'Specialised logistics for the automotive supply chain.',     url: p('/industries#automotive') },
+        { tag: 'Industry', title: 'Food & Beverage',         desc: 'Cold-chain and food-safe logistics solutions.',              url: p('/industries#food') },
+    ];
+
+    // ── Render ────────────────────────────────────────────────────
+    function render(q) {
+        if (!q || q.length < 2) { closeDropdown(); return; }
+
+        const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+        const hits  = INDEX.filter(item => {
+            const hay = `${item.title} ${item.desc} ${item.tag}`.toLowerCase();
+            return terms.every(t => hay.includes(t));
+        });
+
+        if (!hits.length) {
+            dropdown.innerHTML = `<p class="search-no-results">No results for "<strong>${q}</strong>"</p>`;
+        } else {
+            dropdown.innerHTML = hits.slice(0, 8).map(item => `
+                <a href="${item.url}" class="search-result-item" role="option">
+                    <span class="sri-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    </span>
+                    <span class="sri-body">
+                        <span class="sri-tag">${item.tag}</span>
+                        <span class="sri-title">${item.title}</span>
+                        <span class="sri-desc">${item.desc}</span>
+                    </span>
+                </a>`).join('');
+        }
+        dropdown.removeAttribute('hidden');
+        input.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+        dropdown.setAttribute('hidden', '');
+        input.setAttribute('aria-expanded', 'false');
+    }
+
+    // ── Events ────────────────────────────────────────────────────
+    let timer;
+    input.addEventListener('input', () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => render(input.value.trim()), 160);
+    });
+
+    input.addEventListener('focus', () => {
+        if (input.value.trim().length >= 2) render(input.value.trim());
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('#navSearchWrap')) closeDropdown();
+    });
+
+    // Keyboard nav inside dropdown
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { input.value = ''; closeDropdown(); input.blur(); }
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const first = dropdown.querySelector('.search-result-item');
+            if (first) first.focus();
+        }
+    });
+
+    dropdown.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { closeDropdown(); input.focus(); }
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const next = document.activeElement.nextElementSibling;
+            if (next) next.focus();
+        }
+        if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            const prev = document.activeElement.previousElementSibling;
+            if (prev) prev.focus(); else input.focus();
+        }
+    });
+}
+
