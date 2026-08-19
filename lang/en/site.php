@@ -75,7 +75,6 @@ return [
 
         'marquee' => [
             'FTL & LTL Road Freight',
-
             'Real-Time GPS Tracking',
             'Same-Day Delivery',
             'Air & Ocean Freight',
@@ -117,7 +116,7 @@ return [
                 'initials' => 'SM',
             ],
             [
-                'quote' => 'Their customs clearance team is outstanding. Zero compliance issues since we switched two years ago.',
+                'quote' => 'Their operations team is outstanding. Zero compliance issues since we switched two years ago.',
                 'name' => 'James Chen',
                 'role' => 'Logistics Director, TechGlobal Solutions',
                 'initials' => 'JC',

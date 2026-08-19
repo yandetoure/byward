@@ -75,8 +75,6 @@ return [
 
         'marquee' => [
             'Fret routier FTL & LTL',
-
-            'Courtage en douane agréé',
             'Suivi GPS en temps réel',
             'Livraison le jour même',
             'Fret aérien & maritime',
@@ -118,7 +116,7 @@ return [
                 'initials' => 'SM',
             ],
             [
-                'quote' => 'Leur équipe de dédouanement est remarquable. Aucun problème de conformité depuis que nous avons changé de prestataire il y a deux ans.',
+                'quote' => 'Leur équipe opérationnelle est remarquable. Aucun problème de conformité depuis que nous avons changé de prestataire il y a deux ans.',
                 'name' => 'James Chen',
                 'role' => 'Directeur logistique, TechGlobal Solutions',
                 'initials' => 'JC',
@@ -143,7 +141,7 @@ return [
     /* ---------------------------------------------------------------- */
     'services' => [
         'meta_title' => 'Services logistiques — Byward Logistics',
-        'meta_description' => 'Transport de marchandises, entreposage, dernier kilomètre, chaîne d\'approvisionnement, dédouanement et logistique inverse.',
+        'meta_description' => 'Transport de marchandises, entreposage, dernier kilomètre, chaîne d\'approvisionnement et logistique inverse.',
 
         'eyebrow' => 'Ce que nous faisons',
         'title' => 'Des services logistiques de bout en bout',
@@ -736,7 +734,7 @@ return [
             'q3' => 'Où êtes-vous situés ?',
             'a3' => 'Nos bureaux sont situés au 123 Rue de la Logistique, Dakar, Sénégal.',
             'q4' => 'Quels services proposez-vous ?',
-            'a4' => 'Nous proposons une gamme complète de services incluant le fret international, l\'entreposage, la logistique du dernier kilomètre, le dédouanement et les services Gant Blanc.',
+            'a4' => 'Nous proposons une gamme complète de services incluant le fret international, l\'entreposage, la logistique du dernier kilomètre et les services Gant Blanc.',
         ],
     ],
 ];

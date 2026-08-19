@@ -42,14 +42,13 @@ return [
         'why_alt'         => $unsplash('1578575437130-527eed3abbec', 900),
         'estimate_teaser' => $unsplash('1595246140625-573b715d11dc', 1200),
         'about_team'      => $unsplash('1521737711867-e3b97375f902', 1100),
-        'about_ops'       => $unsplash('1566576912321-d58ddd7a6088', 900),
+        'about_ops'       => '/images/about.jpeg',
         'approach'        => $unsplash('1494412574643-ff11b0a5c1c3', 1100),
 
         'service_freight'   => $unsplash('1553413077-190dd305871c', 1000),
         'service_warehouse' => $unsplash('1601584115197-04ecc0da31d7', 1000),
         'service_lastmile'  => $unsplash('1587293852726-70cdb56c2866', 1000),
         'service_supply'    => $unsplash('1586528116311-ad8dd3c8310d', 1000),
-        'service_customs'   => $unsplash('1504328345606-18bbc8c9d7d1', 1000),
         'service_reverse'   => $unsplash('1566576912321-d58ddd7a6088', 1000),
         'service_whiteglove'=> '/images/Glove.jpeg',
 
