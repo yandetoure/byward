@@ -35,9 +35,8 @@
                 <span class="eyebrow">{{ __('site.industries.intro_eyebrow') }}</span>
                 <h2 class="text-balance">{{ __('site.industries.intro_title') }}</h2>
             </div>
-            <div class="col-lg-5" data-reveal="right">
-                <p class="lead mb-0">{{ __('site.industries.intro_text') }}</p>
-            </div>
+
+
         </div>
     </div>
 </section>
