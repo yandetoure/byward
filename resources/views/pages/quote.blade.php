@@ -106,6 +106,14 @@
                                                    value="{{ old('origin_street') }}"
                                                    placeholder="{{ __('site.quote.ph_street') }}" required maxlength="150">
                                         </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="origin_city">
+                                                {{ __('site.quote.f_city') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="origin_city" name="origin_city"
+                                                   value="{{ old('origin_city') }}"
+                                                   placeholder="{{ __('site.quote.ph_city') }}" required maxlength="100">
+                                        </div>
                                         <div class="col-sm-7">
                                             <label class="form-label" for="origin_province">
                                                 {{ __('site.quote.f_province') }} <span class="req">*</span>
@@ -143,6 +151,14 @@
                                             <input type="text" class="form-control" id="destination_street" name="destination_street"
                                                    value="{{ old('destination_street') }}"
                                                    placeholder="{{ __('site.quote.ph_street') }}" required maxlength="150">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="destination_city">
+                                                {{ __('site.quote.f_city') }} <span class="req">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="destination_city" name="destination_city"
+                                                   value="{{ old('destination_city') }}"
+                                                   placeholder="{{ __('site.quote.ph_city') }}" required maxlength="100">
                                         </div>
                                         <div class="col-sm-7">
                                             <label class="form-label" for="destination_province">

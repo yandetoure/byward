@@ -18,9 +18,11 @@ class EstimateController extends Controller
 
         $data = $request->validate([
             'origin_street' => ['required', 'string', 'max:150'],
+            'origin_city' => ['required', 'string', 'max:100'],
             'origin_province' => ['required', 'string', 'max:100'],
             'origin_postal_code' => ['required', 'string', 'max:20'],
             'destination_street' => ['required', 'string', 'max:150'],
+            'destination_city' => ['required', 'string', 'max:100'],
             'destination_province' => ['required', 'string', 'max:100'],
             'destination_postal_code' => ['required', 'string', 'max:20'],
             'method' => ['required', 'string', 'in:'.implode(',', array_keys($methods))],
@@ -29,8 +31,8 @@ class EstimateController extends Controller
 
         $config = $methods[$data['method']];
         
-        $origin = "{$data['origin_street']}, {$data['origin_province']}, {$data['origin_postal_code']}";
-        $destination = "{$data['destination_street']}, {$data['destination_province']}, {$data['destination_postal_code']}";
+        $origin = "{$data['origin_street']}, {$data['origin_city']}, {$data['origin_province']}, {$data['origin_postal_code']}";
+        $destination = "{$data['destination_street']}, {$data['destination_city']}, {$data['destination_province']}, {$data['destination_postal_code']}";
 
         // Calculate driving distance
         $distance = $this->calculateDistance($origin, $destination);
