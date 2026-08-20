@@ -85,9 +85,18 @@
                                 <label for="position" class="form-label">{{ __('site.careers.f_position') }} <span class="text-danger">*</span></label>
                                 <select class="form-select" id="position" name="position" required>
                                     <option value="" disabled {{ old('position') ? '' : 'selected' }}>{{ __('site.careers.f_position') }}</option>
-                                    @foreach(__('site.careers.positions') as $val => $label)
-                                        <option value="{{ $val }}" {{ old('position') === $val ? 'selected' : '' }}>{{ $label }}</option>
-                                    @endforeach
+                                    @if(isset($jobs) && $jobs->isNotEmpty())
+                                        @foreach($jobs as $job)
+                                            @php
+                                                $title = app()->getLocale() === 'fr' ? $job->title_fr : $job->title_en;
+                                            @endphp
+                                            <option value="{{ $job->id }}" {{ old('position') == $job->id ? 'selected' : '' }}>{{ $title }}</option>
+                                        @endforeach
+                                    @else
+                                        @foreach(__('site.careers.positions') as $val => $label)
+                                            <option value="{{ $val }}" {{ old('position') === $val ? 'selected' : '' }}>{{ $label }}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                             <div class="col-12">

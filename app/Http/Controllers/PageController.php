@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobOffer;
+
 class PageController extends Controller
 {
     public function home()
@@ -26,7 +28,8 @@ class PageController extends Controller
 
     public function careers()
     {
-        return view('pages.careers');
+        $jobs = JobOffer::where('is_active', true)->latest()->get();
+        return view('pages.careers', compact('jobs'));
     }
 
     public function faq()

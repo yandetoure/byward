@@ -48,4 +48,33 @@ Route::prefix('{locale}')
         Route::post('/estimate', [EstimateController::class, 'calculate'])
             ->middleware('throttle:30,1')
             ->name('estimate.calculate');
+
+        // ============================ ADMIN PANEL ============================
+        // Admin Auth
+        Route::get('/admin/login', [App\Http\Controllers\Admin\AdminAuthController::class, 'showLogin'])->name('admin.login');
+        Route::post('/admin/login', [App\Http\Controllers\Admin\AdminAuthController::class, 'login'])->name('admin.login.submit');
+        Route::post('/admin/logout', [App\Http\Controllers\Admin\AdminAuthController::class, 'logout'])->name('admin.logout');
+
+        // Protected Admin Dashboard
+        Route::middleware(App\Http\Middleware\AdminAuth::class)
+            ->prefix('admin')
+            ->group(function () {
+                Route::get('/', [App\Http\Controllers\Admin\AdminDashboardController::class, 'index'])->name('admin.dashboard');
+                
+                // Leads management
+                Route::get('/leads', [App\Http\Controllers\Admin\AdminLeadController::class, 'index'])->name('admin.leads.index');
+                Route::get('/leads/{lead}', [App\Http\Controllers\Admin\AdminLeadController::class, 'show'])->name('admin.leads.show');
+                Route::post('/leads/{lead}/toggle', [App\Http\Controllers\Admin\AdminLeadController::class, 'toggleHandled'])->name('admin.leads.toggle');
+                Route::delete('/leads/{lead}', [App\Http\Controllers\Admin\AdminLeadController::class, 'destroy'])->name('admin.leads.destroy');
+
+                // Shipments CRUD
+                Route::resource('/shipments', App\Http\Controllers\Admin\AdminShipmentController::class, [
+                    'as' => 'admin'
+                ])->except(['show']);
+
+                // Jobs CRUD
+                Route::resource('/jobs', App\Http\Controllers\Admin\AdminJobController::class, [
+                    'as' => 'admin'
+                ])->except(['show']);
+            });
     });

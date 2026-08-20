@@ -338,7 +338,7 @@ return [
 
         'eyebrow' => 'About Byward Logistics',
         'title' => 'A Decade of Moving What Matters',
-        'text' => "We started with three trucks and a determination to get logistics right. Today Byward Logistics is a trusted partner to hundreds of businesses looking for dependable transport solutions.",
+        'text' => "We started with one truck and a determination to get logistics right. Today Byward Logistics is a trusted partner to hundreds of businesses looking for dependable transport solutions.",
 
         'stats' => [
             ['value' => 10, 'suffix' => '+', 'label' => 'Years in Business'],

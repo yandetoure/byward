@@ -338,7 +338,7 @@ return [
 
         'eyebrow' => 'À propos de Byward Logistics',
         'title' => 'Une décennie à faire avancer ce qui compte',
-        'text' => "Nous avons commencé avec trois camions et la ferme intention de maîtriser la logistique. Aujourd'hui, Byward Logistics est un partenaire de confiance pour des centaines d'entreprises à la recherche de solutions de transport fiables.",
+        'text' => "Nous avons commencé avec un seul camion et la ferme intention de maîtriser la logistique. Aujourd'hui, Byward Logistics est un partenaire de confiance pour des centaines d'entreprises à la recherche de solutions de transport fiables.",
 
         'stats' => [
             ['value' => 10, 'suffix' => '+', 'label' => 'Années d\'activité'],
