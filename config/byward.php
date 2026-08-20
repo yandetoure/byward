@@ -40,7 +40,7 @@ return [
 
         'why'             => $unsplash('1601584115197-04ecc0da31d7', 1100),
         'why_alt'         => $unsplash('1578575437130-527eed3abbec', 900),
-        'estimate_teaser' => $unsplash('1595246140625-573b715d11dc', 1200),
+        'estimate_teaser' => '/images/quick.jpeg',
         'about_team'      => $unsplash('1521737711867-e3b97375f902', 1100),
         'about_ops'       => '/images/about.jpeg',
         'approach'        => $unsplash('1494412574643-ff11b0a5c1c3', 1100),
