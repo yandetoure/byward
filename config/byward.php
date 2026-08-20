@@ -52,7 +52,7 @@ return [
         'service_reverse'   => '/images/Reverse.jpeg',
         'service_whiteglove'=> '/images/Glove.jpeg',
 
-        'industry_retail'        => $unsplash('1565043666747-69f6646db940', 900),
+        'industry_retail'        => '/images/details.jpeg',
         'industry_healthcare'    => $unsplash('1532187863486-abf9dbad1b69', 900),
         'industry_manufacturing' => $unsplash('1565793298595-6a879b1d9492', 900),
         'industry_automotive'    => $unsplash('1486262715619-67b85e0b08d3', 900),
