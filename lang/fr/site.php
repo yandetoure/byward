@@ -133,7 +133,7 @@ return [
         'faq_title' => 'Questions fréquentes',
 
         'cta_title' => 'Prêt à simplifier votre logistique ?',
-        'cta_text' => 'Rejoignez les centaines d\'entreprises qui font confiance à Byward Logistics pour un transport fiable et maîtrisé.',
+        'cta_text' => 'Rejoignez les nombreuses entreprises qui font confiance à Byward Logistics pour un transport fiable et maîtrisé.',
     ],
 
     /* ---------------------------------------------------------------- */
@@ -338,7 +338,7 @@ return [
 
         'eyebrow' => 'À propos de Byward Logistics',
         'title' => 'À l\'heure. À chaque fois.',
-        'text' => "Nous avons commencé avec un seul camion et la ferme intention de maîtriser la logistique. Aujourd'hui, Byward Logistics est un partenaire de confiance pour des centaines d'entreprises à la recherche de solutions de transport fiables.",
+        'text' => "Nous avons commencé avec un seul camion et la ferme intention de maîtriser la logistique. Aujourd'hui, Byward Logistics est un partenaire de confiance pour plusieurs entreprises à la recherche de solutions de transport fiables.",
 
         'stats' => [
             ['value' => 10, 'suffix' => '+', 'label' => 'Années d\'activité'],

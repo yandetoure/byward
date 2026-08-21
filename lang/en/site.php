@@ -133,7 +133,7 @@ return [
         'faq_title' => 'Common Questions',
 
         'cta_title' => 'Ready to Streamline Your Logistics?',
-        'cta_text' => 'Join hundreds of businesses that rely on Byward Logistics for reliable, cost-efficient freight solutions.',
+        'cta_text' => 'Join the many businesses that rely on Byward Logistics for reliable, cost-efficient freight solutions.',
     ],
 
     /* ---------------------------------------------------------------- */
@@ -338,7 +338,7 @@ return [
 
         'eyebrow' => 'About Byward Logistics',
         'title' => 'On Time. Every Time.',
-        'text' => "We started with one truck and a determination to get logistics right. Today Byward Logistics is a trusted partner to hundreds of businesses looking for dependable transport solutions.",
+        'text' => "We started with one truck and a determination to get logistics right. Today Byward Logistics is a trusted partner to multiple businesses looking for dependable transport solutions.",
 
         'stats' => [
             ['value' => 10, 'suffix' => '+', 'label' => 'Years in Business'],
