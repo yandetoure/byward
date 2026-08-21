@@ -20,24 +20,7 @@
     <a href="{{ route('services') }}" class="btn btn-ghost">{{ __('site.common.view_services') }}</a>
 </x-page-hero>
 
-{{-- Stats --}}
-<section class="stats-strip">
-    <div class="container">
-        <div class="stats-card" data-reveal>
-            <div class="row g-0">
-                @foreach (__('site.about.stats') as $stat)
-                    <div class="col-6 col-lg-3 stat-item">
-                        <div class="stat-value">
-                            <span data-count-to="{{ $stat['value'] }}"
-                                  data-count-suffix="{{ $stat['suffix'] }}">0{{ $stat['suffix'] }}</span>
-                        </div>
-                        <div class="stat-label">{{ $stat['label'] }}</div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
+
 
 {{-- Mission --}}
 <section class="section">
