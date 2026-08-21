@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Login — Byward Logistics</title>
     
-    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('images/logo1.png') }}" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     @vite(['resources/scss/app.scss'])
@@ -89,7 +89,7 @@
 
 <div class="login-card">
     <div class="login-logo">
-        <img src="{{ asset('images/logo-light.png') }}" alt="Byward Logistics">
+        <img src="{{ asset('images/logo-light1.png') }}" alt="Byward Logistics">
         <h1 class="h4 text-white mt-3 fw-bold">Admin Portal</h1>
     </div>
     
