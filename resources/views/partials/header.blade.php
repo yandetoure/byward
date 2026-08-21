@@ -13,9 +13,9 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg p-0" aria-label="{{ __('site.nav.menu') }}">
             <a class="navbar-brand p-0 me-4 position-relative" href="{{ route('home') }}">
-                <img src="{{ asset('images/logo-light.png') }}" alt="{{ config('byward.company.name') }}"
+                <img src="{{ asset('images/logo-light1.png') }}" alt="{{ config('byward.company.name') }}"
                      class="brand-logo brand-logo-light">
-                <img src="{{ asset('images/logo.png') }}" alt="" aria-hidden="true"
+                <img src="{{ asset('images/logo1.png') }}" alt="" aria-hidden="true"
                      class="brand-logo brand-logo-dark">
             </a>
 

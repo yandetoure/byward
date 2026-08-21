@@ -29,7 +29,7 @@
     '@type' => 'LogisticsBusiness',
     'name' => config('byward.company.name'),
     'url' => route('home'),
-    'logo' => asset('images/logo.png'),
+    'logo' => asset('images/logo1.png'),
     'telephone' => config('byward.company.phone'),
     'email' => config('byward.company.email'),
     'address' => [

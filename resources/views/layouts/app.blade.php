@@ -15,8 +15,8 @@
               href="{{ route($currentRoute, ['locale' => $alt]) }}">
     @endforeach
 
-    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
-    <link rel="apple-touch-icon" href="{{ asset('images/logo.png') }}">
+    <link rel="icon" href="{{ asset('images/logo1.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo1.png') }}">
 
     {{-- Open Graph --}}
     <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
     <meta property="og:title" content="@yield('title', config('byward.company.name'))">
     <meta property="og:description" content="@yield('description', __('site.footer.tagline'))">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+    <meta property="og:image" content="{{ asset('images/logo1.png') }}">
 
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 

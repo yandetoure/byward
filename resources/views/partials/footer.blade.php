@@ -17,7 +17,7 @@
         <div class="row g-5">
             <div class="col-lg-4">
                 <a href="{{ route('home') }}" class="footer-logo-plate" aria-label="{{ config('byward.company.name') }}">
-                    <img src="{{ asset('images/logo.png') }}" alt="{{ config('byward.company.name') }}">
+                    <img src="{{ asset('images/logo1.png') }}" alt="{{ config('byward.company.name') }}">
                 </a>
                 <p class="fs-5 fw-bold text-brand mt-3 mb-2" style="letter-spacing: 0.5px;">On Time. Every Time.</p>
                 <p style="max-width:340px">{{ __('site.footer.tagline') }}</p>
