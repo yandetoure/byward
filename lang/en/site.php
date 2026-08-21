@@ -337,7 +337,7 @@ return [
         'meta_description' => 'Since 2014, Byward Logistics has served 500+ business clients across 120+ destinations worldwide.',
 
         'eyebrow' => 'About Byward Logistics',
-        'title' => 'A Decade of Moving What Matters',
+        'title' => 'On Time. Every Time.',
         'text' => "We started with one truck and a determination to get logistics right. Today Byward Logistics is a trusted partner to hundreds of businesses looking for dependable transport solutions.",
 
         'stats' => [

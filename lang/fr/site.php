@@ -337,7 +337,7 @@ return [
         'meta_description' => 'Depuis 2014, Byward Logistics accompagne plus de 500 clients professionnels vers plus de 120 destinations dans le monde.',
 
         'eyebrow' => 'À propos de Byward Logistics',
-        'title' => 'Une décennie à faire avancer ce qui compte',
+        'title' => 'À l\'heure. À chaque fois.',
         'text' => "Nous avons commencé avec un seul camion et la ferme intention de maîtriser la logistique. Aujourd'hui, Byward Logistics est un partenaire de confiance pour des centaines d'entreprises à la recherche de solutions de transport fiables.",
 
         'stats' => [
