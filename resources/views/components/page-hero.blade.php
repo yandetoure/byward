@@ -28,7 +28,7 @@
                     <span class="eyebrow eyebrow-light fade-up-delayed d-1">{{ $eyebrow }}</span>
                 @endif
 
-                <h1 class="text-balance fade-up-delayed d-2">{{ $title }}</h1>
+                <h1 class="text-balance fade-up-delayed d-2">{!! $title !!}</h1>
 
                 @if ($text)
                     <p class="lead mt-3 mw-720 fade-up-delayed d-3">{{ $text }}</p>
