@@ -44,7 +44,7 @@
         @yield('content')
     </main>
 
-    @if(!in_array(request()->route()?->getName(), ['about', 'careers', 'contact', 'quote', 'estimate', 'faq']))
+    @if(!in_array(request()->route()?->getName(), ['about', 'careers', 'contact', 'quote', 'estimate', 'faq', 'services', 'industries']))
         @include('partials.careers-cta')
     @endif
 
