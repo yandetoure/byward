@@ -64,7 +64,7 @@ return [
         'hero_l1' => 'Move Freight.',
         'hero_l2' => 'Build Trust.',
         'hero_l3' => 'Deliver Results.',
-        'hero_text' => "End-to-end logistics solutions trusted by businesses across industries. From last-mile delivery to global freight management — we get your cargo there, every time.",
+        'hero_text' => "End-to-end logistics solutions trusted by businesses across industries. From last-mile delivery to global freight management — we get your cargo there.",
 
         'features' => [
             ['icon' => 'truck', 'text' => 'Fast delivery across Ontario and Quebec.'],

@@ -74,7 +74,7 @@
                     {{ __('site.home.hero_text') }}
                 </p>
                 <div class="mt-3 fade-up-delayed d-2">
-                    <span class="fs-5 fw-medium text-white" style="letter-spacing: 0.5px;">On Time. Every Time.</span>
+                    <span class="fs-5 fw-bold text-white" style="letter-spacing: 0.5px;">On Time. Every Time.</span>
                 </div>
 
                 <div class="mt-5 fade-up-delayed d-3 p-3 bg-white bg-opacity-10 rounded-3 backdrop-blur" style="max-width: 500px; border: 1px solid rgba(255,255,255,0.2);">

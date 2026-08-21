@@ -64,7 +64,7 @@ return [
         'hero_l1' => 'Transportez.',
         'hero_l2' => 'Bâtissez la confiance.',
         'hero_l3' => 'Livrez des résultats.',
-        'hero_text' => "Des solutions logistiques de bout en bout, adoptées par des entreprises de tous les secteurs. De la livraison du dernier kilomètre à la gestion du fret international, nous acheminons vos marchandises à destination, à chaque fois.",
+        'hero_text' => "Des solutions logistiques de bout en bout, adoptées par des entreprises de tous les secteurs. De la livraison du dernier kilomètre à la gestion du fret international, nous acheminons vos marchandises à destination.",
 
         'features' => [
             ['icon' => 'truck', 'text' => 'Livraison rapide partout en Ontario et au Québec.'],
