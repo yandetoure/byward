@@ -38,7 +38,7 @@ return [
         'hero_contact'    => $unsplash('1600880292203-757bb62b4baf', 1800),
         'hero_quote'      => $unsplash('1494412574643-ff11b0a5c1c3', 1800),
 
-        'why'             => $unsplash('1601584115197-04ecc0da31d7', 1100),
+        'why'             => '/images/banner.jpeg',
         'why_alt'         => $unsplash('1578575437130-527eed3abbec', 900),
         'estimate_teaser' => '/images/quick.jpeg',
         'about_team'      => $unsplash('1521737711867-e3b97375f902', 1100),
