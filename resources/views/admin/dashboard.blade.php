@@ -162,7 +162,10 @@
                                             </span>
                                         </td>
                                         <td class="text-end">
-                                            <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action py-1 px-3 text-nowrap">Edit</a>
+                                            <div class="d-inline-flex gap-2">
+                                                <a href="{{ route('admin.shipments.show', $shipment) }}" class="btn btn-sm btn-outline-navy btn-admin-action py-1 px-3 text-nowrap">View</a>
+                                                <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action py-1 px-3 text-nowrap">Edit</a>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

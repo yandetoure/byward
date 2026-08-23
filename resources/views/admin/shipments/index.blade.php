@@ -72,7 +72,10 @@
                                 </td>
                                 <td class="text-end py-3">
                                     <div class="d-inline-flex gap-2 align-items-center">
-                                        <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
+                                        <a href="{{ route('admin.shipments.show', $shipment) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
+                                            View
+                                        </a>
+                                        <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
                                             Edit
                                         </a>
                                         <form action="{{ route('admin.shipments.destroy', $shipment) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this shipment?');" class="d-inline">

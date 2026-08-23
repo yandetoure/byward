@@ -51,6 +51,11 @@ class AdminShipmentController extends Controller
         return redirect()->route('admin.shipments.index')->with('status', 'Shipment created successfully!');
     }
 
+    public function show($locale, Shipment $shipment)
+    {
+        return view('admin.shipments.show', compact('shipment'));
+    }
+
     public function edit($locale, Shipment $shipment)
     {
         return view('admin.shipments.edit', compact('shipment'));

@@ -72,7 +72,7 @@ Route::prefix('{locale}')
                 // Shipments CRUD
                 Route::resource('/shipments', App\Http\Controllers\Admin\AdminShipmentController::class, [
                     'as' => 'admin'
-                ])->except(['show']);
+                ]);
 
                 // Jobs CRUD
                 Route::resource('/jobs', App\Http\Controllers\Admin\AdminJobController::class, [
