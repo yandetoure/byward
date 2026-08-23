@@ -106,7 +106,9 @@
                                             @endif
                                         </td>
                                         <td class="text-end">
-                                            <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-outline-navy btn-admin-action py-1 px-3 text-nowrap">View</a>
+                                            <a href="{{ route('admin.leads.show', $lead) }}" class="btn-icon-action btn-icon-view" title="View details">
+                                                <x-icon name="eye" size="15" />
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -162,9 +164,13 @@
                                             </span>
                                         </td>
                                         <td class="text-end">
-                                            <div class="d-inline-flex gap-2">
-                                                <a href="{{ route('admin.shipments.show', $shipment) }}" class="btn btn-sm btn-outline-navy btn-admin-action py-1 px-3 text-nowrap">View</a>
-                                                <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action py-1 px-3 text-nowrap">Edit</a>
+                                            <div class="d-inline-flex gap-1 justify-content-end">
+                                                <a href="{{ route('admin.shipments.show', $shipment) }}" class="btn-icon-action btn-icon-view" title="View details">
+                                                    <x-icon name="eye" size="15" />
+                                                </a>
+                                                <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn-icon-action btn-icon-edit" title="Edit shipment">
+                                                    <x-icon name="edit" size="15" />
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>

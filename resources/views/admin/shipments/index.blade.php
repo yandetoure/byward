@@ -71,18 +71,18 @@
                                     {{ $shipment->expected_delivery_date ? \Carbon\Carbon::parse($shipment->expected_delivery_date)->format('M d, Y') : '-' }}
                                 </td>
                                 <td class="text-end py-3">
-                                    <div class="d-inline-flex gap-2 align-items-center">
-                                        <a href="{{ route('admin.shipments.show', $shipment) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
-                                            View
+                                    <div class="d-inline-flex gap-1 justify-content-end align-items-center">
+                                        <a href="{{ route('admin.shipments.show', $shipment) }}" class="btn-icon-action btn-icon-view" title="View Shipment Details">
+                                            <x-icon name="eye" size="15" />
                                         </a>
-                                        <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
-                                            Edit
+                                        <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn-icon-action btn-icon-edit" title="Edit Shipment">
+                                            <x-icon name="edit" size="15" />
                                         </a>
                                         <form action="{{ route('admin.shipments.destroy', $shipment) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this shipment?');" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-outline-danger btn-admin-action text-nowrap">
-                                                Delete
+                                            <button type="submit" class="btn-icon-action btn-icon-delete" title="Delete Shipment">
+                                                <x-icon name="trash" size="15" />
                                             </button>
                                         </form>
                                     </div>

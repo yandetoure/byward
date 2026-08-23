@@ -11,25 +11,25 @@
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
         <div>
             <div class="d-flex align-items-center gap-3 flex-wrap">
-                <h1 class="h2 mb-0 fw-bold text-navy">{{ $job->title_fr }} / {{ $job->title_en }}</h1>
+                <h1 class="h3 mb-0 fw-bold text-navy">{{ $job->title_fr }} / {{ $job->title_en }}</h1>
                 @if($job->is_active)
                     <span class="badge-status-delivered">Active</span>
                 @else
                     <span class="badge-status-pending">Inactive</span>
                 @endif
             </div>
-            <p class="text-muted mb-0 mt-1">Created on {{ $job->created_at->format('F d, Y \a\t H:i') }}</p>
+            <p class="text-muted small mb-0 mt-1">Created on {{ $job->created_at->format('F d, Y \a\t H:i') }}</p>
         </div>
 
         <div class="d-flex gap-2 align-items-center">
-            <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-outline-navy btn-admin-action px-3">
-                ✏️ Edit Job
+            <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-sm btn-outline-navy rounded-pill px-3">
+                <x-icon name="edit" size="14" class="me-1" /> Edit Job
             </a>
             <form action="{{ route('admin.jobs.destroy', $job) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this job opening?');" class="d-inline">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-outline-danger btn-admin-action px-3">
-                    🗑️ Delete
+                <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill px-3">
+                    <x-icon name="trash" size="14" class="me-1" /> Delete
                 </button>
             </form>
         </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div>
                     <strong class="text-muted small d-block mb-1">Description (FR)</strong>
-                    <div class="p-3 bg-light rounded-3 border text-dark" style="white-space: pre-wrap; font-size: 0.95rem;">{{ $job->description_fr ?: 'Aucune description en français.' }}</div>
+                    <div class="p-3 bg-light rounded-3 border text-dark" style="white-space: pre-wrap; font-size: 0.9rem;">{{ $job->description_fr ?: 'Aucune description en français.' }}</div>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div>
                     <strong class="text-muted small d-block mb-1">Description (EN)</strong>
-                    <div class="p-3 bg-light rounded-3 border text-dark" style="white-space: pre-wrap; font-size: 0.95rem;">{{ $job->description_en ?: 'No English description provided.' }}</div>
+                    <div class="p-3 bg-light rounded-3 border text-dark" style="white-space: pre-wrap; font-size: 0.9rem;">{{ $job->description_en ?: 'No English description provided.' }}</div>
                 </div>
             </div>
         </div>

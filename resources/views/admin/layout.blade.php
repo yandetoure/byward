@@ -16,7 +16,72 @@
             background-color: #f6f8fb;
             color: #46536b;
             min-height: 100vh;
+            font-size: 0.85rem;
         }
+        h1, .h1 { font-size: 1.4rem !important; }
+        h2, .h2 { font-size: 1.25rem !important; }
+        h3, .h3 { font-size: 1.1rem !important; }
+        h4, .h4 { font-size: 0.98rem !important; }
+        h5, .h5 { font-size: 0.88rem !important; }
+        h6, .h6 { font-size: 0.8rem !important; }
+        
+        .table { font-size: 0.83rem; }
+        .table th { font-weight: 700; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.04em; color: #64748b; }
+        .table td, .table th { padding: 0.55rem 0.75rem; }
+
+        .btn-icon-action {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.4rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+        }
+        .btn-icon-action:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+        .btn-icon-view {
+            background-color: #f1f5f9;
+            color: #334155;
+            border-color: #cbd5e1;
+        }
+        .btn-icon-view:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .btn-icon-edit {
+            background-color: #eff6ff;
+            color: #2563eb;
+            border-color: #bfdbfe;
+        }
+        .btn-icon-edit:hover {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+        .btn-icon-delete {
+            background-color: #fef2f2;
+            color: #dc2626;
+            border-color: #fecaca;
+        }
+        .btn-icon-delete:hover {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .btn-icon-toggle {
+            background-color: #f0fdf4;
+            color: #16a34a;
+            border-color: #bbf7d0;
+        }
+        .btn-icon-toggle:hover {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;

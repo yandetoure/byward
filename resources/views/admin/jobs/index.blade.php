@@ -64,18 +64,18 @@
                                     @endif
                                 </td>
                                 <td class="text-end py-3">
-                                    <div class="d-inline-flex gap-2 align-items-center">
-                                        <a href="{{ route('admin.jobs.show', $job) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
-                                            View
+                                    <div class="d-inline-flex gap-1 justify-content-end align-items-center">
+                                        <a href="{{ route('admin.jobs.show', $job) }}" class="btn-icon-action btn-icon-view" title="View Job Details">
+                                            <x-icon name="eye" size="15" />
                                         </a>
-                                        <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
-                                            Edit
+                                        <a href="{{ route('admin.jobs.edit', $job) }}" class="btn-icon-action btn-icon-edit" title="Edit Job Opening">
+                                            <x-icon name="edit" size="15" />
                                         </a>
                                         <form action="{{ route('admin.jobs.destroy', $job) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this job opening?');" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-outline-danger btn-admin-action text-nowrap">
-                                                Delete
+                                            <button type="submit" class="btn-icon-action btn-icon-delete" title="Delete Job Opening">
+                                                <x-icon name="trash" size="15" />
                                             </button>
                                         </form>
                                     </div>

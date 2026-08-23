@@ -99,17 +99,24 @@
                                     @endif
                                 </td>
                                 <td class="text-end py-3">
-                                    <div class="d-inline-flex gap-2 align-items-center">
-                                        <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
-                                            View
+                                    <div class="d-inline-flex gap-1 justify-content-end align-items-center">
+                                        <a href="{{ route('admin.leads.show', $lead) }}" class="btn-icon-action btn-icon-view" title="View Details">
+                                            <x-icon name="eye" size="15" />
                                         </a>
-                                        <a href="{{ route('admin.leads.edit', $lead) }}" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
-                                            Edit
+                                        <a href="{{ route('admin.leads.edit', $lead) }}" class="btn-icon-action btn-icon-edit" title="Edit Lead">
+                                            <x-icon name="edit" size="15" />
                                         </a>
                                         <form action="{{ route('admin.leads.toggle', $lead) }}" method="POST" class="d-inline">
                                             @csrf
-                                            <button type="submit" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
-                                                {{ $lead->handled ? 'Mark Pending' : 'Mark Handled' }}
+                                            <button type="submit" class="btn-icon-action btn-icon-toggle" title="{{ $lead->handled ? 'Mark as Pending' : 'Mark as Handled' }}">
+                                                <x-icon name="check-circle" size="15" />
+                                            </button>
+                                        </form>
+                                        <form action="{{ route('admin.leads.destroy', $lead) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this lead?');" class="d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn-icon-action btn-icon-delete" title="Delete Lead">
+                                                <x-icon name="trash" size="15" />
                                             </button>
                                         </form>
                                     </div>
