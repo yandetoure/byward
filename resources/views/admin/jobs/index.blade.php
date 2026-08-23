@@ -65,7 +65,10 @@
                                 </td>
                                 <td class="text-end py-3">
                                     <div class="d-inline-flex gap-2 align-items-center">
-                                        <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
+                                        <a href="{{ route('admin.jobs.show', $job) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
+                                            View
+                                        </a>
+                                        <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
                                             Edit
                                         </a>
                                         <form action="{{ route('admin.jobs.destroy', $job) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this job opening?');" class="d-inline">

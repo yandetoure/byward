@@ -49,6 +49,11 @@ class AdminJobController extends Controller
         return redirect()->route('admin.jobs.index')->with('status', 'Job opening created successfully!');
     }
 
+    public function show($locale, JobOffer $job)
+    {
+        return view('admin.jobs.show', compact('job'));
+    }
+
     public function edit($locale, JobOffer $job)
     {
         return view('admin.jobs.edit', compact('job'));

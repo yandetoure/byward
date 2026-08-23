@@ -67,13 +67,39 @@
                 <h3 class="h5 border-bottom pb-2 mb-3">Quote / Shipment Details</h3>
                 <div class="row g-3 mb-4">
                     <div class="col-md-6">
-                        <label for="origin" class="form-label fw-semibold">Origin Location</label>
+                        <label for="origin" class="form-label fw-semibold">Origin City / Country</label>
                         <input type="text" class="form-control" id="origin" name="origin" value="{{ old('origin', $lead->origin) }}">
                     </div>
 
                     <div class="col-md-6">
-                        <label for="destination" class="form-label fw-semibold">Destination Location</label>
+                        <label for="destination" class="form-label fw-semibold">Destination City / Country</label>
                         <input type="text" class="form-control" id="destination" name="destination" value="{{ old('destination', $lead->destination) }}">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="origin_street" class="form-label fw-semibold">Origin Street Address</label>
+                        <input type="text" class="form-control" id="origin_street" name="origin_street" value="{{ old('origin_street', $lead->origin_street) }}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="origin_province" class="form-label fw-semibold">Origin Province / State</label>
+                        <input type="text" class="form-control" id="origin_province" name="origin_province" value="{{ old('origin_province', $lead->origin_province) }}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="origin_postal_code" class="form-label fw-semibold">Origin Postal Code</label>
+                        <input type="text" class="form-control" id="origin_postal_code" name="origin_postal_code" value="{{ old('origin_postal_code', $lead->origin_postal_code) }}">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="destination_street" class="form-label fw-semibold">Destination Street Address</label>
+                        <input type="text" class="form-control" id="destination_street" name="destination_street" value="{{ old('destination_street', $lead->destination_street) }}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="destination_province" class="form-label fw-semibold">Destination Province / State</label>
+                        <input type="text" class="form-control" id="destination_province" name="destination_province" value="{{ old('destination_province', $lead->destination_province) }}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="destination_postal_code" class="form-label fw-semibold">Destination Postal Code</label>
+                        <input type="text" class="form-control" id="destination_postal_code" name="destination_postal_code" value="{{ old('destination_postal_code', $lead->destination_postal_code) }}">
                     </div>
 
                     <div class="col-md-4">
@@ -94,6 +120,19 @@
                     <div class="col-md-4">
                         <label for="pickup_date" class="form-label fw-semibold">Pickup Date</label>
                         <input type="date" class="form-control" id="pickup_date" name="pickup_date" value="{{ old('pickup_date', $lead->pickup_date ? $lead->pickup_date->format('Y-m-d') : '') }}">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="length" class="form-label fw-semibold">Length (cm)</label>
+                        <input type="number" step="0.01" class="form-control" id="length" name="length" value="{{ old('length', $lead->length) }}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="width" class="form-label fw-semibold">Width (cm)</label>
+                        <input type="number" step="0.01" class="form-control" id="width" name="width" value="{{ old('width', $lead->width) }}">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="height" class="form-label fw-semibold">Height (cm)</label>
+                        <input type="number" step="0.01" class="form-control" id="height" name="height" value="{{ old('height', $lead->height) }}">
                     </div>
                 </div>
             @endif

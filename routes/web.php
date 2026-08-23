@@ -77,6 +77,6 @@ Route::prefix('{locale}')
                 // Jobs CRUD
                 Route::resource('/jobs', App\Http\Controllers\Admin\AdminJobController::class, [
                     'as' => 'admin'
-                ])->except(['show']);
+                ]);
             });
     });
