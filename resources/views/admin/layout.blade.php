@@ -278,5 +278,30 @@
     </main>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('form input[name="search"]').forEach(function(input) {
+        let timeout = null;
+        input.addEventListener('input', function() {
+            clearTimeout(timeout);
+            const form = this.form;
+            timeout = setTimeout(function() {
+                if (form) {
+                    form.submit();
+                }
+            }, 350);
+        });
+
+        // Maintain cursor focus at end of search input when page reloads with search query
+        if (input.value) {
+            input.focus();
+            const val = input.value;
+            input.value = '';
+            input.value = val;
+        }
+    });
+});
+</script>
+
 </body>
 </html>
