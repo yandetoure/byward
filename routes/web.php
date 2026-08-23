@@ -78,5 +78,9 @@ Route::prefix('{locale}')
                 Route::resource('/jobs', App\Http\Controllers\Admin\AdminJobController::class, [
                     'as' => 'admin'
                 ]);
+
+                // Admin Profile
+                Route::get('/profile', [App\Http\Controllers\Admin\AdminProfileController::class, 'edit'])->name('admin.profile.edit');
+                Route::put('/profile', [App\Http\Controllers\Admin\AdminProfileController::class, 'update'])->name('admin.profile.update');
             });
     });

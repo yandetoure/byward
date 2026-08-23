@@ -312,13 +312,19 @@
                 <x-icon name="users" size="18" />
                 Job Openings
             </a>
+            <a href="{{ route('admin.profile.edit') }}" class="sidebar-link {{ request()->routeIs('admin.profile.*') ? 'active' : '' }}">
+                <x-icon name="user" size="18" />
+                Mon Profil
+            </a>
         </nav>
         
         <div class="sidebar-footer">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="small text-white-50">
                     Logged in as:<br>
-                    <strong class="text-white">{{ auth()->user()->name }}</strong>
+                    <a href="{{ route('admin.profile.edit') }}" class="text-white text-decoration-underline-hover fw-bold" title="Modifier le profil">
+                        {{ auth()->user()->name }}
+                    </a>
                 </div>
                 <form action="{{ route('admin.logout') }}" method="POST">
                     @csrf
