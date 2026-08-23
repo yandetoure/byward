@@ -66,11 +66,11 @@
 
 <div class="row g-4">
     <!-- Recent Leads -->
-    <div class="col-lg-6">
-        <div class="card border-0 shadow-sm rounded-4 h-100">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm rounded-4">
             <div class="card-header bg-transparent border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
                 <h4 class="h5 mb-0">Recent Leads & Requests</h4>
-                <a href="{{ route('admin.leads.index') }}" class="btn btn-sm btn-outline-navy">View All</a>
+                <a href="{{ route('admin.leads.index') }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">View All</a>
             </div>
             <div class="card-body px-4 pb-4">
                 @if($recentLeads->isEmpty())
@@ -83,7 +83,7 @@
                                     <th>Name</th>
                                     <th>Type</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <th class="text-end">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -105,7 +105,7 @@
                                                 <span class="badge-pending">Pending</span>
                                             @endif
                                         </td>
-                                        <td>
+                                        <td class="text-end">
                                             <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-outline-navy btn-admin-action py-1 px-3 text-nowrap">View</a>
                                         </td>
                                     </tr>
@@ -119,11 +119,11 @@
     </div>
 
     <!-- Recent Shipments -->
-    <div class="col-lg-6">
-        <div class="card border-0 shadow-sm rounded-4 h-100">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm rounded-4">
             <div class="card-header bg-transparent border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
                 <h4 class="h5 mb-0">Recent Shipments</h4>
-                <a href="{{ route('admin.shipments.index') }}" class="btn btn-sm btn-outline-navy">View All</a>
+                <a href="{{ route('admin.shipments.index') }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">View All</a>
             </div>
             <div class="card-body px-4 pb-4">
                 @if($recentShipments->isEmpty())
@@ -136,7 +136,7 @@
                                     <th>Tracking Number</th>
                                     <th>Route</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <th class="text-end">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -161,7 +161,7 @@
                                                 {{ $shipment->status }}
                                             </span>
                                         </td>
-                                        <td>
+                                        <td class="text-end">
                                             <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action py-1 px-3 text-nowrap">Edit</a>
                                         </td>
                                     </tr>
