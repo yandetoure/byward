@@ -94,7 +94,7 @@
                                             <div class="small text-muted">{{ $lead->created_at->format('M d, Y') }}</div>
                                         </td>
                                         <td>
-                                            <span class="badge bg-light text-navy text-uppercase px-2 py-1" style="font-size: 0.7rem;">
+                                            <span class="badge-type-{{ strtolower($lead->type) }}">
                                                 {{ $lead->type }}
                                             </span>
                                         </td>

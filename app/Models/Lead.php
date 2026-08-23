@@ -12,6 +12,7 @@ class Lead extends Model
         'length', 'width', 'height', 'pickup_date', 'photo_paths',
         'origin_street', 'origin_province', 'origin_postal_code',
         'destination_street', 'destination_province', 'destination_postal_code',
+        'position', 'resume_path', 'handled',
     ];
 
     protected function casts(): array

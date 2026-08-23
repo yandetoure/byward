@@ -64,6 +64,8 @@ Route::prefix('{locale}')
                 // Leads management
                 Route::get('/leads', [App\Http\Controllers\Admin\AdminLeadController::class, 'index'])->name('admin.leads.index');
                 Route::get('/leads/{lead}', [App\Http\Controllers\Admin\AdminLeadController::class, 'show'])->name('admin.leads.show');
+                Route::get('/leads/{lead}/edit', [App\Http\Controllers\Admin\AdminLeadController::class, 'edit'])->name('admin.leads.edit');
+                Route::put('/leads/{lead}', [App\Http\Controllers\Admin\AdminLeadController::class, 'update'])->name('admin.leads.update');
                 Route::post('/leads/{lead}/toggle', [App\Http\Controllers\Admin\AdminLeadController::class, 'toggleHandled'])->name('admin.leads.toggle');
                 Route::delete('/leads/{lead}', [App\Http\Controllers\Admin\AdminLeadController::class, 'destroy'])->name('admin.leads.destroy');
 

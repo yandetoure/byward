@@ -71,7 +71,7 @@ class LeadController extends Controller
         if ($request->hasFile('photos')) {
             foreach ($request->file('photos') as $photo) {
                 if ($photo->isValid()) {
-                    $photoPaths[] = $photo->store('quotes');
+                    $photoPaths[] = $photo->store('quotes', 'public');
                 }
             }
         }
@@ -113,7 +113,7 @@ class LeadController extends Controller
         // Handle file upload
         $resumePath = null;
         if ($request->hasFile('resume')) {
-            $resumePath = $request->file('resume')->store('resumes');
+            $resumePath = $request->file('resume')->store('resumes', 'public');
         }
 
         $leadData = collect($data)->except(['resume'])->toArray();

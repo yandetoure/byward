@@ -27,6 +27,35 @@ class AdminLeadController extends Controller
         return view('admin.leads.show', compact('lead'));
     }
 
+    public function edit($locale, Lead $lead)
+    {
+        return view('admin.leads.edit', compact('lead'));
+    }
+
+    public function update(Request $request, $locale, Lead $lead)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:120'],
+            'email' => ['required', 'email', 'max:180'],
+            'phone' => ['nullable', 'string', 'max:40'],
+            'company' => ['nullable', 'string', 'max:150'],
+            'message' => ['nullable', 'string', 'max:4000'],
+            'handled' => ['nullable', 'boolean'],
+            'origin' => ['nullable', 'string', 'max:255'],
+            'destination' => ['nullable', 'string', 'max:255'],
+            'shipment_type' => ['nullable', 'string', 'max:50'],
+            'weight' => ['nullable', 'numeric'],
+            'pickup_date' => ['nullable', 'date'],
+            'position' => ['nullable', 'string', 'max:150'],
+        ]);
+
+        $data['handled'] = $request->has('handled');
+
+        $lead->update($data);
+
+        return redirect()->route('admin.leads.show', $lead)->with('status', 'Lead updated successfully!');
+    }
+
     public function toggleHandled($locale, Lead $lead)
     {
         $lead->update([

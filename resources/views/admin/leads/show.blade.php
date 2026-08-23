@@ -13,6 +13,9 @@
             <p class="text-muted">Submitted on {{ $lead->created_at->format('M d, Y \a\t H:i') }} (locale: {{ strtoupper($lead->locale) }})</p>
         </div>
         <div class="d-flex gap-2">
+            <a href="{{ route('admin.leads.edit', $lead) }}" class="btn btn-outline-navy">
+                Edit Lead
+            </a>
             <form action="{{ route('admin.leads.toggle', $lead) }}" method="POST">
                 @csrf
                 <button type="submit" class="btn {{ $lead->handled ? 'btn-outline-warning' : 'btn-success' }}">

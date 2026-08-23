@@ -56,42 +56,45 @@
                     <tbody>
                         @foreach($leads as $lead)
                             <tr>
-                                <td>
-                                    <div class="fw-semibold">{{ $lead->created_at->format('M d, Y') }}</div>
+                                <td class="py-3">
+                                    <div class="fw-semibold text-nowrap">{{ $lead->created_at->format('M d, Y') }}</div>
                                     <div class="small text-muted">{{ $lead->created_at->format('H:i') }}</div>
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     <div class="fw-semibold text-navy">{{ $lead->name }}</div>
                                     @if($lead->company)
                                         <div class="small text-muted">{{ $lead->company }}</div>
                                     @endif
                                 </td>
-                                <td>
-                                    <div><a href="mailto:{{ $lead->email }}" class="text-decoration-none">{{ $lead->email }}</a></div>
+                                <td class="py-3">
+                                    <div><a href="mailto:{{ $lead->email }}" class="text-decoration-none fw-medium">{{ $lead->email }}</a></div>
                                     @if($lead->phone)
                                         <div class="small text-muted">{{ $lead->phone }}</div>
                                     @endif
                                 </td>
-                                <td>
-                                    <span class="badge bg-light text-navy text-uppercase px-2 py-1" style="font-size: 0.7rem;">
+                                <td class="py-3">
+                                    <span class="badge-type-{{ strtolower($lead->type) }}">
                                         {{ $lead->type }}
                                     </span>
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     @if($lead->handled)
                                         <span class="badge-handled">Handled</span>
                                     @else
                                         <span class="badge-pending">Pending</span>
                                     @endif
                                 </td>
-                                <td class="text-end">
-                                    <div class="d-inline-flex gap-2">
-                                        <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-outline-navy py-1 px-2">
+                                <td class="text-end py-3">
+                                    <div class="d-inline-flex gap-2 align-items-center">
+                                        <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
                                             View
                                         </a>
-                                        <form action="{{ route('admin.leads.toggle', $lead) }}" method="POST">
+                                        <a href="{{ route('admin.leads.edit', $lead) }}" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
+                                            Edit
+                                        </a>
+                                        <form action="{{ route('admin.leads.toggle', $lead) }}" method="POST" class="d-inline">
                                             @csrf
-                                            <button type="submit" class="btn btn-sm btn-outline-secondary py-1 px-2">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary btn-admin-action text-nowrap">
                                                 {{ $lead->handled ? 'Mark Pending' : 'Mark Handled' }}
                                             </button>
                                         </form>

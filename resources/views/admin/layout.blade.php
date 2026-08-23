@@ -120,20 +120,73 @@
         .bg-orange-light { background-color: rgba(253, 126, 20, 0.1); color: #fd7e14; }
         
         .badge-handled {
-            background-color: rgba(25, 135, 84, 0.1);
-            color: #198754;
-            padding: 0.35rem 0.65rem;
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 0.35rem 0.75rem;
             border-radius: 2rem;
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
+            border: 1px solid #bbf7d0;
+            display: inline-flex;
+            align-items: center;
         }
         .badge-pending {
-            background-color: rgba(253, 126, 20, 0.1);
-            color: #fd7e14;
-            padding: 0.35rem 0.65rem;
+            background-color: #fff7ed;
+            color: #c2410c;
+            padding: 0.35rem 0.75rem;
             border-radius: 2rem;
             font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #ffedd5;
+            display: inline-flex;
+            align-items: center;
+        }
+        .badge-type-quote {
+            background-color: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fca5a5;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .badge-type-contact {
+            background-color: #e0f2fe;
+            color: #0284c7;
+            border: 1px solid #7dd3fc;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .badge-type-career {
+            background-color: #dcfce7;
+            color: #16a34a;
+            border: 1px solid #86efac;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .btn-admin-action {
+            font-size: 0.82rem;
             font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            white-space: nowrap !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
         }
     </style>
 </head>
