@@ -10,12 +10,7 @@
     </div>
     <div class="d-flex gap-2 align-items-center flex-wrap">
         <form action="{{ route('admin.shipments.index') }}" method="GET" class="d-flex gap-2 align-items-center" style="max-width: 320px; width: 100%;">
-            <div class="input-group">
-                <input type="text" name="search" class="form-control form-control-sm rounded-start-pill border-end-0 ps-3" placeholder="Search tracking #, route, status..." value="{{ $search ?? '' }}">
-                <button class="btn btn-sm btn-outline-secondary rounded-end-pill px-3" type="submit">
-                    🔍
-                </button>
-            </div>
+            <input type="text" name="search" class="form-control form-control-sm rounded-pill px-3" placeholder="Search tracking #, route, status..." value="{{ $search ?? '' }}">
             @if(!empty($search))
                 <a href="{{ route('admin.shipments.index') }}" class="btn btn-sm btn-light text-nowrap rounded-pill px-3 border" title="Clear Search">Reset</a>
             @endif

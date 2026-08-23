@@ -12,12 +12,7 @@
         @if($type)
             <input type="hidden" name="type" value="{{ $type }}">
         @endif
-        <div class="input-group">
-            <input type="text" name="search" class="form-control form-control-sm rounded-start-pill border-end-0 ps-3" placeholder="Search name, email, phone..." value="{{ $search ?? '' }}">
-            <button class="btn btn-sm btn-outline-secondary rounded-end-pill px-3" type="submit">
-                🔍
-            </button>
-        </div>
+        <input type="text" name="search" class="form-control form-control-sm rounded-pill px-3" placeholder="Search name, email, phone..." value="{{ $search ?? '' }}">
         @if(!empty($search))
             <a href="{{ route('admin.leads.index', array_filter(['type' => $type])) }}" class="btn btn-sm btn-light text-nowrap rounded-pill px-3 border" title="Clear Search">Reset</a>
         @endif
