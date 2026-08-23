@@ -6,6 +6,7 @@ use App\Models\Lead;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class LeadController extends Controller
 {
@@ -27,6 +28,8 @@ class LeadController extends Controller
         $lead = Lead::create($data + ['type' => 'contact', 'locale' => App::getLocale()]);
 
         Log::info('New contact lead received', ['id' => $lead->id, 'email' => $lead->email]);
+
+        $this->sendLeadNotification($lead);
 
         return redirect()
             ->route('contact')
@@ -84,6 +87,8 @@ class LeadController extends Controller
 
         Log::info('New quote request received', ['id' => $lead->id, 'email' => $lead->email]);
 
+        $this->sendLeadNotification($lead);
+
         return redirect()
             ->route('quote')
             ->with('status', __('site.quote.success'))
@@ -118,9 +123,51 @@ class LeadController extends Controller
 
         Log::info('New career application received', ['id' => $lead->id, 'email' => $lead->email]);
 
+        $this->sendLeadNotification($lead);
+
         return redirect()
             ->route('careers')
             ->with('status', __('site.careers.success'))
             ->withFragment('form');
+    }
+
+    private function sendLeadNotification(Lead $lead): void
+    {
+        try {
+            $toEmail = config('byward.company.email', 'contact@bywardlogistics.com');
+            $subject = 'Nouvelle demande [' . strtoupper($lead->type) . '] de ' . $lead->name;
+
+            $content = "Nouvelle demande reçue sur Byward Logistics :\n\n"
+                . "Type : " . strtoupper($lead->type) . "\n"
+                . "Nom : " . $lead->name . "\n"
+                . "Email : " . $lead->email . "\n"
+                . "Téléphone : " . ($lead->phone ?? 'N/A') . "\n"
+                . "Entreprise : " . ($lead->company ?? 'N/A') . "\n";
+
+            if ($lead->type === 'quote') {
+                $content .= "Origine : " . ($lead->origin ?? 'N/A') . "\n"
+                    . "Destination : " . ($lead->destination ?? 'N/A') . "\n"
+                    . "Type de fret : " . ($lead->shipment_type ?? 'N/A') . "\n"
+                    . "Poids : " . ($lead->weight ?? 'N/A') . " kg\n"
+                    . "Date d'enlèvement : " . ($lead->pickup_date ?? 'N/A') . "\n";
+            } elseif ($lead->type === 'career') {
+                $content .= "Poste : " . ($lead->position ?? 'N/A') . "\n";
+            }
+
+            if ($lead->message) {
+                $content .= "\nMessage :\n" . $lead->message . "\n";
+            }
+
+            Mail::raw($content, function ($message) use ($toEmail, $subject, $lead) {
+                $message->to($toEmail)
+                    ->replyTo($lead->email, $lead->name)
+                    ->subject($subject);
+            });
+        } catch (\Throwable $e) {
+            Log::error('Erreur lors de l’envoi du mail de notification lead', [
+                'error' => $e->getMessage(),
+                'lead_id' => $lead->id,
+            ]);
+        }
     }
 }
