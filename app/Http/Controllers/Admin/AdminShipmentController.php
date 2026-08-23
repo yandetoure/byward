@@ -8,10 +8,25 @@ use Illuminate\Http\Request;
 
 class AdminShipmentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $shipments = Shipment::latest()->paginate(15);
-        return view('admin.shipments.index', compact('shipments'));
+        $search = trim((string) $request->query('search'));
+        $query = Shipment::latest();
+
+        if ($search !== '') {
+            $query->where(function ($q) use ($search) {
+                $q->where('tracking_number', 'like', "%{$search}%")
+                  ->orWhere('origin', 'like', "%{$search}%")
+                  ->orWhere('destination', 'like', "%{$search}%")
+                  ->orWhere('current_location', 'like', "%{$search}%")
+                  ->orWhere('status', 'like', "%{$search}%")
+                  ->orWhere('notes', 'like', "%{$search}%");
+            });
+        }
+
+        $shipments = $query->paginate(15)->withQueryString();
+
+        return view('admin.shipments.index', compact('shipments', 'search'));
     }
 
     public function create()

@@ -3,14 +3,27 @@
 @section('title', 'Manage Shipments')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
     <div>
         <h1 class="h2 mb-0">Track Shipments</h1>
         <p class="text-muted mb-0">Create, edit, and monitor shipment tracking information.</p>
     </div>
-    <a href="{{ route('admin.shipments.create') }}" class="btn btn-brand">
-        + Create Shipment
-    </a>
+    <div class="d-flex gap-2 align-items-center flex-wrap">
+        <form action="{{ route('admin.shipments.index') }}" method="GET" class="d-flex gap-2 align-items-center" style="max-width: 320px; width: 100%;">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control form-control-sm rounded-start-pill border-end-0 ps-3" placeholder="Search tracking #, route, status..." value="{{ $search ?? '' }}">
+                <button class="btn btn-sm btn-outline-secondary rounded-end-pill px-3" type="submit">
+                    🔍
+                </button>
+            </div>
+            @if(!empty($search))
+                <a href="{{ route('admin.shipments.index') }}" class="btn btn-sm btn-light text-nowrap rounded-pill px-3 border" title="Clear Search">Reset</a>
+            @endif
+        </form>
+        <a href="{{ route('admin.shipments.create') }}" class="btn btn-brand btn-sm text-nowrap">
+            + Create Shipment
+        </a>
+    </div>
 </div>
 
 <div class="card border-0 shadow-sm rounded-4">
@@ -36,29 +49,36 @@
                     <tbody>
                         @foreach($shipments as $shipment)
                             <tr>
-                                <td>
-                                    <span class="fw-bold text-navy">{{ $shipment->tracking_number }}</span>
+                                <td class="py-3">
+                                    <span class="fw-bold text-navy text-nowrap">{{ $shipment->tracking_number }}</span>
                                 </td>
-                                <td>
-                                    <span class="badge bg-navy text-white px-2 py-1" style="font-size: 0.75rem;">
+                                <td class="py-3">
+                                    @php
+                                        $statusClass = match(strtolower($shipment->status)) {
+                                            'delivered' => 'badge-status-delivered',
+                                            'in transit' => 'badge-status-transit',
+                                            default => 'badge-status-pending',
+                                        };
+                                    @endphp
+                                    <span class="{{ $statusClass }}">
                                         {{ $shipment->status }}
                                     </span>
                                 </td>
-                                <td>{{ $shipment->origin }}</td>
-                                <td>{{ $shipment->destination }}</td>
-                                <td>{{ $shipment->current_location ?? '-' }}</td>
-                                <td>
+                                <td class="py-3">{{ $shipment->origin }}</td>
+                                <td class="py-3">{{ $shipment->destination }}</td>
+                                <td class="py-3">{{ $shipment->current_location ?? '-' }}</td>
+                                <td class="py-3 text-nowrap">
                                     {{ $shipment->expected_delivery_date ? \Carbon\Carbon::parse($shipment->expected_delivery_date)->format('M d, Y') : '-' }}
                                 </td>
-                                <td class="text-end">
-                                    <div class="d-inline-flex gap-2">
-                                        <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-navy py-1 px-2">
+                                <td class="text-end py-3">
+                                    <div class="d-inline-flex gap-2 align-items-center">
+                                        <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
                                             Edit
                                         </a>
-                                        <form action="{{ route('admin.shipments.destroy', $shipment) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this shipment?');">
+                                        <form action="{{ route('admin.shipments.destroy', $shipment) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this shipment?');" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-outline-danger py-1 px-2">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger btn-admin-action text-nowrap">
                                                 Delete
                                             </button>
                                         </form>

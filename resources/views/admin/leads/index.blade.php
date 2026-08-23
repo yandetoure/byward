@@ -3,11 +3,25 @@
 @section('title', 'Manage Leads & Requests')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
     <div>
         <h1 class="h2 mb-0">Leads & Requests</h1>
         <p class="text-muted mb-0">Manage customer inquiries, quote requests, and job applications.</p>
     </div>
+    <form action="{{ route('admin.leads.index') }}" method="GET" class="d-flex gap-2 align-items-center" style="max-width: 380px; width: 100%;">
+        @if($type)
+            <input type="hidden" name="type" value="{{ $type }}">
+        @endif
+        <div class="input-group">
+            <input type="text" name="search" class="form-control form-control-sm rounded-start-pill border-end-0 ps-3" placeholder="Search name, email, phone..." value="{{ $search ?? '' }}">
+            <button class="btn btn-sm btn-outline-secondary rounded-end-pill px-3" type="submit">
+                🔍
+            </button>
+        </div>
+        @if(!empty($search))
+            <a href="{{ route('admin.leads.index', array_filter(['type' => $type])) }}" class="btn btn-sm btn-light text-nowrap rounded-pill px-3 border" title="Clear Search">Reset</a>
+        @endif
+    </form>
 </div>
 
 <div class="card border-0 shadow-sm rounded-4">
@@ -15,22 +29,22 @@
         <!-- Tabs -->
         <ul class="nav nav-tabs border-bottom">
             <li class="nav-item">
-                <a class="nav-link fw-semibold {{ is_null($type) ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index') }}">
+                <a class="nav-link fw-semibold {{ is_null($type) ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', array_filter(['search' => $search])) }}">
                     All Leads
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fw-semibold {{ $type === 'contact' ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', ['type' => 'contact']) }}">
+                <a class="nav-link fw-semibold {{ $type === 'contact' ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', array_filter(['type' => 'contact', 'search' => $search])) }}">
                     Contact Inquiries
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fw-semibold {{ $type === 'quote' ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', ['type' => 'quote']) }}">
+                <a class="nav-link fw-semibold {{ $type === 'quote' ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', array_filter(['type' => 'quote', 'search' => $search])) }}">
                     Quote Requests
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fw-semibold {{ $type === 'career' ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', ['type' => 'career']) }}">
+                <a class="nav-link fw-semibold {{ $type === 'career' ? 'active text-brand' : 'text-muted' }}" href="{{ route('admin.leads.index', array_filter(['type' => 'career', 'search' => $search])) }}">
                     Job Applications
                 </a>
             </li>

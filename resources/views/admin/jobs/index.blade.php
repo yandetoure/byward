@@ -3,14 +3,27 @@
 @section('title', 'Manage Job Offers')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
     <div>
         <h1 class="h2 mb-0">Job Openings</h1>
         <p class="text-muted mb-0">Manage dynamic job offers displayed on the Careers page.</p>
     </div>
-    <a href="{{ route('admin.jobs.create') }}" class="btn btn-brand">
-        + Add Job Opening
-    </a>
+    <div class="d-flex gap-2 align-items-center flex-wrap">
+        <form action="{{ route('admin.jobs.index') }}" method="GET" class="d-flex gap-2 align-items-center" style="max-width: 320px; width: 100%;">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control form-control-sm rounded-start-pill border-end-0 ps-3" placeholder="Search job title or description..." value="{{ $search ?? '' }}">
+                <button class="btn btn-sm btn-outline-secondary rounded-end-pill px-3" type="submit">
+                    🔍
+                </button>
+            </div>
+            @if(!empty($search))
+                <a href="{{ route('admin.jobs.index') }}" class="btn btn-sm btn-light text-nowrap rounded-pill px-3 border" title="Clear Search">Reset</a>
+            @endif
+        </form>
+        <a href="{{ route('admin.jobs.create') }}" class="btn btn-brand btn-sm text-nowrap">
+            + Add Job Opening
+        </a>
+    </div>
 </div>
 
 <div class="card border-0 shadow-sm rounded-4">
@@ -34,31 +47,31 @@
                     <tbody>
                         @foreach($jobs as $job)
                             <tr>
-                                <td>
+                                <td class="py-3 text-nowrap">
                                     <span>{{ $job->created_at->format('M d, Y') }}</span>
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     <span class="fw-bold text-navy">{{ $job->title_en }}</span>
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     <span class="fw-bold text-navy">{{ $job->title_fr }}</span>
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     @if($job->is_active)
-                                        <span class="badge bg-success text-white px-2 py-1" style="font-size: 0.75rem;">Active</span>
+                                        <span class="badge-status-delivered">Active</span>
                                     @else
-                                        <span class="badge bg-secondary text-white px-2 py-1" style="font-size: 0.75rem;">Inactive</span>
+                                        <span class="badge-status-pending">Inactive</span>
                                     @endif
                                 </td>
-                                <td class="text-end">
-                                    <div class="d-inline-flex gap-2">
-                                        <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-sm btn-outline-navy py-1 px-2">
+                                <td class="text-end py-3">
+                                    <div class="d-inline-flex gap-2 align-items-center">
+                                        <a href="{{ route('admin.jobs.edit', $job) }}" class="btn btn-sm btn-outline-navy btn-admin-action text-nowrap">
                                             Edit
                                         </a>
-                                        <form action="{{ route('admin.jobs.destroy', $job) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this job opening?');">
+                                        <form action="{{ route('admin.jobs.destroy', $job) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this job opening?');" class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-outline-danger py-1 px-2">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger btn-admin-action text-nowrap">
                                                 Delete
                                             </button>
                                         </form>
