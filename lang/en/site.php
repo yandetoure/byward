@@ -644,9 +644,9 @@ return [
                 ['title' => 'How We Use Your Data', 'text' => "Your data is used to respond to your enquiries, produce quotes, execute and track your shipments, meet our legal and customs obligations, and improve our services. We never sell your personal data to third parties."],
                 ['title' => 'Sharing With Third Parties', 'text' => "We share only the information strictly required with our partner carriers, customs brokers and regulatory authorities, and only in order to execute your shipments."],
                 ['title' => 'Data Retention', 'text' => "We retain shipment records and customs documentation for the period required by applicable regulation, after which they are deleted or anonymised."],
-                ['title' => 'Your Rights', 'text' => "You may request access to, correction of, or deletion of your personal data, and object to its processing. Send your request to info@bywardlogistics.com."],
+                ['title' => 'Your Rights', 'text' => "You may request access to, correction of, or deletion of your personal data, and object to its processing. Send your request to contact@bywardlogistics.com."],
                 ['title' => 'Cookies', 'text' => "Our site uses cookies essential to session functionality and, with your consent, analytics cookies. You can disable them in your browser settings."],
-                ['title' => 'Contact Us', 'text' => "For any question about this policy, write to info@bywardlogistics.com or call +1 (800) 555-0100."],
+                ['title' => 'Contact Us', 'text' => "For any question about this policy, write to contact@bywardlogistics.com or call +1 (800) 555-0100."],
             ],
         ],
 
@@ -729,7 +729,7 @@ return [
         'welcome' => 'Hello! How can we help you today? Choose a question below:',
         'placeholder' => 'Write a message...',
         'send' => 'Send',
-        'fallback_response' => 'Thank you for your message! A representative will get back to you as soon as possible. You can also email us directly at <a href="mailto:info@bywardlogistics.com" class="text-brand fw-bold">info@bywardlogistics.com</a>, call us at <a href="tel:+16135010653" class="text-brand fw-bold">(613) 501-0653</a>, or visit our <a href=":url" class="text-brand fw-bold">contact page</a>.',
+        'fallback_response' => 'Thank you for your message! A representative will get back to you as soon as possible. You can also email us directly at <a href="mailto:contact@bywardlogistics.com" class="text-brand fw-bold">contact@bywardlogistics.com</a>, call us at <a href="tel:+16135010653" class="text-brand fw-bold">(613) 501-0653</a>, or visit our <a href=":url" class="text-brand fw-bold">contact page</a>.',
         'questions' => [
             'q1' => 'How to get a quote?',
             'a1' => 'You can get a free quote online by clicking the \'Get a Quote\' button in the main menu at the top of the page.',
