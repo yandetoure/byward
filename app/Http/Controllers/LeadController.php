@@ -137,28 +137,7 @@ class LeadController extends Controller
             $toEmail = config('byward.company.email', 'contact@bywardlogistics.com');
             $subject = 'Nouvelle demande [' . strtoupper($lead->type) . '] de ' . $lead->name;
 
-            $content = "Nouvelle demande reçue sur Byward Logistics :\n\n"
-                . "Type : " . strtoupper($lead->type) . "\n"
-                . "Nom : " . $lead->name . "\n"
-                . "Email : " . $lead->email . "\n"
-                . "Téléphone : " . ($lead->phone ?? 'N/A') . "\n"
-                . "Entreprise : " . ($lead->company ?? 'N/A') . "\n";
-
-            if ($lead->type === 'quote') {
-                $content .= "Origine : " . ($lead->origin ?? 'N/A') . "\n"
-                    . "Destination : " . ($lead->destination ?? 'N/A') . "\n"
-                    . "Type de fret : " . ($lead->shipment_type ?? 'N/A') . "\n"
-                    . "Poids : " . ($lead->weight ?? 'N/A') . " kg\n"
-                    . "Date d'enlèvement : " . ($lead->pickup_date ?? 'N/A') . "\n";
-            } elseif ($lead->type === 'career') {
-                $content .= "Poste : " . ($lead->position ?? 'N/A') . "\n";
-            }
-
-            if ($lead->message) {
-                $content .= "\nMessage :\n" . $lead->message . "\n";
-            }
-
-            Mail::raw($content, function ($message) use ($toEmail, $subject, $lead) {
+            Mail::send('emails.lead_notification', ['lead' => $lead], function ($message) use ($toEmail, $subject, $lead) {
                 $message->to($toEmail)
                     ->replyTo($lead->email, $lead->name)
                     ->subject($subject);
