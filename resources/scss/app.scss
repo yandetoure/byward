@@ -438,6 +438,7 @@ h4,
   &:hover,
   &:focus-visible {
     opacity: 1;
+    color: var(--by-red);
   }
 
   &:hover::after,
@@ -447,11 +448,12 @@ h4,
 
   &.active {
     opacity: 1;
+    color: var(--by-red);
   }
 
   .is-stuck &:hover,
   .is-stuck &.active {
-    color: var(--by-navy-600);
+    color: var(--by-red);
   }
 }
 
@@ -505,9 +507,9 @@ h4,
 
   &:hover,
   &:focus-visible {
-    background: #fff;
-    color: var(--by-navy-800);
-    border-color: #fff;
+    background: var(--by-red);
+    color: #fff;
+    border-color: var(--by-red);
     transform: translateY(-2px);
   }
 
@@ -518,9 +520,9 @@ h4,
 
     &:hover,
     &:focus-visible {
-      background: var(--by-navy-800);
+      background: var(--by-red);
       color: #fff;
-      border-color: var(--by-navy-800);
+      border-color: var(--by-red);
     }
   }
 }
@@ -631,7 +633,7 @@ h4,
 
       &:hover,
       &.active {
-        color: var(--by-navy-600);
+        color: var(--by-red);
       }
     }
 
@@ -650,9 +652,9 @@ h4,
 
       &:hover,
       &:focus-visible {
-        background: var(--by-navy-800);
+        background: var(--by-red);
         color: #fff;
-        border-color: var(--by-navy-800);
+        border-color: var(--by-red);
       }
     }
   }
