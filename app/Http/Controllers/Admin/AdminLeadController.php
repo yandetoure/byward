@@ -11,15 +11,28 @@ class AdminLeadController extends Controller
     public function index(Request $request)
     {
         $type = $request->query('type');
+        $search = trim((string) $request->query('search'));
         $query = Lead::latest();
 
         if ($type) {
             $query->where('type', $type);
         }
 
+        if ($search !== '') {
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('phone', 'like', "%{$search}%")
+                  ->orWhere('company', 'like', "%{$search}%")
+                  ->orWhere('message', 'like', "%{$search}%")
+                  ->orWhere('origin', 'like', "%{$search}%")
+                  ->orWhere('destination', 'like', "%{$search}%");
+            });
+        }
+
         $leads = $query->paginate(15)->withQueryString();
 
-        return view('admin.leads.index', compact('leads', 'type'));
+        return view('admin.leads.index', compact('leads', 'type', 'search'));
     }
 
     public function show($locale, Lead $lead)

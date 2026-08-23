@@ -16,6 +16,47 @@
     </div>
 </section>
 
+{{-- ============================ OPEN POSITIONS CARDS ============================ --}}
+@if(isset($jobs) && $jobs->isNotEmpty())
+<section class="section py-5 bg-sand">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="eyebrow">{{ __('site.careers.cta_eyebrow') }}</span>
+            <h2 class="display-5 text-balance mb-3">{{ __('site.careers.cta_title') }}</h2>
+            <p class="lead text-muted mw-560 mx-auto mb-0">{{ __('site.careers.cta_text') }}</p>
+        </div>
+
+        <div class="row g-4">
+            @foreach($jobs as $job)
+                @php
+                    $title = app()->getLocale() === 'fr' ? $job->title_fr : $job->title_en;
+                    $desc = app()->getLocale() === 'fr' ? $job->description_fr : $job->description_en;
+                @endphp
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 d-flex flex-column justify-content-between hover-lift transition-all">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge bg-navy text-white px-3 py-2 rounded-pill fw-semibold" style="font-size:0.75rem;">
+                                    Byward Logistics
+                                </span>
+                                <span class="badge bg-success-subtle text-success px-2 py-1 rounded-pill small">Active</span>
+                            </div>
+                            <h4 class="h5 mb-2 fw-bold text-navy">{{ $title }}</h4>
+                            @if($desc)
+                                <p class="text-muted small mb-4" style="line-height: 1.5;">{{ $desc }}</p>
+                            @endif
+                        </div>
+                        <a href="#form" class="btn btn-outline-brand btn-sm w-100 mt-2 select-job-btn" data-job-id="{{ $job->id }}">
+                            {{ __('site.careers.apply_now') }} →
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+@endif
+
 <section class="section py-5">
     <div class="container">
         <div class="row g-5">
@@ -120,4 +161,18 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.select-job-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            const jobId = this.getAttribute('data-job-id');
+            const selectEl = document.getElementById('position');
+            if (selectEl && jobId) {
+                selectEl.value = jobId;
+            }
+        });
+    });
+});
+</script>
 @endsection
