@@ -188,6 +188,36 @@
             justify-content: center;
             transition: all 0.2s ease;
         }
+        .badge-status-delivered {
+            background-color: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+            font-weight: 700;
+            font-size: 0.72rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            display: inline-block;
+        }
+        .badge-status-transit {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            border: 1px solid #7dd3fc;
+            font-weight: 700;
+            font-size: 0.72rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            display: inline-block;
+        }
+        .badge-status-pending {
+            background-color: #fff7ed;
+            color: #c2410c;
+            border: 1px solid #ffedd5;
+            font-weight: 700;
+            font-size: 0.72rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>

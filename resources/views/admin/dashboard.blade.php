@@ -106,7 +106,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-link text-brand p-0">Details</a>
+                                            <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-sm btn-outline-navy btn-admin-action py-1 px-3 text-nowrap">View</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -150,12 +150,19 @@
                                             <div class="small fw-medium">{{ $shipment->origin }} → {{ $shipment->destination }}</div>
                                         </td>
                                         <td>
-                                            <span class="badge bg-navy text-white px-2 py-1" style="font-size: 0.75rem;">
+                                            @php
+                                                $statusClass = match(strtolower($shipment->status)) {
+                                                    'delivered' => 'badge-status-delivered',
+                                                    'in transit' => 'badge-status-transit',
+                                                    default => 'badge-status-pending',
+                                                };
+                                            @endphp
+                                            <span class="{{ $statusClass }}">
                                                 {{ $shipment->status }}
                                             </span>
                                         </td>
                                         <td>
-                                            <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-link text-brand p-0">Edit</a>
+                                            <a href="{{ route('admin.shipments.edit', $shipment) }}" class="btn btn-sm btn-outline-secondary btn-admin-action py-1 px-3 text-nowrap">Edit</a>
                                         </td>
                                     </tr>
                                 @endforeach
