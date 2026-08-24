@@ -234,7 +234,7 @@ return [
         'steps_title' => 'From Quote to Delivery in 4 Steps',
         'steps' => [
             ['num' => '01', 'title' => 'Request a Quote', 'text' => "Share your shipment details and we'll send a transparent, all-inclusive quote within hours."],
-            ['num' => '02', 'title' => 'Confirm & Book', 'text' => "Approve the quote, share pickup details, and we schedule your collection."],
+            ['num' => '02', 'title' => 'Confirm & Book', 'text' => "Approve the quote, share pickup details, and we will schedule your collection."],
             ['num' => '03', 'title' => 'Track in Real Time', 'text' => "Monitor your shipment 24/7 with real-time status updates."],
             ['num' => '04', 'title' => 'Delivery & Confirmation', 'text' => 'Photo proof of delivery and signed discharge paperwork with no hidden charges.'],
         ],
