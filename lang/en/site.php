@@ -23,6 +23,7 @@ return [
         'view_services' => 'View Services',
         'all_services' => 'View All Services',
         'all_industries' => 'All Industries',
+        'view_more' => 'View More',
         'all_faq' => 'View All FAQs',
         'learn_more' => 'Learn more',
         'talk_expert' => 'Speak to an Expert',

@@ -16,8 +16,8 @@
         'reverse' => ['icon' => 'rotate', 'anchor' => 'reverse'],
     ];
 
-
-    $homeIndustries = ['retail', 'manufacturing', 'automotive', 'food'];
+    $homeServiceCards = array_slice($serviceCards, 0, 3, true);
+    $homeIndustries = ['retail', 'manufacturing', 'automotive'];
     $whyIcons = ['check-circle', 'eye', 'support', 'tag'];
     $homeFaq = collect(__('site.faq.groups'))->flatMap(fn ($g) => $g['items'])->take(3);
 @endphp
@@ -182,7 +182,7 @@
         </div>
 
         <div class="row g-4">
-            @foreach ($serviceCards as $key => $meta)
+            @foreach ($homeServiceCards as $key => $meta)
                 <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="{{ $loop->index * 80 }}">
                     <a href="{{ route('services') }}#{{ $meta['anchor'] }}" class="card-service d-block text-decoration-none">
                         <span class="icon-tile {{ $loop->index % 3 === 1 ? 'icon-tile-red' : '' }}">
@@ -201,7 +201,7 @@
 
         <div class="text-center mt-5" data-reveal>
             <a href="{{ route('services') }}" class="btn btn-navy btn-lg">
-                {{ __('site.common.all_services') }}
+                {{ __('site.common.view_more') }}
             </a>
         </div>
     </div>
@@ -301,7 +301,7 @@
 
         <div class="text-center mt-5" data-reveal>
             <a href="{{ route('industries') }}" class="btn btn-outline-navy btn-lg">
-                {{ __('site.common.all_industries') }}
+                {{ __('site.common.view_more') }}
             </a>
         </div>
     </div>
