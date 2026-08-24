@@ -96,9 +96,6 @@
                     <a href="{{ route('estimate') }}" class="btn btn-brand btn-lg">
                         {{ __('site.common.calculate') }}
                     </a>
-                    <a href="{{ route('services') }}" class="btn btn-ghost text-white btn-lg">
-                        {{ __('site.common.view_services') }}
-                    </a>
                 </div>
             </div>
         </div>
