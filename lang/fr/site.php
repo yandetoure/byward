@@ -204,8 +204,8 @@ return [
 
             'reverse' => [
                 'name' => 'Logistique inverse',
-                'short' => 'Gestion efficace des retours et solutions de traitement qui réduisent les coûts et améliorent l\'expérience client.',
-                'long' => "Une gestion efficace des retours et des solutions de traitement des produits qui réduisent les coûts opérationnels, valorisent vos actifs et améliorent l'expérience de retour de vos clients.",
+                'short' => 'Solutions efficaces d\'élimination et de gestion des retours pour améliorer l\'expérience client et la gestion des déchets.',
+                'long' => 'Solutions efficaces d\'élimination et de gestion des retours qui permettent d\'améliorer l\'expérience de retour client et la gestion des déchets.',
                 'features' => [
                     'Portail et gestion des retours',
                     'Inspection et classement des produits',
@@ -217,8 +217,8 @@ return [
             ],
             'whiteglove' => [
                 'name' => 'Services Gant Blanc',
-                'short' => 'Services de livraison et d\'installation haut de gamme pour les articles de grande valeur ou fragiles.',
-                'long' => 'Des services de livraison premium incluant la livraison à l\'intérieur, le déballage, l\'installation et l\'enlèvement des débris pour les articles de grande valeur ou délicats.',
+                'short' => 'Services de livraison et d\'installation haut de gamme pour tous vos articles.',
+                'long' => 'Des services de livraison premium incluant la livraison à l\'intérieur, le déballage, l\'installation et l\'enlèvement des débris.',
                 'features' => [
                     'Livraison à l\'intérieur et pièce au choix',
                     'Déballage et enlèvement des débris',

@@ -204,8 +204,8 @@ return [
 
             'reverse' => [
                 'name' => 'Reverse Logistics',
-                'short' => 'Efficient returns management and product disposition solutions that reduce costs and improve customer experience.',
-                'long' => "Efficient returns management and product disposition solutions that reduce operational costs, recover asset value, and improve the customer return experience.",
+                'short' => 'Efficient product disposal solution that helps improve the customer return experience and waste management.',
+                'long' => 'Efficient product disposal solution that helps improve the customer return experience and waste management.',
                 'features' => [
                     'Returns portal and management',
                     'Product inspection and grading',
@@ -217,8 +217,8 @@ return [
             ],
             'whiteglove' => [
                 'name' => 'White Glove Services',
-                'short' => 'Premium delivery and setup services for high-value and delicate items.',
-                'long' => 'Premium delivery services including inside delivery, unpacking, setup, and debris removal for high-value or delicate items.',
+                'short' => 'Premium delivery and setup services for all items.',
+                'long' => 'Premium delivery services including inside delivery, unpacking, setup, and debris removal.',
                 'features' => [
                     'Inside delivery and room of choice',
                     'Unpacking and debris removal',
