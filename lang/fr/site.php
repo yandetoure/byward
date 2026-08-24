@@ -236,7 +236,7 @@ return [
             ['num' => '01', 'title' => 'Demandez un devis', 'text' => "Communiquez-nous les détails de votre expédition et nous vous transmettons un devis transparent et tout compris en quelques heures."],
             ['num' => '02', 'title' => 'Confirmez et réservez', 'text' => "Validez le devis, indiquez les informations d'enlèvement et nous planifions la collecte."],
             ['num' => '03', 'title' => 'Suivez en temps réel', 'text' => "Surveillez votre expédition 24h/24 grâce au suivi en temps réel et aux notifications proactives."],
-            ['num' => '04', 'title' => 'Livré et confirmé', 'text' => "Recevez la preuve de livraison et une facture détaillée, sans frais surprise."],
+            ['num' => '04', 'title' => 'Livraison et confirmation', 'text' => "Preuve de livraison en photo et documents de décharge signés sans frais cachés."],
         ],
 
         'cta_title' => 'Prêt à démarrer ?',
