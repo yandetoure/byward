@@ -318,7 +318,7 @@ return [
 
         'approach_eyebrow' => 'Notre approche',
         'approach_title' => 'Pourquoi l\'expertise sectorielle fait la différence',
-        'approach_text' => "Les prestataires logistiques génériques prennent en charge le transport de marchandises. Nous connaissons votre secteur d'activité. Votre gestionnaire de compte sait donc ce qu'implique la conformité aux BPD pour un envoi pharmaceutique, les exigences d'une livraison juste-à-temps pour une ligne de production et pourquoi un retard de livraison de produits alimentaires représente un risque pour votre réputation, au-delà du simple coût du fret. Nous parlons votre langage et nous nous adaptons à vos besoins.",
+        'approach_text' => "Les prestataires logistiques génériques se contentent de transporter du fret. Nous connaissons le secteur, vos attentes et les exigences des livraisons dans les délais. Nous comprenons nos clients et parlons le même langage afin de répondre à leurs besoins et d'optimiser leur satisfaction.",
         'approach_points' => [
             'Un gestionnaire de compte qui connaît vos contraintes réglementaires',
             'Des transporteurs sélectionnés selon les exigences de votre secteur',
@@ -393,11 +393,11 @@ return [
                 'items' => [
                     [
                         'q' => 'Quelles régions Byward Logistics dessert-elle ?',
-                        'a' => "Nous assurons le transport de marchandises au Canada, principalement en Ontario et au Québec, et proposons des expéditions internationales vers plus de 120 destinations grâce à nos partenariats avec des transporteurs internationaux. Contactez-nous pour vérifier la couverture de votre point de départ et de votre destination.",
+                        'a' => "Nous assurons des liaisons nationales en Ontario et au Québec. Contactez-nous pour confirmer la couverture de votre point de départ et de votre destination.",
                     ],
                     [
                         'q' => 'Dans quels secteurs êtes-vous spécialisé ?',
-                        'a' => "Nous intervenons principalement dans le commerce de détail et le e-commerce, la santé et l'industrie pharmaceutique, la fabrication, l'automobile, et l'agroalimentaire. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
+                        'a' => "Nous intervenons principalement dans les électroménagers, le commerce de détail, le mobilier, la fabrication, l'automobile, et l'agroalimentaire. Chaque secteur dispose de transporteurs sélectionnés et de processus documentaires adaptés à ses exigences réglementaires.",
                     ],
                 ],
             ],

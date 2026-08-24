@@ -318,7 +318,7 @@ return [
 
         'approach_eyebrow' => 'Our Approach',
         'approach_title' => 'Why Sector Expertise Makes the Difference',
-        'approach_text' => "Generic logistics providers move freight. We know your industry — so your account manager understands what GDP compliance means for a pharmaceutical shipment, what just-in-time delivery demands of a production line, and why a late food delivery is a reputational risk long before it is a freight cost. We speak your language and adapt to how you operate.",
+        'approach_text' => "Generic logistics providers move freight. We know the industry, your expectations and what in time deliveries demands. We understand our customers so we speak the same language to satisfy their needs and optimize the customer satisfaction.",
         'approach_points' => [
             'An account manager who understands your regulatory constraints',
             'Carriers vetted against your sector requirements',
@@ -393,11 +393,11 @@ return [
                 'items' => [
                     [
                         'q' => 'What regions does Byward Logistics service?',
-                        'a' => "We operate domestic routes across Canada, primarily serving Ontario and Quebec, and offer international shipping to over 120 destinations through our global carrier partnerships. Contact us to confirm coverage for your specific origin and destination.",
+                        'a' => "We operate domestic routes across Ontario and Quebec. Contact us to confirm coverage for your specific origin and destination.",
                     ],
                     [
                         'q' => 'Which industries do you specialise in?',
-                        'a' => "Our core sectors are retail and e-commerce, healthcare and pharma, manufacturing, automotive, and food and beverage. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
+                        'a' => "Our core sectors are appliances, retail, furniture, manufacturing, automotive, food and beverages. Each has vetted carriers and documentation processes matched to its regulatory requirements.",
                     ],
                 ],
             ],
