@@ -76,7 +76,7 @@ return [
 
         'marquee' => [
             'Fret routier FTL & LTL',
-            'Suivi GPS en temps réel',
+            'Suivi en temps réel',
             'Livraison le jour même',
             'Fret aérien & maritime',
         ],
@@ -90,7 +90,7 @@ return [
         'why_text' => "Nous associons la technologie à un service personnalisé pour offrir une expérience logistique qui maintient vos opérations en marche, sans interruption.",
         'why_items' => [
             ['title' => 'Une fiabilité prouvée', 'text' => 'Dix ans d\'expérience et un taux de livraison à l\'heure de 98 % sur l\'ensemble de nos itinéraires.'],
-            ['title' => 'Suivi en temps réel', 'text' => 'Visibilité totale sur vos expéditions, avec position GPS en direct et notifications automatiques.'],
+            ['title' => 'Suivi en temps réel', 'text' => 'Visibilité totale sur vos expéditions, avec mises à jour en temps réel et notifications automatiques.'],
             ['title' => 'Un accompagnement dédié', 'text' => 'Un gestionnaire de compte nommé pour chaque client, joignable à toute heure.'],
             ['title' => 'Une tarification transparente', 'text' => 'Des devis tout compris, sans frais cachés, sans surcharge carburant ni mauvaise surprise.'],
         ],
@@ -151,11 +151,11 @@ return [
         'items' => [
             'freight' => [
                 'name' => 'Transport de marchandises',
-                'short' => 'Expéditions FTL et LTL, nationales et internationales, avec suivi GPS en direct et délais de livraison garantis.',
+                'short' => 'Expéditions FTL et LTL, nationales et internationales, avec suivi en temps réel et délais de livraison garantis.',
                 'long' => "Du camion complet (FTL) au groupage (LTL), nous proposons des services de fret nationaux et internationaux fiables, avec une visibilité de bout en bout et des fenêtres de transit garanties.",
                 'features' => [
                     'Options FTL et LTL',
-                    'Suivi GPS en direct sur chaque chargement',
+                    'Suivi en temps réel sur chaque chargement',
                     'Options à température contrôlée',
                     'Réseau de transporteurs certifiés matières dangereuses',
                     'Plateaux et équipements spécialisés',
@@ -235,7 +235,7 @@ return [
         'steps' => [
             ['num' => '01', 'title' => 'Demandez un devis', 'text' => "Communiquez-nous les détails de votre expédition et nous vous transmettons un devis transparent et tout compris en quelques heures."],
             ['num' => '02', 'title' => 'Confirmez et réservez', 'text' => "Validez le devis, indiquez les informations d'enlèvement et nous planifions la collecte."],
-            ['num' => '03', 'title' => 'Suivez en temps réel', 'text' => "Surveillez votre expédition 24h/24 grâce au suivi GPS en direct et aux notifications proactives."],
+            ['num' => '03', 'title' => 'Suivez en temps réel', 'text' => "Surveillez votre expédition 24h/24 grâce au suivi en temps réel et aux notifications proactives."],
             ['num' => '04', 'title' => 'Livré et confirmé', 'text' => "Recevez la preuve de livraison et une facture détaillée, sans frais surprise."],
         ],
 

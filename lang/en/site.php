@@ -76,7 +76,7 @@ return [
 
         'marquee' => [
             'FTL & LTL Road Freight',
-            'Real-Time GPS Tracking',
+            'Real-Time Tracking',
             'Same-Day Delivery',
             'Air & Ocean Freight',
         ],
@@ -90,7 +90,7 @@ return [
         'why_text' => "We combine technology with personalised service to deliver a logistics experience that keeps your operations running without interruption.",
         'why_items' => [
             ['title' => 'Proven Reliability', 'text' => 'A decade-long track record with a 98% on-time delivery rate across all routes.'],
-            ['title' => 'Real-Time Tracking', 'text' => 'Full shipment visibility with live GPS updates and automated customer notifications.'],
+            ['title' => 'Real-Time Tracking', 'text' => 'Full shipment visibility with real-time status updates and automated customer notifications.'],
             ['title' => 'Dedicated Support', 'text' => 'A named account manager for every client, available around the clock.'],
             ['title' => 'Transparent Pricing', 'text' => 'All-inclusive quotes with no hidden fees, fuel surcharges, or billing surprises.'],
         ],
@@ -151,11 +151,11 @@ return [
         'items' => [
             'freight' => [
                 'name' => 'Freight Transport',
-                'short' => 'FTL and LTL shipping across domestic and international routes with live GPS tracking and guaranteed delivery windows.',
+                'short' => 'FTL and LTL shipping across domestic and international routes with real-time tracking and guaranteed delivery windows.',
                 'long' => "From full truckload (FTL) to less-than-truckload (LTL), we offer reliable domestic and international freight services with end-to-end shipment visibility and guaranteed transit windows.",
                 'features' => [
                     'FTL and LTL options',
-                    'Live GPS tracking on every load',
+                    'Real-time tracking on every load',
                     'Temperature-controlled options',
                     'Hazmat-certified carrier network',
                     'Flatbed and specialized equipment',
@@ -235,7 +235,7 @@ return [
         'steps' => [
             ['num' => '01', 'title' => 'Request a Quote', 'text' => "Share your shipment details and we'll send a transparent, all-inclusive quote within hours."],
             ['num' => '02', 'title' => 'Confirm & Book', 'text' => "Approve the quote, share pickup details, and we schedule your collection."],
-            ['num' => '03', 'title' => 'Track in Real Time', 'text' => "Monitor your shipment 24/7 with live GPS tracking and proactive status updates."],
+            ['num' => '03', 'title' => 'Track in Real Time', 'text' => "Monitor your shipment 24/7 with real-time status updates."],
             ['num' => '04', 'title' => 'Delivered & Confirmed', 'text' => "Receive proof of delivery and an itemised invoice with no surprise charges."],
         ],
 
