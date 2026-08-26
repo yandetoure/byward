@@ -2,241 +2,276 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- ==================== HOME ==================== -->
+  <!-- Root -->
   <url>
-    <loc>https://bywardlogistics.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en"/>
+    <loc>https://bywardlogistics.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Accueil (EN - Default) -->
+  <url>
+    <loc>https://bywardlogistics.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en" />
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Accueil (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- ==================== SERVICES ==================== -->
+  <!-- Services (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/services"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/services"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/services" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Services (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/services"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/services"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/services" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- ==================== INDUSTRIES ==================== -->
+  <!-- Industries (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/industries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/industries"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/industries"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/industries"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/industries" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/industries" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/industries" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Industries (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/industries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/industries"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/industries"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/industries"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/industries" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/industries" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/industries" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- ==================== GET A QUOTE ==================== -->
+  <!-- Quote (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/quote</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/quote"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/quote"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/quote"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/quote" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/quote" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/quote" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Quote (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/quote</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/quote"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/quote"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/quote"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/quote" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/quote" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/quote" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- ==================== ESTIMATE ==================== -->
+  <!-- Estimate (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/estimate</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/estimate"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/estimate"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/estimate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/estimate" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/estimate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/estimate" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
+  <!-- Estimate (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/estimate</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/estimate"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/estimate"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/estimate"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/estimate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/estimate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/estimate" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
-  <!-- ==================== TRACKING ==================== -->
+  <!-- Tracking (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/tracking</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/tracking"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/tracking"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/tracking"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/tracking" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/tracking" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/tracking" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Tracking (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/tracking</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/tracking"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/tracking"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/tracking"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/tracking" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/tracking" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/tracking" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- ==================== ABOUT ==================== -->
+  <!-- About (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/about"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/about" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- About (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/about"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/about" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- ==================== CAREERS ==================== -->
+  <!-- Careers (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/careers</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/careers"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/careers"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/careers" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/careers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/careers" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Careers (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/careers</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/careers"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/careers"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/careers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/careers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/careers" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- ==================== FAQ ==================== -->
+  <!-- FAQ (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/faq</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/faq"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/faq"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/faq" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- FAQ (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/faq</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/faq"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/faq"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/faq" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- ==================== CONTACT ==================== -->
+  <!-- Contact (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/contact" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Contact (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/contact" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- ==================== PRIVACY ==================== -->
+  <!-- Privacy Policy (EN) -->
   <url>
     <loc>https://bywardlogistics.com/en/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/privacy"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/privacy"/>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://bywardlogistics.com/fr/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/privacy"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/privacy" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- ==================== TERMS ==================== -->
+  <!-- Privacy Policy (FR) -->
   <url>
-    <loc>https://bywardlogistics.com/en/terms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/terms"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/terms"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/terms"/>
+    <loc>https://bywardlogistics.com/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/privacy" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- Terms (EN) -->
+  <url>
+    <loc>https://bywardlogistics.com/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/terms" />
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms (FR) -->
   <url>
     <loc>https://bywardlogistics.com/fr/terms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/terms"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/terms"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bywardlogistics.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bywardlogistics.com/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bywardlogistics.com/en/terms" />
     <lastmod>2026-08-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
