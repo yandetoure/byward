@@ -134,7 +134,7 @@ class LeadController extends Controller
     private function sendLeadNotification(Lead $lead): void
     {
         try {
-            $toEmail = config('byward.company.email', 'contact@bywardlogistics.com');
+            $toEmail = config('byward.company.email', 'info@bywardlogistics.ca');
             $subject = 'Nouvelle demande [' . strtoupper($lead->type) . '] de ' . $lead->name;
 
             Mail::send('emails.lead_notification', ['lead' => $lead], function ($message) use ($toEmail, $subject, $lead) {
