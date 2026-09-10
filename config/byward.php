@@ -19,7 +19,7 @@ return [
         'name' => 'Byward Logistics',
         'phone' => '(613) 501-0653',
         'phone_href' => '+16135010653',
-        'email' => 'contact@bywardlogistics.com',
+        'email' => 'info@bywardlogistics.ca',
         'founded' => 2014,
     ],
 

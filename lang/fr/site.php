@@ -645,9 +645,9 @@ return [
                 ['title' => 'Utilisation de vos données', 'text' => "Vos données servent à répondre à vos demandes, établir des devis, exécuter et suivre vos expéditions, respecter nos obligations légales et douanières, et améliorer nos services. Nous ne vendons jamais vos données personnelles à des tiers."],
                 ['title' => 'Partage avec des tiers', 'text' => "Nous partageons les informations strictement nécessaires avec nos transporteurs partenaires, nos courtiers en douane et les autorités réglementaires, uniquement dans le cadre de l'exécution de vos expéditions."],
                 ['title' => 'Conservation des données', 'text' => "Nous conservons les données d'expédition et les documents douaniers pendant la durée requise par la réglementation applicable, puis les supprimons ou les anonymisons."],
-                ['title' => 'Vos droits', 'text' => "Vous pouvez demander l'accès, la rectification ou la suppression de vos données personnelles, ainsi que vous opposer à leur traitement. Adressez votre demande à contact@bywardlogistics.com."],
+                ['title' => 'Vos droits', 'text' => "Vous pouvez demander l'accès, la rectification ou la suppression de vos données personnelles, ainsi que vous opposer à leur traitement. Adressez votre demande à info@bywardlogistics.ca."],
                 ['title' => 'Témoins de connexion (cookies)', 'text' => "Notre site utilise des témoins essentiels au fonctionnement de la session et, avec votre accord, des témoins de mesure d'audience. Vous pouvez les désactiver depuis les réglages de votre navigateur."],
-                ['title' => 'Nous contacter', 'text' => "Pour toute question relative à cette politique, écrivez-nous à contact@bywardlogistics.com ou appelez le +1 (800) 555-0100."],
+                ['title' => 'Nous contacter', 'text' => "Pour toute question relative à cette politique, écrivez-nous à info@bywardlogistics.ca ou appelez le +1 (800) 555-0100."],
             ],
         ],
 
@@ -730,7 +730,7 @@ return [
         'welcome' => 'Bonjour ! Comment pouvons-nous vous aider aujourd\'hui ? Choisissez une question ci-dessous :',
         'placeholder' => 'Écrivez un message...',
         'send' => 'Envoyer',
-        'fallback_response' => 'Merci pour votre message ! Un conseiller va vous répondre dans les plus brefs délais. Vous pouvez également nous écrire directement à <a href="mailto:contact@bywardlogistics.com" class="text-brand fw-bold">contact@bywardlogistics.com</a>, nous appeler au <a href="tel:+16135010653" class="text-brand fw-bold">(613) 501-0653</a>, ou visiter notre <a href=":url" class="text-brand fw-bold">page de contact</a>.',
+        'fallback_response' => 'Merci pour votre message ! Un conseiller va vous répondre dans les plus brefs délais. Vous pouvez également nous écrire directement à <a href="mailto:info@bywardlogistics.ca" class="text-brand fw-bold">info@bywardlogistics.ca</a>, nous appeler au <a href="tel:+16135010653" class="text-brand fw-bold">(613) 501-0653</a>, ou visiter notre <a href=":url" class="text-brand fw-bold">page de contact</a>.',
         'questions' => [
             'q1' => 'Comment obtenir un devis ?',
             'a1' => 'Vous pouvez obtenir un devis gratuitement et en ligne en cliquant sur le bouton \'Demander un devis\' situé dans le menu principal en haut de la page.',

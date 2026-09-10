@@ -88,7 +88,7 @@ class EstimateController extends Controller
             'http' => [
                 'method' => 'GET',
                 'header' => [
-                    'User-Agent: BywardLogistics/1.0 (contact@bywardlogistics.com)'
+                    'User-Agent: BywardLogistics/1.0 (info@bywardlogistics.ca)'
                 ],
                 'timeout' => 3
             ]
@@ -117,7 +117,7 @@ class EstimateController extends Controller
             'http' => [
                 'method' => 'GET',
                 'header' => [
-                    'User-Agent: BywardLogistics/1.0 (contact@bywardlogistics.com)'
+                    'User-Agent: BywardLogistics/1.0 (info@bywardlogistics.ca)'
                 ],
                 'timeout' => 3
             ]

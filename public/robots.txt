@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin
 Disallow: /*/admin/
 
-Sitemap: https://bywardlogistics.com/sitemap.xml
+Sitemap: https://bywardlogistics.ca/sitemap.xml

@@ -108,7 +108,7 @@
         
         <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="admin@bywardlogistics.com">
+            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="info@bywardlogistics.ca">
         </div>
         
         <div class="mb-3">
