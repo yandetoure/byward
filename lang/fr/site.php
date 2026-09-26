@@ -58,7 +58,7 @@ return [
     /* Accueil                                                           */
     /* ---------------------------------------------------------------- */
     'home' => [
-        'meta_title' => 'Byward Logistics — Solutions logistiques de bout en bout',
+        'meta_title' => 'ByWard Logistics',
         'meta_description' => 'Transport de marchandises, entreposage, livraison du dernier kilomètre et gestion de la chaîne d\'approvisionnement. 98 % de livraisons à l\'heure, plus de 120 destinations.',
 
         'hero_badge' => 'Solutions logistiques mondiales',

@@ -58,7 +58,7 @@ return [
     /* Home                                                              */
     /* ---------------------------------------------------------------- */
     'home' => [
-        'meta_title' => 'Byward Logistics — End-to-End Logistics Solutions',
+        'meta_title' => 'ByWard Logistics',
         'meta_description' => 'Freight transport, warehousing, last-mile delivery and supply chain management. 98% on-time rate across 120+ destinations.',
 
         'hero_badge' => 'Global Logistics Solutions',
